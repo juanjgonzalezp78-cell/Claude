@@ -1,0 +1,8 @@
+timekeeper,matter_id,partner,start_date,end_date,allocation_pct,notes,source
+Daniel Smith,M-1001,David Okafor,,,100,Okafor's matter,Staffing memo
+Daniel Smith,M-1004,Elena Petrova,,,100,Assigned to the matter by Petrova,Staffing memo
+Rachel Jones,M-1007,Michael Brennan,,,60,Joint supervision,Committee decision
+Rachel Jones,M-1007,Aisha Mohammed,,,40,Joint supervision,Committee decision
+Kevin Park,M-1005,Priya Raman,2025-01-01,2025-06-30,100,First half,Staffing memo
+Kevin Park,M-1005,Thomas Nakamura,2025-07-01,,100,Supervision transferred mid-year,Staffing memo
+Laura Martinez,M-1008,Thomas Nakamura,,,100,,Staffing memo
