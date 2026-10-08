@@ -1,0 +1,64 @@
+Payment Date,Client Name,Project ID,Project Name,Invoice #,Payment ID,Payment Amount,Applied to Fees,Applied to Expenses,Applied to Tax,Payment Type,Payment Status,Responsible Professional
+02/14/2025,Harborview Holdings LLC,M-1001,Commercial lease dispute,,PMT-9061,25000.00,0.00,0.00,0.00,Trust Deposit,Cleared,David Okafor
+04/26/2025,Cedar Point Hospitality,M-1011,Franchise agreement litigation,INV-1011-1,PMT-9051,18257.92,17640.50,617.42,0.00,ACH,Cleared,Owen Fletcher
+04/27/2025,Meridian Software Ltd.,M-1012,SaaS contract portfolio,INV-1012-1,PMT-9056,22941.45,21849.00,1092.45,0.00,Check,Cleared,David Okafor
+04/28/2025,Atlas Manufacturing Inc.,M-1003,Acquisition of Delta Tooling,INV-1003-1,PMT-9011,46451.31,45540.50,910.81,0.00,Wire,Cleared,Margaret Chen
+05/03/2025,Bluewater Logistics,M-1004,Employment class action defense,INV-1004-1,PMT-9016,25081.84,24833.50,248.34,0.00,ACH,Cleared,Elena Petrova
+05/05/2025,Estate of Harold Vance,M-1009,Estate administration,INV-1009-1,PMT-9041,14339.16,14058.00,140.58,140.58,ACH,Cleared,Catherine Doyle
+05/05/2025,Keystone Retail Partners,M-1010,Retail portfolio sale,INV-1010-1,PMT-9046,18433.80,17556.00,877.80,0.00,ACH,Cleared,Rachel Jones
+05/06/2025,Summit Biotech Corp.,M-1007,Patent licensing program,INV-1007-1,PMT-9031,22055.25,21005.00,1050.25,0.00,ACH,Cleared,Aisha Mohammed
+05/07/2025,Harborview Holdings LLC,M-1001,Commercial lease dispute,INV-1001-1,PMT-9001,19858.89,19469.50,389.39,0.00,ACH,Cleared,David Okafor
+05/10/2025,Greenfield Energy Partners,M-1005,Solar project finance,INV-1005-1,PMT-9021,21628.14,21414.00,214.14,0.00,Check,Cleared,Priya Raman
+05/13/2025,Pinecrest Medical Group,M-1002,Regulatory compliance review,INV-1002-1,PMT-9006,25854.15,24623.00,1231.15,0.00,Credit Card,Cleared,Sarah Lindqvist
+05/13/2025,Pinecrest Medical Group,M-1002,Regulatory compliance review,INV-1002-1,PMT-9006,25854.15,24623.00,1231.15,0.00,Credit Card,Cleared,Sarah Lindqvist
+05/15/2025,Riverside Credit Union,M-1008,Commercial loan workout,INV-1008-1,PMT-9036,14348.34,14067.00,281.34,0.00,Check,Cleared,Thomas Nakamura
+05/16/2025,Northgate School District,M-1006,Construction defect claim,INV-1006-1,PMT-9026,24285.24,23464.00,821.24,0.00,Credit Card,Cleared,Michael Brennan
+06/02/2025,Northgate School District,M-1006,Construction defect claim,INV-1006-1,PMT-9062,4800.00,4800.00,0.00,0.00,Check,Void,Michael Brennan
+07/28/2025,Harborview Holdings LLC,M-1001,Commercial lease dispute,INV-1001-2,PMT-9002,12506.64,11817.30,689.34,0.00,Wire,Cleared,David Okafor
+07/28/2025,Pinecrest Medical Group,M-1002,Regulatory compliance review,INV-1002-2,PMT-9007,20938.45,19327.80,1610.65,0.00,Wire,Cleared,Sarah Lindqvist
+07/28/2025,Atlas Manufacturing Inc.,M-1003,Acquisition of Delta Tooling,INV-1003-2,PMT-9012,18010.56,17715.30,295.26,0.00,Credit Card,Cleared,Margaret Chen
+07/28/2025,Bluewater Logistics,M-1004,Employment class action defense,INV-1004-2,PMT-9017,13491.85,12748.20,743.65,0.00,ACH,Cleared,Elena Petrova
+07/28/2025,Greenfield Energy Partners,M-1005,Solar project finance,INV-1005-2,PMT-9022,13021.45,12019.80,1001.65,0.00,Wire,Cleared,Priya Raman
+07/28/2025,Northgate School District,M-1006,Construction defect claim,INV-1006-2,PMT-9027,16217.50,14970.00,1247.50,0.00,Credit Card,Cleared,Michael Brennan
+07/28/2025,Summit Biotech Corp.,M-1007,Patent licensing program,INV-1007-2,PMT-9032,16001.68,15119.70,881.98,0.00,Wire,Cleared,Aisha Mohammed
+07/28/2025,Riverside Credit Union,M-1008,Commercial loan workout,INV-1008-2,PMT-9037,5662.02,5569.20,92.82,0.00,Wire,Cleared,Thomas Nakamura
+07/28/2025,Estate of Harold Vance,M-1009,Estate administration,INV-1009-2,PMT-9042,4563.52,4416.30,73.61,73.61,ACH,Cleared,Catherine Doyle
+07/28/2025,Keystone Retail Partners,M-1010,Retail portfolio sale,INV-1010-2,PMT-9047,20563.40,18981.60,1581.80,0.00,Wire,Cleared,Rachel Jones
+07/28/2025,Cedar Point Hospitality,M-1011,Franchise agreement litigation,INV-1011-2,PMT-9052,13493.43,12749.70,743.73,0.00,Check,Cleared,Owen Fletcher
+07/28/2025,Meridian Software Ltd.,M-1012,SaaS contract portfolio,INV-1012-2,PMT-9057,16829.90,16287.00,542.90,0.00,ACH,Cleared,David Okafor
+09/01/2025,Harborview Holdings LLC,M-1001,Commercial lease dispute,INV-1001-2,PMT-9003,7878.20,7878.20,0.00,0.00,Wire,Cleared,David Okafor
+09/01/2025,Pinecrest Medical Group,M-1002,Regulatory compliance review,INV-1002-2,PMT-9008,12885.20,12885.20,0.00,0.00,Wire,Cleared,Sarah Lindqvist
+09/01/2025,Atlas Manufacturing Inc.,M-1003,Acquisition of Delta Tooling,INV-1003-2,PMT-9013,11810.20,11810.20,0.00,0.00,Credit Card,Cleared,Margaret Chen
+09/01/2025,Bluewater Logistics,M-1004,Employment class action defense,INV-1004-2,PMT-9018,8498.80,8498.80,0.00,0.00,ACH,Cleared,Elena Petrova
+09/01/2025,Greenfield Energy Partners,M-1005,Solar project finance,INV-1005-2,PMT-9023,8013.20,8013.20,0.00,0.00,Wire,Cleared,Priya Raman
+09/01/2025,Northgate School District,M-1006,Construction defect claim,INV-1006-2,PMT-9028,9980.00,9980.00,0.00,0.00,Credit Card,Cleared,Michael Brennan
+09/01/2025,Summit Biotech Corp.,M-1007,Patent licensing program,INV-1007-2,PMT-9033,10079.80,10079.80,0.00,0.00,Wire,Cleared,Aisha Mohammed
+09/01/2025,Riverside Credit Union,M-1008,Commercial loan workout,INV-1008-2,PMT-9038,3712.80,3712.80,0.00,0.00,Wire,Cleared,Thomas Nakamura
+09/01/2025,Estate of Harold Vance,M-1009,Estate administration,INV-1009-2,PMT-9043,2944.20,2944.20,0.00,0.00,ACH,Cleared,Catherine Doyle
+09/01/2025,Keystone Retail Partners,M-1010,Retail portfolio sale,INV-1010-2,PMT-9048,12654.40,12654.40,0.00,0.00,Wire,Cleared,Rachel Jones
+09/01/2025,Cedar Point Hospitality,M-1011,Franchise agreement litigation,INV-1011-2,PMT-9053,8499.80,8499.80,0.00,0.00,Check,Cleared,Owen Fletcher
+09/01/2025,Meridian Software Ltd.,M-1012,SaaS contract portfolio,INV-1012-2,PMT-9058,10858.00,10858.00,0.00,0.00,ACH,Cleared,David Okafor
+10/28/2025,Pinecrest Medical Group,M-1002,Regulatory compliance review,INV-1002-3,PMT-9009,24697.72,24372.75,324.97,0.00,Wire,Cleared,Sarah Lindqvist
+10/29/2025,Estate of Harold Vance,M-1009,Estate administration,INV-1009-3,PMT-9044,6574.40,5870.00,587.00,117.40,ACH,Cleared,Catherine Doyle
+11/02/2025,Harborview Holdings LLC,M-1001,Commercial lease dispute,INV-1001-3,PMT-9004,10415.22,10211.00,204.22,0.00,Credit Card,Cleared,David Okafor
+11/12/2025,Cedar Point Hospitality,M-1011,Franchise agreement litigation,INV-1011-3,PMT-9054,8856.75,8435.00,421.75,0.00,Credit Card,Cleared,Owen Fletcher
+11/15/2025,Bluewater Logistics,M-1004,Employment class action defense,INV-1004-3,PMT-9019,18483.85,18003.75,480.10,0.00,Credit Card,Cleared,Elena Petrova
+11/15/2025,Keystone Retail Partners,M-1010,Retail portfolio sale,INV-1010-3,PMT-9049,13008.05,11825.50,1182.55,0.00,Wire,Cleared,Rachel Jones
+11/16/2025,Meridian Software Ltd.,M-1012,SaaS contract portfolio,INV-1012-3,PMT-9059,29143.55,28855.00,288.55,0.00,ACH,Cleared,David Okafor
+11/17/2025,Northgate School District,M-1006,Construction defect claim,INV-1006-3,PMT-9029,10952.25,10737.50,214.75,0.00,Check,Cleared,Michael Brennan
+11/19/2025,Riverside Credit Union,M-1008,Commercial loan workout,INV-1008-3,PMT-9039,13451.76,13188.00,263.76,0.00,Wire,Cleared,Thomas Nakamura
+11/20/2025,Atlas Manufacturing Inc.,M-1003,Acquisition of Delta Tooling,INV-1003-3,PMT-9014,36626.10,34882.00,1744.10,0.00,Check,Cleared,Margaret Chen
+11/21/2025,Greenfield Energy Partners,M-1005,Solar project finance,INV-1005-3,PMT-9024,12027.59,11791.75,235.84,0.00,Check,Cleared,Priya Raman
+11/22/2025,Summit Biotech Corp.,M-1007,Patent licensing program,INV-1007-3,PMT-9034,33077.10,31502.00,1575.10,0.00,Wire,Cleared,Aisha Mohammed
+01/20/2026,Harborview Holdings LLC,M-1001,Commercial lease dispute,INV-1001-4,PMT-9005,4760.75,4760.75,0.00,0.00,Credit Card,Cleared,David Okafor
+01/20/2026,Pinecrest Medical Group,M-1002,Regulatory compliance review,INV-1002-4,PMT-9010,5230.50,5230.50,0.00,0.00,Wire,Cleared,Sarah Lindqvist
+01/20/2026,Atlas Manufacturing Inc.,M-1003,Acquisition of Delta Tooling,INV-1003-4,PMT-9015,3379.75,3379.75,0.00,0.00,Check,Cleared,Margaret Chen
+01/20/2026,Bluewater Logistics,M-1004,Employment class action defense,INV-1004-4,PMT-9020,5784.50,5784.50,0.00,0.00,Wire,Cleared,Elena Petrova
+01/20/2026,Greenfield Energy Partners,M-1005,Solar project finance,INV-1005-4,PMT-9025,1791.50,1791.50,0.00,0.00,ACH,Cleared,Priya Raman
+01/20/2026,Northgate School District,M-1006,Construction defect claim,INV-1006-4,PMT-9030,1651.50,1651.50,0.00,0.00,Wire,Cleared,Michael Brennan
+01/20/2026,Summit Biotech Corp.,M-1007,Patent licensing program,INV-1007-4,PMT-9035,5464.75,5464.75,0.00,0.00,Check,Cleared,Aisha Mohammed
+01/20/2026,Riverside Credit Union,M-1008,Commercial loan workout,INV-1008-4,PMT-9040,1170.00,1170.00,0.00,0.00,Wire,Cleared,Thomas Nakamura
+01/20/2026,Estate of Harold Vance,M-1009,Estate administration,INV-1009-4,PMT-9045,3862.25,3862.25,0.00,0.00,Wire,Cleared,Catherine Doyle
+01/20/2026,Keystone Retail Partners,M-1010,Retail portfolio sale,INV-1010-4,PMT-9050,3039.00,3039.00,0.00,0.00,Credit Card,Cleared,Rachel Jones
+01/20/2026,Cedar Point Hospitality,M-1011,Franchise agreement litigation,INV-1011-4,PMT-9055,904.75,904.75,0.00,0.00,Wire,Cleared,Owen Fletcher
+01/20/2026,Meridian Software Ltd.,M-1012,SaaS contract portfolio,INV-1012-4,PMT-9060,2905.25,2905.25,0.00,0.00,Credit Card,Cleared,David Okafor

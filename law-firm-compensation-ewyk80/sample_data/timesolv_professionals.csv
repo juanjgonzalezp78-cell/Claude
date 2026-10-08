@@ -1,0 +1,20 @@
+Professional ID,Name,Title,Type,Supervisor,Status
+P01,Margaret Chen,Managing Partner,Partner,,Active
+P02,David Okafor,Partner,Partner,,Active
+P03,Sarah Lindqvist,Partner,Partner,,Active
+P04,James Whitfield,Partner,Partner,,Active
+P05,Priya Raman,Partner,Partner,,Active
+P06,Robert Alvarez,Partner,Partner,,Active
+P07,Elena Petrova,Partner,Partner,,Active
+P08,Michael Brennan,Partner,Partner,,Active
+P09,Aisha Mohammed,Partner,Partner,,Active
+P10,Thomas Nakamura,Partner,Partner,,Active
+P11,Catherine Doyle,Partner,Partner,,Active
+A01,Daniel Smith,Senior Associate,Associate,David Okafor,Active
+A02,Rachel Jones,Associate,Associate,Sarah Lindqvist,Active
+A03,Kevin Park,Associate,Associate,James Whitfield,Active
+A04,Laura Martinez,Associate,Associate,Priya Raman,Active
+A05,Owen Fletcher,Junior Associate,Associate,,Active
+L01,Grace Liu,Senior Paralegal,Paralegal,Margaret Chen,Active
+L02,Henry Adams,Paralegal,Paralegal,Robert Alvarez,Active
+S01,Nina Patel,Law Clerk,Staff,,Active

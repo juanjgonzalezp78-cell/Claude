@@ -1,0 +1,1001 @@
+Entry ID,Date,Client,Project ID,Invoice Number,Timekeeper,Professional Type,Hours,Billable,Billed Status,Billed Hours,Rate,Billed Amount,Task Code,Description
+TE-500911,01/01/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,2.1,Yes,Billed,2.1,575.00,1207.50,L210,Pleadings
+TE-500322,01/03/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,3.2,Yes,Billed,3.2,395.00,1264.00,L250,Other written motions and submissions
+TE-500404,01/03/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Priya Raman,Partner,4.0,Yes,Billed,4.0,540.00,2160.00,C300,Analysis and advice
+TE-500205,01/04/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,3.2,Yes,Billed,3.2,395.00,1264.00,L210,Pleadings
+TE-500321,01/04/2025,Bluewater Logistics,M-1004,INV-1004-1,Elena Petrova,Partner,4.1,Yes,Billed,3.6,525.00,1890.00,L310,Written discovery
+TE-500912,01/04/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,3.6,No,Non-billable,0,575.00,0.00,A103,Internal file management / training
+TE-500003,01/05/2025,Harborview Holdings LLC,M-1001,INV-1001-1,David Okafor,Partner,0.5,Yes,Billed,0.1,575.00,57.50,A101,Plan and prepare for
+TE-500207,01/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,5.1,Yes,Billed,4.6,395.00,1817.00,A106,Communicate (with client)
+TE-500208,01/05/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,4.9,No,Non-billable,0,395.00,0.00,A104,Internal file management / training
+TE-500325,01/05/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,2.2,Yes,Billed,2.2,395.00,869.00,C300,Analysis and advice
+TE-500326,01/05/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,2.1,Yes,Billed,2.1,395.00,829.50,C100,Fact gathering
+TE-500913,01/05/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.4,Yes,Billed,2.4,330.00,792.00,A101,Plan and prepare for
+TE-500008,01/06/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Grace Liu,Paralegal,1.6,Yes,Billed,1.6,195.00,312.00,A106,Communicate (with client)
+TE-500083,01/06/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Sarah Lindqvist,Partner,0.8,Yes,Billed,0.8,560.00,448.00,A103,Draft / revise
+TE-500090,01/06/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Margaret Chen,Partner,1.6,Yes,Billed,1.1,650.00,715.00,A106,Communicate (with client)
+TE-500323,01/06/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,0.4,Yes,Billed,0.4,395.00,158.00,C100,Fact gathering
+TE-500406,01/06/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,0.7,Yes,Billed,0.7,340.00,238.00,C100,Fact gathering
+TE-500572,01/06/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,5.4,Yes,Billed,5.4,350.00,1890.00,L250,Other written motions and submissions
+TE-500202,01/07/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,2.1,Yes,Billed,1.6,530.00,848.00,A108,Communicate (other external)
+TE-500492,01/07/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,0.5,Yes,Billed,0.5,340.00,170.00,L120,Analysis / strategy
+TE-500087,01/08/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Rachel Jones,Associate,1.3,Yes,Billed,1.3,350.00,455.00,L120,Analysis / strategy
+TE-500573,01/08/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,1.6,Yes,Billed,1.6,350.00,560.00,L120,Analysis / strategy
+TE-500908,01/08/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,0.9,Yes,Billed,0.9,510.00,459.00,L210,Pleadings
+TE-500203,01/09/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,4.7,Yes,Billed,4.7,530.00,2491.00,A104,Review / analyze
+TE-500493,01/09/2025,Northgate School District,M-1006,,Kevin Park,Associate,3.6,No,Non-billable,0,340.00,0.00,A103,Internal file management / training
+TE-500570,01/09/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Michael Brennan,Partner,3.4,Yes,Billed,3.4,520.00,1768.00,A108,Communicate (other external)
+TE-500714,01/09/2025,Estate of Harold Vance,M-1009,INV-1009-1,Henry Adams,Paralegal,0.6,Yes,Billed,0.6,185.00,111.00,A103,Draft / revise
+TE-500324,01/10/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,1.6,Yes,Billed,1.6,395.00,632.00,A103,Draft / revise
+TE-500712,01/11/2025,Estate of Harold Vance,M-1009,INV-1009-1,Henry Adams,Paralegal,2.3,Yes,Billed,2.3,185.00,425.50,A108,Communicate (other external)
+TE-500848,01/11/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,1.2,Yes,Billed,1.2,525.00,630.00,C100,Fact gathering
+TE-500914,01/11/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,3.2,Yes,Billed,3.2,330.00,1056.00,A108,Communicate (other external)
+TE-500084,01/12/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Sarah Lindqvist,Partner,1.9,Yes,Billed,1.9,560.00,1064.00,L250,Other written motions and submissions
+TE-500086,01/12/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Rachel Jones,Associate,4.0,Yes,Billed,4.0,350.00,1400.00,C100,Fact gathering
+TE-500491,01/12/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,0.8,Yes,Billed,0.8,340.00,272.00,A108,Communicate (other external)
+TE-500775,01/12/2025,Keystone Retail Partners,M-1010,INV-1010-1,James Whitfield,Partner,5.1,Yes,Billed,5.1,550.00,2805.00,L120,Analysis / strategy
+TE-500915,01/12/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,3.4,Yes,Billed,3.4,330.00,1122.00,A101,Plan and prepare for
+TE-500409,01/13/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Henry Adams,Paralegal,2.0,Yes,Billed,1.5,185.00,277.50,L210,Pleadings
+TE-500771,01/13/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,2.9,Yes,Billed,2.9,350.00,1015.00,L310,Written discovery
+TE-500088,01/14/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Rachel Jones,Associate,1.8,Yes,Billed,1.8,350.00,630.00,A104,Review / analyze
+TE-500199,01/14/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Margaret Chen,Partner,3.7,Yes,Billed,3.7,650.00,2405.00,L210,Pleadings
+TE-500209,01/14/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,5.5,No,Non-billable,0,195.00,0.00,L250,Internal file management / training
+TE-500708,01/14/2025,Estate of Harold Vance,M-1009,,Catherine Doyle,Partner,2.1,No,Non-billable,0,505.00,0.00,A108,Internal file management / training
+TE-500713,01/14/2025,Estate of Harold Vance,M-1009,INV-1009-1,Henry Adams,Paralegal,5.1,Yes,Billed,5.1,185.00,943.50,A103,Draft / revise
+TE-500770,01/14/2025,Keystone Retail Partners,M-1010,INV-1010-1,Michael Brennan,Partner,1.0,Yes,Billed,1.0,520.00,520.00,L210,Pleadings
+TE-500574,01/15/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,1.4,Yes,Billed,1.4,350.00,490.00,A108,Communicate (other external)
+TE-500085,01/16/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Sarah Lindqvist,Partner,3.9,Yes,Billed,3.9,560.00,2184.00,L110,Fact investigation / development
+TE-500201,01/16/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Margaret Chen,Partner,2.4,Yes,Billed,2.4,650.00,1560.00,A103,Draft / revise
+TE-500403,01/16/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Priya Raman,Partner,1.6,Yes,Billed,1.6,540.00,864.00,L210,Pleadings
+TE-500850,01/16/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,4.9,Yes,Billed,4.9,295.00,1445.50,L250,Other written motions and submissions
+TE-500405,01/17/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,3.7,Yes,Billed,3.7,340.00,1258.00,L250,Other written motions and submissions
+TE-500490,01/17/2025,Northgate School District,M-1006,INV-1006-1,Robert Alvarez,Partner,1.1,Yes,Billed,1.1,530.00,583.00,C100,Fact gathering
+TE-500910,01/17/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,3.2,Yes,Billed,2.7,510.00,1377.00,A108,Communicate (other external)
+TE-500320,01/18/2025,Bluewater Logistics,M-1004,INV-1004-1,James Whitfield,Partner,0.6,Yes,Billed,0.6,550.00,330.00,L250,Other written motions and submissions
+TE-500488,01/18/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,3.9,Yes,Written Off,0,530.00,0.00,A106,Communicate (with client)
+TE-500568,01/18/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Aisha Mohammed,Partner,1.3,Yes,Billed,1.3,515.00,669.50,A106,Communicate (with client)
+TE-500571,01/18/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Michael Brennan,Partner,0.9,Yes,Billed,0.9,520.00,468.00,L310,Written discovery
+TE-500774,01/18/2025,Keystone Retail Partners,M-1010,INV-1010-1,James Whitfield,Partner,4.4,Yes,Billed,4.4,550.00,2420.00,A108,Communicate (other external)
+TE-500849,01/18/2025,Cedar Point Hospitality,M-1011,,Elena Petrova,Partner,3.9,No,Non-billable,0,525.00,0.00,L310,Internal file management / training
+TE-500007,01/19/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Grace Liu,Paralegal,3.9,Yes,Billed,3.9,195.00,760.50,A108,Communicate (other external)
+TE-500204,01/19/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,5.4,Yes,Billed,5.4,530.00,2862.00,A106,Communicate (with client)
+TE-500710,01/19/2025,Estate of Harold Vance,M-1009,INV-1009-1,Nina Patel,Staff,2.8,Yes,Billed,2.8,150.00,420.00,L120,Analysis / strategy
+TE-500210,01/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Grace Liu,Paralegal,5.0,Yes,Billed,5.0,195.00,975.00,A101,Plan and prepare for
+TE-500650,01/20/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,5.1,Yes,Billed,5.1,330.00,1683.00,L110,Fact investigation / development
+TE-500709,01/20/2025,Estate of Harold Vance,M-1009,INV-1009-1,Catherine Doyle,Partner,3.1,Yes,Billed,3.1,505.00,1565.50,L210,Pleadings
+TE-500711,01/20/2025,Estate of Harold Vance,M-1009,INV-1009-1,Nina Patel,Staff,1.2,Yes,Billed,1.2,150.00,180.00,A108,Communicate (other external)
+TE-500776,01/20/2025,Keystone Retail Partners,M-1010,INV-1010-1,James Whitfield,Partner,0.8,Yes,Billed,0.8,550.00,440.00,L120,Analysis / strategy
+TE-500847,01/20/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,4.0,Yes,Billed,4.0,525.00,2100.00,L310,Written discovery
+TE-500001,01/21/2025,Harborview Holdings LLC,M-1001,INV-1001-1,David Okafor,Partner,3.4,Yes,Billed,3.4,575.00,1955.00,L120,Analysis / strategy
+TE-500769,01/21/2025,Keystone Retail Partners,M-1010,INV-1010-1,Michael Brennan,Partner,0.4,Yes,Billed,0.4,520.00,208.00,C300,Analysis and advice
+TE-500569,01/22/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Michael Brennan,Partner,3.8,Yes,Billed,3.8,520.00,1976.00,C100,Fact gathering
+TE-500772,01/22/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,3.3,Yes,Billed,3.3,350.00,1155.00,L120,Analysis / strategy
+TE-500909,01/22/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,5.5,Yes,Billed,5.5,510.00,2805.00,A101,Plan and prepare for
+TE-500002,01/23/2025,Harborview Holdings LLC,M-1001,,David Okafor,Partner,4.3,No,Non-billable,0,575.00,0.00,A108,Internal file management / training
+TE-500005,01/23/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,5.2,Yes,Billed,5.2,395.00,2054.00,L310,Written discovery
+TE-500319,01/23/2025,Bluewater Logistics,M-1004,INV-1004-1,James Whitfield,Partner,3.8,Yes,Billed,3.8,550.00,2090.00,A101,Plan and prepare for
+TE-500773,01/23/2025,Keystone Retail Partners,M-1010,,Rachel Jones,Associate,4.6,No,Non-billable,0,350.00,0.00,L110,Internal file management / training
+TE-500009,01/24/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Grace Liu,Paralegal,4.5,Yes,Billed,4.0,195.00,780.00,A108,Communicate (other external)
+TE-500489,01/24/2025,Northgate School District,M-1006,INV-1006-1,Robert Alvarez,Partner,5.2,Yes,Billed,4.7,530.00,2491.00,L120,Analysis / strategy
+TE-500004,01/25/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,3.5,Yes,Billed,3.5,395.00,1382.50,A104,Review / analyze
+TE-500089,01/26/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,3.3,Yes,Billed,3.3,330.00,1089.00,C100,Fact gathering
+TE-500200,01/26/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Margaret Chen,Partner,5.1,Yes,Billed,5.1,650.00,3315.00,L110,Fact investigation / development
+TE-500408,01/26/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Henry Adams,Paralegal,1.8,Yes,Billed,1.8,185.00,333.00,A104,Review / analyze
+TE-500006,01/27/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,4.5,Yes,Billed,4.5,395.00,1777.50,L310,Written discovery
+TE-500206,01/27/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,4.8,Yes,Billed,4.8,395.00,1896.00,C300,Analysis and advice
+TE-500407,01/27/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,1.2,Yes,Billed,1.2,340.00,408.00,L110,Fact investigation / development
+TE-500487,01/27/2025,Northgate School District,M-1006,INV-1006-1,Michael Brennan,Partner,0.5,Yes,Billed,0.5,520.00,260.00,A108,Communicate (other external)
+TE-500649,01/27/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,2.6,No,Non-billable,0,510.00,0.00,A106,Internal file management / training
+TE-500707,01/28/2025,Estate of Harold Vance,M-1009,INV-1009-1,Catherine Doyle,Partner,4.8,Yes,Billed,4.8,505.00,2424.00,A104,Review / analyze
+TE-500575,02/01/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Aisha Mohammed,Partner,0.8,Yes,Billed,0.8,515.00,412.00,A101,Plan and prepare for
+TE-500092,02/03/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Sarah Lindqvist,Partner,3.4,Yes,Billed,3.4,560.00,1904.00,C100,Fact gathering
+TE-500417,02/03/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Henry Adams,Paralegal,3.7,Yes,Billed,3.2,185.00,592.00,L120,Analysis / strategy
+TE-500496,02/03/2025,Northgate School District,M-1006,INV-1006-1,Robert Alvarez,Partner,2.8,Yes,Billed,2.8,530.00,1484.00,A101,Plan and prepare for
+TE-500653,02/03/2025,Riverside Credit Union,M-1008,INV-1008-1,Thomas Nakamura,Partner,2.8,Yes,Billed,2.3,510.00,1173.00,L210,Pleadings
+TE-500652,02/04/2025,Riverside Credit Union,M-1008,INV-1008-1,Thomas Nakamura,Partner,0.7,Yes,Billed,0.7,510.00,357.00,A101,Plan and prepare for
+TE-500784,02/04/2025,Keystone Retail Partners,M-1010,INV-1010-1,James Whitfield,Partner,1.7,Yes,Billed,1.7,550.00,935.00,L210,Pleadings
+TE-500212,02/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,4.9,Yes,Billed,4.9,530.00,2597.00,A101,Plan and prepare for
+TE-500215,02/05/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,2.6,No,Non-billable,0,395.00,0.00,A101,Internal file management / training
+TE-500782,02/05/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,1.6,Yes,Billed,1.6,350.00,560.00,L310,Written discovery
+TE-500853,02/05/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,5.4,Yes,Billed,5.4,525.00,2835.00,L250,Other written motions and submissions
+TE-500495,02/06/2025,Northgate School District,M-1006,INV-1006-1,Michael Brennan,Partner,3.3,Yes,Billed,3.3,520.00,1716.00,L210,Pleadings
+TE-500582,02/06/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,1.1,Yes,Billed,1.1,350.00,385.00,C100,Fact gathering
+TE-500780,02/06/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,0.7,Yes,Billed,0.7,350.00,245.00,L250,Other written motions and submissions
+TE-500216,02/07/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,4.6,No,Non-billable,0,395.00,0.00,C300,Internal file management / training
+TE-500578,02/07/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Michael Brennan,Partner,1.2,Yes,Billed,1.2,520.00,624.00,L310,Written discovery
+TE-500580,02/07/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,1.7,No,Non-billable,0,350.00,0.00,A106,Internal file management / training
+TE-500095,02/08/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,3.4,Yes,Billed,3.4,330.00,1122.00,L110,Fact investigation / development
+TE-500778,02/08/2025,Keystone Retail Partners,M-1010,INV-1010-1,Michael Brennan,Partner,4.6,Yes,Billed,4.6,520.00,2392.00,C300,Analysis and advice
+TE-500497,02/09/2025,Northgate School District,M-1006,INV-1006-1,Robert Alvarez,Partner,2.1,Yes,Billed,2.1,530.00,1113.00,L250,Other written motions and submissions
+TE-500777,02/10/2025,Keystone Retail Partners,M-1010,INV-1010-1,Michael Brennan,Partner,0.8,Yes,Billed,0.3,520.00,156.00,A108,Communicate (other external)
+TE-500852,02/10/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,2.7,Yes,Billed,2.7,525.00,1417.50,L110,Fact investigation / development
+TE-500916,02/10/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,4.1,Yes,Billed,4.1,510.00,2091.00,A104,Review / analyze
+TE-500499,02/11/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,4.9,Yes,Billed,4.9,340.00,1666.00,L210,Pleadings
+TE-500500,02/11/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,2.5,Yes,Billed,2.5,340.00,850.00,A106,Communicate (with client)
+TE-500655,02/11/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,3.3,Yes,Billed,2.8,330.00,924.00,A106,Communicate (with client)
+TE-500855,02/11/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,1.2,Yes,Billed,1.2,295.00,354.00,A108,Communicate (other external)
+TE-500919,02/11/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,0.3,Yes,Billed,0.3,330.00,99.00,A108,Communicate (other external)
+TE-500013,02/12/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,5.2,Yes,Billed,5.2,395.00,2054.00,A104,Review / analyze
+TE-500333,02/12/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,3.1,Yes,Billed,3.1,395.00,1224.50,L110,Fact investigation / development
+TE-500412,02/12/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Priya Raman,Partner,5.4,Yes,Billed,4.9,540.00,2646.00,L250,Other written motions and submissions
+TE-500094,02/13/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Rachel Jones,Associate,1.1,Yes,Billed,1.1,350.00,385.00,A104,Review / analyze
+TE-500097,02/13/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Margaret Chen,Partner,4.1,Yes,Billed,4.1,650.00,2665.00,L210,Pleadings
+TE-500330,02/13/2025,Bluewater Logistics,M-1004,INV-1004-1,Elena Petrova,Partner,1.5,Yes,Billed,1.5,525.00,787.50,C300,Analysis and advice
+TE-500332,02/13/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,5.0,Yes,Billed,5.0,395.00,1975.00,A106,Communicate (with client)
+TE-500410,02/13/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Priya Raman,Partner,2.3,Yes,Billed,2.3,540.00,1242.00,L110,Fact investigation / development
+TE-500576,02/13/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Aisha Mohammed,Partner,3.9,Yes,Billed,3.9,515.00,2008.50,A108,Communicate (other external)
+TE-500851,02/13/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,0.8,Yes,Billed,0.8,525.00,420.00,L110,Fact investigation / development
+TE-500014,02/14/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,1.3,Yes,Billed,1.3,395.00,513.50,C100,Fact gathering
+TE-500415,02/14/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,4.3,Yes,Billed,4.3,340.00,1462.00,L210,Pleadings
+TE-500418,02/14/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Henry Adams,Paralegal,4.6,Yes,Billed,4.6,185.00,851.00,L310,Written discovery
+TE-500781,02/14/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,1.4,Yes,Billed,1.4,350.00,490.00,C300,Analysis and advice
+TE-500918,02/14/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,5.4,Yes,Billed,5.4,330.00,1782.00,A101,Plan and prepare for
+TE-500920,02/14/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.1,Yes,Billed,4.1,330.00,1353.00,L110,Fact investigation / development
+TE-500096,02/15/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,2.4,Yes,Billed,2.4,330.00,792.00,A101,Plan and prepare for
+TE-500651,02/15/2025,Riverside Credit Union,M-1008,INV-1008-1,Thomas Nakamura,Partner,3.2,Yes,Billed,3.2,510.00,1632.00,C100,Fact gathering
+TE-500716,02/15/2025,Estate of Harold Vance,M-1009,INV-1009-1,Catherine Doyle,Partner,2.9,Yes,Billed,2.9,505.00,1464.50,A101,Plan and prepare for
+TE-500719,02/15/2025,Estate of Harold Vance,M-1009,INV-1009-1,Henry Adams,Paralegal,1.4,Yes,Billed,1.4,185.00,259.00,A106,Communicate (with client)
+TE-500654,02/16/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,3.6,Yes,Billed,3.6,330.00,1188.00,L210,Pleadings
+TE-500783,02/16/2025,Keystone Retail Partners,M-1010,,Rachel Jones,Associate,5.2,Yes,Written Off,0,350.00,0.00,C100,Fact gathering
+TE-500217,02/17/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Grace Liu,Paralegal,3.3,Yes,Billed,3.3,195.00,643.50,A106,Communicate (with client)
+TE-500498,02/17/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,2.5,Yes,Billed,2.5,340.00,850.00,A103,Draft / revise
+TE-500715,02/17/2025,Estate of Harold Vance,M-1009,INV-1009-1,Catherine Doyle,Partner,4.4,Yes,Billed,4.4,505.00,2222.00,A104,Review / analyze
+TE-500717,02/17/2025,Estate of Harold Vance,M-1009,INV-1009-1,Nina Patel,Staff,2.2,Yes,Billed,2.2,150.00,330.00,L250,Other written motions and submissions
+TE-500327,02/18/2025,Bluewater Logistics,M-1004,INV-1004-1,James Whitfield,Partner,3.0,Yes,Billed,3.0,550.00,1650.00,C100,Fact gathering
+TE-500584,02/18/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,0.5,Yes,Billed,0.5,350.00,175.00,C100,Fact gathering
+TE-500331,02/19/2025,Bluewater Logistics,M-1004,INV-1004-1,Elena Petrova,Partner,0.5,Yes,Billed,0.5,525.00,262.50,L310,Written discovery
+TE-500583,02/19/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,0.3,Yes,Billed,0.3,350.00,105.00,L110,Fact investigation / development
+TE-500657,02/19/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,3.3,Yes,Billed,3.3,330.00,1089.00,L310,Written discovery
+TE-500010,02/20/2025,Harborview Holdings LLC,M-1001,INV-1001-1,David Okafor,Partner,1.6,Yes,Billed,1.6,575.00,920.00,L120,Analysis / strategy
+TE-500213,02/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,5.2,Yes,Billed,5.2,530.00,2756.00,L310,Written discovery
+TE-500917,02/20/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,4.3,No,Non-billable,0,575.00,0.00,A106,Internal file management / training
+TE-500093,02/21/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Rachel Jones,Associate,3.7,Yes,Billed,3.7,350.00,1295.00,C300,Analysis and advice
+TE-500416,02/21/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Henry Adams,Paralegal,3.5,Yes,Billed,3.5,185.00,647.50,A101,Plan and prepare for
+TE-500854,02/21/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,2.2,Yes,Billed,2.2,295.00,649.00,A106,Communicate (with client)
+TE-500779,02/22/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,1.3,Yes,Billed,1.3,350.00,455.00,A108,Communicate (other external)
+TE-500012,02/23/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,3.6,Yes,Billed,3.6,395.00,1422.00,A106,Communicate (with client)
+TE-500413,02/23/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,4.1,Yes,Billed,3.6,340.00,1224.00,L120,Analysis / strategy
+TE-500656,02/23/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,5.4,No,Non-billable,0,330.00,0.00,A106,Internal file management / training
+TE-500718,02/23/2025,Estate of Harold Vance,M-1009,INV-1009-1,Henry Adams,Paralegal,3.5,Yes,Billed,3.5,185.00,647.50,C100,Fact gathering
+TE-500329,02/24/2025,Bluewater Logistics,M-1004,INV-1004-1,James Whitfield,Partner,5.2,Yes,Billed,5.2,550.00,2860.00,C100,Fact gathering
+TE-500414,02/24/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,5.0,Yes,Billed,5.0,340.00,1700.00,L120,Analysis / strategy
+TE-500502,02/24/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,2.8,Yes,Billed,2.8,340.00,952.00,C100,Fact gathering
+TE-500015,02/25/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Grace Liu,Paralegal,0.8,Yes,Billed,0.8,195.00,156.00,A108,Communicate (other external)
+TE-500211,02/25/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Margaret Chen,Partner,1.2,Yes,Billed,1.2,650.00,780.00,A108,Communicate (other external)
+TE-500494,02/25/2025,Northgate School District,M-1006,INV-1006-1,Michael Brennan,Partner,3.6,Yes,Billed,3.6,520.00,1872.00,L210,Pleadings
+TE-500011,02/26/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,1.9,Yes,Billed,1.9,395.00,750.50,A108,Communicate (other external)
+TE-500016,02/26/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Grace Liu,Paralegal,2.7,Yes,Billed,2.7,195.00,526.50,L120,Analysis / strategy
+TE-500214,02/26/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,4.2,Yes,Billed,4.2,530.00,2226.00,C100,Fact gathering
+TE-500328,02/26/2025,Bluewater Logistics,M-1004,INV-1004-1,James Whitfield,Partner,5.3,Yes,Billed,5.3,550.00,2915.00,A108,Communicate (other external)
+TE-500411,02/26/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Priya Raman,Partner,2.8,Yes,Billed,2.8,540.00,1512.00,A103,Draft / revise
+TE-500501,02/27/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,2.9,Yes,Billed,2.9,340.00,986.00,L250,Other written motions and submissions
+TE-500091,02/28/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Sarah Lindqvist,Partner,3.3,Yes,Billed,2.8,560.00,1568.00,C100,Fact gathering
+TE-500577,02/28/2025,Summit Biotech Corp.,M-1007,,Michael Brennan,Partner,1.9,Yes,Written Off,0,520.00,0.00,L310,Written discovery
+TE-500579,02/28/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Michael Brennan,Partner,2.4,Yes,Billed,2.4,520.00,1248.00,A103,Draft / revise
+TE-500581,02/28/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,2.5,Yes,Billed,2.5,350.00,875.00,C100,Fact gathering
+TE-500335,03/01/2025,Bluewater Logistics,M-1004,INV-1004-1,Elena Petrova,Partner,4.3,Yes,Billed,3.8,525.00,1995.00,L110,Fact investigation / development
+TE-500338,03/01/2025,Bluewater Logistics,M-1004,INV-1004-1,Daniel Smith,Associate,4.2,Yes,Billed,4.2,395.00,1659.00,L250,Other written motions and submissions
+TE-500665,03/01/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,3.1,Yes,Billed,2.6,330.00,858.00,L210,Pleadings
+TE-500102,03/02/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,3.8,Yes,Billed,3.8,330.00,1254.00,A103,Draft / revise
+TE-500334,03/02/2025,Bluewater Logistics,M-1004,INV-1004-1,James Whitfield,Partner,1.0,Yes,Billed,1.0,550.00,550.00,A106,Communicate (with client)
+TE-500586,03/02/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Aisha Mohammed,Partner,3.9,Yes,Billed,3.9,515.00,2008.50,A103,Draft / revise
+TE-500104,03/03/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,4.5,Yes,Billed,4.5,330.00,1485.00,A108,Communicate (other external)
+TE-500336,03/03/2025,Bluewater Logistics,M-1004,INV-1004-1,Elena Petrova,Partner,1.7,Yes,Billed,1.7,525.00,892.50,A108,Communicate (other external)
+TE-500422,03/03/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,1.8,Yes,Billed,1.8,340.00,612.00,A104,Review / analyze
+TE-500786,03/03/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,1.3,Yes,Billed,1.3,350.00,455.00,A108,Communicate (other external)
+TE-500860,03/03/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,4.7,Yes,Billed,4.7,295.00,1386.50,L110,Fact investigation / development
+TE-500100,03/04/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,1.9,Yes,Billed,1.9,330.00,627.00,A103,Draft / revise
+TE-500105,03/04/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Margaret Chen,Partner,0.6,Yes,Billed,0.6,650.00,390.00,A108,Communicate (other external)
+TE-500589,03/04/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,1.4,Yes,Billed,1.4,350.00,490.00,L210,Pleadings
+TE-500724,03/04/2025,Estate of Harold Vance,M-1009,INV-1009-1,Henry Adams,Paralegal,5.1,Yes,Billed,5.1,185.00,943.50,A104,Review / analyze
+TE-500017,03/05/2025,Harborview Holdings LLC,M-1001,INV-1001-1,David Okafor,Partner,0.4,Yes,Billed,0.4,575.00,230.00,L250,Other written motions and submissions
+TE-500098,03/05/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Sarah Lindqvist,Partner,1.6,Yes,Billed,1.6,560.00,896.00,L110,Fact investigation / development
+TE-500223,03/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,4.1,Yes,Billed,4.1,395.00,1619.50,C300,Analysis and advice
+TE-500658,03/05/2025,Riverside Credit Union,M-1008,INV-1008-1,Thomas Nakamura,Partner,1.6,Yes,Billed,1.1,510.00,561.00,L210,Pleadings
+TE-500020,03/06/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,4.0,Yes,Billed,3.5,395.00,1382.50,L210,Pleadings
+TE-500509,03/06/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,4.4,Yes,Billed,4.4,340.00,1496.00,A108,Communicate (other external)
+TE-500720,03/06/2025,Estate of Harold Vance,M-1009,INV-1009-1,Catherine Doyle,Partner,1.0,Yes,Billed,1.0,505.00,505.00,L310,Written discovery
+TE-500722,03/06/2025,Estate of Harold Vance,M-1009,INV-1009-1,Nina Patel,Staff,2.6,Yes,Billed,2.6,150.00,390.00,C100,Fact gathering
+TE-500220,03/08/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,4.6,Yes,Billed,4.6,530.00,2438.00,L210,Pleadings
+TE-500419,03/08/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,2.4,Yes,Written Off,0,540.00,0.00,A104,Review / analyze
+TE-500226,03/09/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,3.9,Yes,Billed,3.4,395.00,1343.00,C100,Fact gathering
+TE-500227,03/09/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Grace Liu,Paralegal,3.9,Yes,Billed,3.9,195.00,760.50,L250,Other written motions and submissions
+TE-500787,03/09/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,0.3,Yes,Billed,0.3,350.00,105.00,L250,Other written motions and submissions
+TE-500863,03/09/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,2.9,Yes,Billed,2.9,295.00,855.50,C100,Fact gathering
+TE-500921,03/09/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,5.4,Yes,Billed,5.4,510.00,2754.00,L110,Fact investigation / development
+TE-500423,03/10/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,4.4,Yes,Billed,4.4,340.00,1496.00,L210,Pleadings
+TE-500504,03/10/2025,Northgate School District,M-1006,INV-1006-1,Michael Brennan,Partner,3.2,Yes,Billed,3.2,520.00,1664.00,A104,Review / analyze
+TE-500662,03/10/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,1.3,Yes,Billed,1.3,330.00,429.00,A106,Communicate (with client)
+TE-500998,03/10/2025,Unknown Client,M-1099,,Kevin Park,Associate,1.5,Yes,Unbilled,0,340.00,0.00,A104,Conflict check research
+TE-500585,03/11/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Aisha Mohammed,Partner,5.4,Yes,Billed,5.4,515.00,2781.00,L120,Analysis / strategy
+TE-500858,03/11/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,4.6,Yes,Billed,4.6,525.00,2415.00,A106,Communicate (with client)
+TE-500999,03/11/2025,Unknown Client,M-1099,,Kevin Park,Associate,1.5,Yes,Unbilled,0,340.00,0.00,A104,Conflict check research
+TE-500659,03/12/2025,Riverside Credit Union,M-1008,INV-1008-1,Thomas Nakamura,Partner,0.8,Yes,Billed,0.8,510.00,408.00,L250,Other written motions and submissions
+TE-500660,03/12/2025,Riverside Credit Union,M-1008,INV-1008-1,Thomas Nakamura,Partner,3.5,Yes,Billed,3.5,510.00,1785.00,A101,Plan and prepare for
+TE-501000,03/12/2025,Unknown Client,M-1099,,Kevin Park,Associate,1.5,Yes,Unbilled,0,340.00,0.00,A104,Conflict check research
+TE-500506,03/13/2025,Northgate School District,M-1006,INV-1006-1,Robert Alvarez,Partner,1.3,Yes,Billed,1.3,530.00,689.00,L110,Fact investigation / development
+TE-500099,03/14/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Rachel Jones,Associate,2.2,Yes,Billed,2.2,350.00,770.00,L120,Analysis / strategy
+TE-500503,03/14/2025,Northgate School District,M-1006,INV-1006-1,Michael Brennan,Partner,1.0,Yes,Billed,1.0,520.00,520.00,L120,Analysis / strategy
+TE-500590,03/14/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Rachel Jones,Associate,4.3,Yes,Billed,4.3,350.00,1505.00,C300,Analysis and advice
+TE-500219,03/15/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Margaret Chen,Partner,4.1,Yes,Billed,4.1,650.00,2665.00,A106,Communicate (with client)
+TE-500588,03/15/2025,Summit Biotech Corp.,M-1007,,Michael Brennan,Partner,3.2,Yes,Written Off,0,520.00,0.00,A108,Communicate (other external)
+TE-500859,03/16/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,2.0,Yes,Billed,2.0,295.00,590.00,A106,Communicate (with client)
+TE-500019,03/17/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Daniel Smith,Associate,0.7,Yes,Billed,0.7,395.00,276.50,L110,Fact investigation / development
+TE-500218,03/17/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Margaret Chen,Partner,2.7,Yes,Billed,2.7,650.00,1755.00,A104,Review / analyze
+TE-500225,03/17/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,1.1,Yes,Billed,1.1,395.00,434.50,L110,Fact investigation / development
+TE-500222,03/18/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,4.0,Yes,Billed,4.0,530.00,2120.00,L250,Other written motions and submissions
+TE-500103,03/19/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,1.8,Yes,Billed,1.8,330.00,594.00,A103,Draft / revise
+TE-500221,03/19/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Robert Alvarez,Partner,2.4,Yes,Billed,2.4,530.00,1272.00,C300,Analysis and advice
+TE-500661,03/19/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,1.5,Yes,Billed,1.5,330.00,495.00,A104,Review / analyze
+TE-500923,03/19/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.5,Yes,Billed,4.5,330.00,1485.00,L310,Written discovery
+TE-500018,03/20/2025,Harborview Holdings LLC,M-1001,INV-1001-1,David Okafor,Partner,3.0,Yes,Billed,2.5,575.00,1437.50,A104,Review / analyze
+TE-500021,03/20/2025,Harborview Holdings LLC,M-1001,INV-1001-1,Grace Liu,Paralegal,3.7,Yes,Billed,3.7,195.00,721.50,A106,Communicate (with client)
+TE-500228,03/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Grace Liu,Paralegal,3.3,Yes,Billed,3.3,195.00,643.50,A106,Communicate (with client)
+TE-500788,03/20/2025,Keystone Retail Partners,M-1010,INV-1010-1,Rachel Jones,Associate,2.4,Yes,Billed,1.9,350.00,665.00,C300,Analysis and advice
+TE-500789,03/20/2025,Keystone Retail Partners,M-1010,INV-1010-1,James Whitfield,Partner,1.3,Yes,Billed,1.3,550.00,715.00,L210,Pleadings
+TE-500856,03/20/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,2.8,Yes,Billed,2.8,525.00,1470.00,C100,Fact gathering
+TE-500421,03/21/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,2.6,Yes,Billed,2.6,340.00,884.00,L250,Other written motions and submissions
+TE-500922,03/21/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,2.7,Yes,Billed,2.7,575.00,1552.50,L120,Analysis / strategy
+TE-500424,03/22/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,1.2,Yes,Billed,1.2,340.00,408.00,L110,Fact investigation / development
+TE-500425,03/22/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Henry Adams,Paralegal,1.4,Yes,Billed,1.4,185.00,259.00,L120,Analysis / strategy
+TE-500857,03/22/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Elena Petrova,Partner,1.2,Yes,Billed,1.2,525.00,630.00,A106,Communicate (with client)
+TE-500924,03/22/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.4,Yes,Billed,1.4,330.00,462.00,A108,Communicate (other external)
+TE-500224,03/23/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-1,Daniel Smith,Associate,5.2,Yes,Billed,5.2,395.00,2054.00,A103,Draft / revise
+TE-500508,03/23/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,1.3,Yes,Billed,1.3,340.00,442.00,A101,Plan and prepare for
+TE-500664,03/23/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,2.5,Yes,Billed,2.5,330.00,825.00,C100,Fact gathering
+TE-500721,03/23/2025,Estate of Harold Vance,M-1009,INV-1009-1,Catherine Doyle,Partner,2.4,Yes,Billed,2.4,505.00,1212.00,A103,Draft / revise
+TE-500723,03/23/2025,Estate of Harold Vance,M-1009,INV-1009-1,Nina Patel,Staff,0.5,Yes,Billed,0.1,150.00,15.00,L310,Written discovery
+TE-500861,03/23/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,3.3,Yes,Written Off,0,295.00,0.00,A104,Review / analyze
+TE-500505,03/24/2025,Northgate School District,M-1006,INV-1006-1,Michael Brennan,Partner,2.2,Yes,Billed,2.2,520.00,1144.00,C100,Fact gathering
+TE-500663,03/24/2025,Riverside Credit Union,M-1008,INV-1008-1,Laura Martinez,Associate,2.0,Yes,Billed,2.0,330.00,660.00,A106,Communicate (with client)
+TE-500925,03/24/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.5,Yes,Billed,2.5,330.00,825.00,L310,Written discovery
+TE-500926,03/24/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.8,Yes,Billed,1.8,330.00,594.00,A104,Review / analyze
+TE-500927,03/24/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,0.5,Yes,Billed,0.1,330.00,33.00,A104,Review / analyze
+TE-500510,03/25/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,3.0,Yes,Billed,3.0,340.00,1020.00,L250,Other written motions and submissions
+TE-500785,03/25/2025,Keystone Retail Partners,M-1010,INV-1010-1,Michael Brennan,Partner,3.5,Yes,Billed,3.5,520.00,1820.00,A103,Draft / revise
+TE-500862,03/25/2025,Cedar Point Hospitality,M-1011,INV-1011-1,Owen Fletcher,Associate,1.5,Yes,Billed,1.5,295.00,442.50,L210,Pleadings
+TE-500101,03/26/2025,Pinecrest Medical Group,M-1002,INV-1002-1,Laura Martinez,Associate,2.7,Yes,Billed,2.7,330.00,891.00,A108,Communicate (other external)
+TE-500337,03/26/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,1.5,Yes,Written Off,0,525.00,0.00,L210,Pleadings
+TE-500587,03/26/2025,Summit Biotech Corp.,M-1007,INV-1007-1,Aisha Mohammed,Partner,1.1,Yes,Billed,1.1,515.00,566.50,L120,Analysis / strategy
+TE-500507,03/27/2025,Northgate School District,M-1006,INV-1006-1,Kevin Park,Associate,3.6,Yes,Billed,3.6,340.00,1224.00,A104,Review / analyze
+TE-500420,03/28/2025,Greenfield Energy Partners,M-1005,INV-1005-1,Kevin Park,Associate,1.5,Yes,Billed,1.0,340.00,340.00,A108,Communicate (other external)
+TE-500107,04/01/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Sarah Lindqvist,Partner,4.3,Yes,Billed,4.3,560.00,2408.00,L210,Pleadings
+TE-500112,04/01/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,2.9,Yes,Billed,2.9,330.00,957.00,L250,Other written motions and submissions
+TE-500234,04/01/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,4.2,Yes,Billed,3.7,530.00,1961.00,A108,Communicate (other external)
+TE-500593,04/02/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,2.2,Yes,Billed,2.2,520.00,1144.00,C100,Fact gathering
+TE-500790,04/02/2025,Keystone Retail Partners,M-1010,INV-1010-2,Michael Brennan,Partner,5.0,Yes,Billed,4.5,520.00,2340.00,A104,Review / analyze
+TE-500871,04/02/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,5.4,Yes,Billed,5.4,295.00,1593.00,A101,Plan and prepare for
+TE-500024,04/03/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,1.0,Yes,Billed,1.0,195.00,195.00,A103,Draft / revise
+TE-500343,04/03/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,1.5,Yes,Billed,1.5,395.00,592.50,C300,Analysis and advice
+TE-500666,04/03/2025,Riverside Credit Union,M-1008,INV-1008-2,Thomas Nakamura,Partner,1.5,Yes,Billed,1.0,510.00,510.00,C300,Analysis and advice
+TE-500928,04/03/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,2.3,Yes,Billed,2.3,510.00,1173.00,L110,Fact investigation / development
+TE-500931,04/03/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,2.1,Yes,Billed,2.1,575.00,1207.50,L110,Fact investigation / development
+TE-500229,04/04/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,1.7,Yes,Billed,1.7,650.00,1105.00,A106,Communicate (with client)
+TE-500428,04/04/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,4.6,Yes,Billed,4.6,340.00,1564.00,A106,Communicate (with client)
+TE-500870,04/04/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,0.7,Yes,Billed,0.7,295.00,206.50,A104,Review / analyze
+TE-500026,04/05/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,3.3,Yes,Billed,3.3,195.00,643.50,L120,Analysis / strategy
+TE-500342,04/05/2025,Bluewater Logistics,M-1004,INV-1004-2,Elena Petrova,Partner,0.7,Yes,Billed,0.7,525.00,367.50,A106,Communicate (with client)
+TE-500592,04/05/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Aisha Mohammed,Partner,4.7,Yes,Billed,4.7,515.00,2420.50,L120,Analysis / strategy
+TE-500798,04/05/2025,Keystone Retail Partners,M-1010,INV-1010-2,James Whitfield,Partner,4.0,Yes,Billed,4.0,550.00,2200.00,L110,Fact investigation / development
+TE-500235,04/06/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,0.5,Yes,Billed,0.5,395.00,197.50,C100,Fact gathering
+TE-500728,04/06/2025,Estate of Harold Vance,M-1009,INV-1009-2,Nina Patel,Staff,5.4,Yes,Billed,4.9,150.00,735.00,C100,Fact gathering
+TE-500929,04/06/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,1.0,Yes,Billed,1.0,510.00,510.00,A104,Review / analyze
+TE-500932,04/06/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.5,Yes,Billed,2.5,330.00,825.00,L120,Analysis / strategy
+TE-500114,04/07/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Margaret Chen,Partner,0.4,Yes,Billed,0.4,650.00,260.00,A106,Communicate (with client)
+TE-500514,04/08/2025,Northgate School District,M-1006,INV-1006-2,Robert Alvarez,Partner,4.9,Yes,Billed,4.9,530.00,2597.00,A101,Plan and prepare for
+TE-500667,04/08/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,4.8,Yes,Written Off,0,510.00,0.00,L250,Other written motions and submissions
+TE-500427,04/09/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,3.2,Yes,Billed,2.7,340.00,918.00,C300,Analysis and advice
+TE-500729,04/09/2025,Estate of Harold Vance,M-1009,INV-1009-2,Henry Adams,Paralegal,2.7,Yes,Billed,2.7,185.00,499.50,C300,Analysis and advice
+TE-500341,04/10/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,5.4,Yes,Written Off,0,525.00,0.00,L120,Analysis / strategy
+TE-500237,04/11/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Grace Liu,Paralegal,2.5,Yes,Billed,2.5,195.00,487.50,L310,Written discovery
+TE-500429,04/11/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,1.5,Yes,Billed,1.0,340.00,340.00,L310,Written discovery
+TE-500022,04/12/2025,Harborview Holdings LLC,M-1001,,David Okafor,Partner,4.3,No,Non-billable,0,575.00,0.00,A108,Internal file management / training
+TE-500106,04/12/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Sarah Lindqvist,Partner,4.1,Yes,Billed,4.1,560.00,2296.00,C100,Fact gathering
+TE-500431,04/12/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,5.3,Yes,Billed,4.8,185.00,888.00,L120,Analysis / strategy
+TE-500864,04/12/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Elena Petrova,Partner,4.5,Yes,Billed,4.5,525.00,2362.50,L120,Analysis / strategy
+TE-500023,04/13/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Daniel Smith,Associate,5.3,Yes,Billed,5.3,395.00,2093.50,L210,Pleadings
+TE-500231,04/13/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,1.8,Yes,Billed,1.8,650.00,1170.00,L310,Written discovery
+TE-500511,04/13/2025,Northgate School District,M-1006,,Michael Brennan,Partner,0.4,Yes,Written Off,0,520.00,0.00,C300,Analysis and advice
+TE-500518,04/13/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,5.1,Yes,Billed,5.1,340.00,1734.00,A104,Review / analyze
+TE-500869,04/13/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,2.5,Yes,Billed,2.5,295.00,737.50,A101,Plan and prepare for
+TE-500591,04/14/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Aisha Mohammed,Partner,4.9,Yes,Billed,4.9,515.00,2523.50,L210,Pleadings
+TE-500727,04/14/2025,Estate of Harold Vance,M-1009,INV-1009-2,Catherine Doyle,Partner,2.6,Yes,Billed,2.6,505.00,1313.00,C100,Fact gathering
+TE-500430,04/16/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,2.4,Yes,Billed,2.4,185.00,444.00,A103,Draft / revise
+TE-500796,04/16/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,3.8,Yes,Billed,3.8,350.00,1330.00,L250,Other written motions and submissions
+TE-500867,04/16/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,0.6,Yes,Billed,0.6,295.00,177.00,A103,Draft / revise
+TE-500795,04/17/2025,Keystone Retail Partners,M-1010,,Rachel Jones,Associate,4.5,No,Non-billable,0,350.00,0.00,L250,Internal file management / training
+TE-500111,04/18/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,1.9,Yes,Billed,1.9,350.00,665.00,A101,Plan and prepare for
+TE-500596,04/18/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Rachel Jones,Associate,1.2,Yes,Billed,1.2,350.00,420.00,C300,Analysis and advice
+TE-500791,04/18/2025,Keystone Retail Partners,M-1010,INV-1010-2,Michael Brennan,Partner,2.9,Yes,Billed,2.9,520.00,1508.00,L250,Other written motions and submissions
+TE-500793,04/18/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,4.8,Yes,Billed,4.8,350.00,1680.00,C100,Fact gathering
+TE-500109,04/19/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,1.9,Yes,Billed,1.9,350.00,665.00,A108,Communicate (other external)
+TE-500025,04/20/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,5.2,Yes,Billed,5.2,195.00,1014.00,L120,Analysis / strategy
+TE-500113,04/20/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Margaret Chen,Partner,5.1,Yes,Billed,5.1,650.00,3315.00,A108,Communicate (other external)
+TE-500236,04/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,2.0,Yes,Billed,2.0,395.00,790.00,A108,Communicate (other external)
+TE-500339,04/20/2025,Bluewater Logistics,M-1004,INV-1004-2,James Whitfield,Partner,4.8,Yes,Billed,4.8,550.00,2640.00,L250,Other written motions and submissions
+TE-500516,04/20/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,2.3,Yes,Billed,2.3,340.00,782.00,A108,Communicate (other external)
+TE-500432,04/21/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,4.9,Yes,Billed,4.9,185.00,906.50,L110,Fact investigation / development
+TE-500594,04/21/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,3.7,Yes,Billed,3.7,520.00,1924.00,A106,Communicate (with client)
+TE-500726,04/21/2025,Estate of Harold Vance,M-1009,INV-1009-2,Catherine Doyle,Partner,0.5,Yes,Billed,0.1,505.00,50.50,A101,Plan and prepare for
+TE-500866,04/21/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Elena Petrova,Partner,1.3,Yes,Billed,1.3,525.00,682.50,A104,Review / analyze
+TE-500340,04/22/2025,Bluewater Logistics,M-1004,INV-1004-2,Elena Petrova,Partner,3.1,Yes,Billed,3.1,525.00,1627.50,L110,Fact investigation / development
+TE-500668,04/22/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,5.3,No,Non-billable,0,330.00,0.00,L310,Internal file management / training
+TE-500725,04/22/2025,Estate of Harold Vance,M-1009,INV-1009-2,Catherine Doyle,Partner,0.5,Yes,Billed,0.5,505.00,252.50,A106,Communicate (with client)
+TE-500865,04/22/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Elena Petrova,Partner,4.7,Yes,Billed,4.7,525.00,2467.50,L310,Written discovery
+TE-500345,04/23/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,1.2,Yes,Billed,1.2,395.00,474.00,A103,Draft / revise
+TE-500595,04/23/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,3.4,Yes,Billed,2.9,520.00,1508.00,C100,Fact gathering
+TE-500868,04/23/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,2.0,Yes,Billed,2.0,295.00,590.00,C100,Fact gathering
+TE-500110,04/24/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,5.4,No,Non-billable,0,350.00,0.00,L250,Internal file management / training
+TE-500794,04/24/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,1.2,Yes,Billed,1.2,350.00,420.00,A103,Draft / revise
+TE-500930,04/24/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,2.8,Yes,Billed,2.8,575.00,1610.00,A101,Plan and prepare for
+TE-500230,04/25/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,1.3,Yes,Billed,1.3,650.00,845.00,L210,Pleadings
+TE-500426,04/25/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Priya Raman,Partner,1.4,Yes,Billed,1.4,540.00,756.00,C100,Fact gathering
+TE-500513,04/25/2025,Northgate School District,M-1006,INV-1006-2,Robert Alvarez,Partner,1.8,Yes,Billed,1.8,530.00,954.00,L310,Written discovery
+TE-500797,04/25/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,4.0,Yes,Billed,4.0,350.00,1400.00,C100,Fact gathering
+TE-500233,04/26/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,1.7,Yes,Billed,1.2,530.00,636.00,L250,Other written motions and submissions
+TE-500512,04/26/2025,Northgate School District,M-1006,INV-1006-2,Michael Brennan,Partner,2.6,Yes,Billed,2.6,520.00,1352.00,L210,Pleadings
+TE-500108,04/27/2025,Pinecrest Medical Group,M-1002,,Sarah Lindqvist,Partner,0.6,No,Non-billable,0,560.00,0.00,L310,Internal file management / training
+TE-500232,04/28/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,2.8,Yes,Billed,2.3,530.00,1219.00,C300,Analysis and advice
+TE-500344,04/28/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,1.2,Yes,Billed,1.2,395.00,474.00,L110,Fact investigation / development
+TE-500515,04/28/2025,Northgate School District,M-1006,INV-1006-2,Robert Alvarez,Partner,5.2,Yes,Billed,5.2,530.00,2756.00,A108,Communicate (other external)
+TE-500517,04/28/2025,Northgate School District,M-1006,,Kevin Park,Associate,3.2,No,Non-billable,0,340.00,0.00,A108,Internal file management / training
+TE-500730,04/28/2025,Estate of Harold Vance,M-1009,,Henry Adams,Paralegal,3.8,No,Non-billable,0,185.00,0.00,A103,Internal file management / training
+TE-500792,04/28/2025,Keystone Retail Partners,M-1010,INV-1010-2,Michael Brennan,Partner,1.9,Yes,Billed,1.9,520.00,988.00,A103,Draft / revise
+TE-500030,05/01/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,5.4,Yes,Billed,5.4,195.00,1053.00,A108,Communicate (other external)
+TE-500120,05/01/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,2.3,Yes,Billed,2.3,350.00,805.00,A104,Review / analyze
+TE-500116,05/02/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Sarah Lindqvist,Partner,5.0,Yes,Billed,5.0,560.00,2800.00,L250,Other written motions and submissions
+TE-500671,05/02/2025,Riverside Credit Union,M-1008,INV-1008-2,Laura Martinez,Associate,2.2,Yes,Billed,1.7,330.00,561.00,A106,Communicate (with client)
+TE-500242,05/03/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,2.8,Yes,Billed,2.8,530.00,1484.00,C100,Fact gathering
+TE-500600,05/03/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,2.3,Yes,Billed,2.3,520.00,1196.00,A106,Communicate (with client)
+TE-500672,05/03/2025,Riverside Credit Union,M-1008,INV-1008-2,Laura Martinez,Associate,3.3,Yes,Billed,3.3,330.00,1089.00,A108,Communicate (other external)
+TE-500240,05/04/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,3.9,Yes,Billed,3.9,650.00,2535.00,L310,Written discovery
+TE-500346,05/04/2025,Bluewater Logistics,M-1004,INV-1004-2,James Whitfield,Partner,1.6,Yes,Billed,1.6,550.00,880.00,L110,Fact investigation / development
+TE-500803,05/04/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,0.4,Yes,Billed,0.4,350.00,140.00,L210,Pleadings
+TE-500942,05/04/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.9,Yes,Billed,1.9,330.00,627.00,L210,Pleadings
+TE-500124,05/06/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Margaret Chen,Partner,0.8,Yes,Billed,0.8,650.00,520.00,A101,Plan and prepare for
+TE-500520,05/06/2025,Northgate School District,M-1006,INV-1006-2,Robert Alvarez,Partner,0.8,Yes,Billed,0.8,530.00,424.00,L210,Pleadings
+TE-500674,05/07/2025,Riverside Credit Union,M-1008,INV-1008-2,Laura Martinez,Associate,5.1,Yes,Billed,5.1,330.00,1683.00,L110,Fact investigation / development
+TE-500670,05/08/2025,Riverside Credit Union,M-1008,INV-1008-2,Laura Martinez,Associate,1.2,Yes,Billed,1.2,330.00,396.00,A103,Draft / revise
+TE-500933,05/08/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,0.8,Yes,Billed,0.8,510.00,408.00,A106,Communicate (with client)
+TE-500029,05/09/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Daniel Smith,Associate,5.4,Yes,Billed,5.4,395.00,2133.00,C300,Analysis and advice
+TE-500122,05/09/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,4.5,Yes,Billed,4.5,330.00,1485.00,L310,Written discovery
+TE-500123,05/09/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,3.2,Yes,Written Off,0,330.00,0.00,L210,Pleadings
+TE-500245,05/09/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,1.9,Yes,Billed,1.9,395.00,750.50,A108,Communicate (other external)
+TE-500246,05/09/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Grace Liu,Paralegal,3.8,Yes,Billed,3.8,195.00,741.00,C100,Fact gathering
+TE-500731,05/09/2025,Estate of Harold Vance,M-1009,INV-1009-2,Catherine Doyle,Partner,2.9,Yes,Billed,2.9,505.00,1464.50,C100,Fact gathering
+TE-500943,05/09/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.0,Yes,Billed,2.0,330.00,660.00,A104,Review / analyze
+TE-500598,05/10/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,3.6,Yes,Billed,3.6,520.00,1872.00,L310,Written discovery
+TE-500874,05/10/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,0.4,Yes,Billed,0.4,295.00,118.00,L250,Other written motions and submissions
+TE-500941,05/10/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,5.0,Yes,Billed,5.0,330.00,1650.00,A104,Review / analyze
+TE-500117,05/11/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,1.3,Yes,Billed,0.8,350.00,280.00,L210,Pleadings
+TE-500119,05/11/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,3.5,Yes,Billed,3.5,350.00,1225.00,C300,Analysis and advice
+TE-500243,05/11/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,4.2,Yes,Billed,4.2,530.00,2226.00,A104,Review / analyze
+TE-500599,05/11/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,4.6,Yes,Billed,4.1,520.00,2132.00,A104,Review / analyze
+TE-500806,05/11/2025,Keystone Retail Partners,M-1010,INV-1010-2,James Whitfield,Partner,4.8,Yes,Billed,4.3,550.00,2365.00,A103,Draft / revise
+TE-500238,05/12/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,2.8,Yes,Billed,2.3,650.00,1495.00,L310,Written discovery
+TE-500244,05/12/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,3.4,Yes,Written Off,0,395.00,0.00,L250,Other written motions and submissions
+TE-500735,05/12/2025,Estate of Harold Vance,M-1009,INV-1009-2,Henry Adams,Paralegal,0.9,Yes,Billed,0.4,185.00,74.00,L120,Analysis / strategy
+TE-500350,05/13/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,3.6,Yes,Billed,3.6,395.00,1422.00,C100,Fact gathering
+TE-500433,05/13/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,0.9,No,Non-billable,0,540.00,0.00,C300,Internal file management / training
+TE-500031,05/14/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,4.6,Yes,Billed,4.6,195.00,897.00,A108,Communicate (other external)
+TE-500804,05/14/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,3.7,Yes,Billed,3.7,350.00,1295.00,A108,Communicate (other external)
+TE-500118,05/15/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,3.5,Yes,Billed,3.5,350.00,1225.00,L120,Analysis / strategy
+TE-500524,05/16/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,0.4,Yes,Billed,0.1,340.00,34.00,C100,Fact gathering
+TE-500732,05/16/2025,Estate of Harold Vance,M-1009,INV-1009-2,Nina Patel,Staff,0.8,Yes,Billed,0.8,150.00,120.00,L120,Analysis / strategy
+TE-500935,05/16/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,0.5,Yes,Billed,0.5,510.00,255.00,A101,Plan and prepare for
+TE-500733,05/17/2025,Estate of Harold Vance,M-1009,INV-1009-2,Nina Patel,Staff,4.1,Yes,Billed,4.1,150.00,615.00,A103,Draft / revise
+TE-500873,05/17/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,2.8,Yes,Billed,2.8,295.00,826.00,C100,Fact gathering
+TE-500937,05/17/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,4.9,Yes,Billed,4.9,575.00,2817.50,A103,Draft / revise
+TE-500438,05/18/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,5.0,Yes,Billed,5.0,185.00,925.00,L250,Other written motions and submissions
+TE-500521,05/18/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,0.9,No,Non-billable,0,530.00,0.00,C300,Internal file management / training
+TE-500936,05/18/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,1.1,Yes,Billed,1.1,575.00,632.50,C300,Analysis and advice
+TE-500434,05/19/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Priya Raman,Partner,0.4,Yes,Billed,0.4,540.00,216.00,L110,Fact investigation / development
+TE-500436,05/19/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,3.8,Yes,Billed,3.8,185.00,703.00,C100,Fact gathering
+TE-500734,05/19/2025,Estate of Harold Vance,M-1009,INV-1009-2,Henry Adams,Paralegal,1.1,Yes,Billed,1.1,185.00,203.50,A101,Plan and prepare for
+TE-500437,05/20/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,4.5,Yes,Billed,4.5,185.00,832.50,L250,Other written motions and submissions
+TE-500872,05/20/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Elena Petrova,Partner,3.4,Yes,Billed,3.4,525.00,1785.00,L310,Written discovery
+TE-500241,05/21/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,3.7,Yes,Billed,3.7,530.00,1961.00,A106,Communicate (with client)
+TE-500801,05/21/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,1.1,Yes,Billed,1.1,350.00,385.00,L250,Other written motions and submissions
+TE-500115,05/22/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Sarah Lindqvist,Partner,4.5,Yes,Billed,4.5,560.00,2520.00,L250,Other written motions and submissions
+TE-500121,05/22/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,3.8,Yes,Billed,3.8,350.00,1330.00,C300,Analysis and advice
+TE-500938,05/22/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,4.6,Yes,Billed,4.6,575.00,2645.00,A106,Communicate (with client)
+TE-500802,05/23/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,3.0,Yes,Billed,3.0,350.00,1050.00,C100,Fact gathering
+TE-500597,05/24/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Aisha Mohammed,Partner,2.7,Yes,Billed,2.7,515.00,1390.50,L250,Other written motions and submissions
+TE-500673,05/24/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,4.7,No,Non-billable,0,330.00,0.00,C100,Internal file management / training
+TE-500875,05/24/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,5.1,Yes,Billed,5.1,295.00,1504.50,A106,Communicate (with client)
+TE-500348,05/25/2025,Bluewater Logistics,M-1004,INV-1004-2,Elena Petrova,Partner,3.4,Yes,Billed,3.4,525.00,1785.00,C100,Fact gathering
+TE-500601,05/25/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Rachel Jones,Associate,5.0,Yes,Billed,5.0,350.00,1750.00,L110,Fact investigation / development
+TE-500669,05/25/2025,Riverside Credit Union,M-1008,INV-1008-2,Thomas Nakamura,Partner,5.4,Yes,Billed,4.9,510.00,2499.00,L210,Pleadings
+TE-500800,05/25/2025,Keystone Retail Partners,M-1010,INV-1010-2,Michael Brennan,Partner,2.8,Yes,Billed,2.8,520.00,1456.00,A108,Communicate (other external)
+TE-500805,05/25/2025,Keystone Retail Partners,M-1010,INV-1010-2,James Whitfield,Partner,5.0,Yes,Billed,5.0,550.00,2750.00,L120,Analysis / strategy
+TE-500934,05/25/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,3.9,Yes,Billed,3.9,510.00,1989.00,A103,Draft / revise
+TE-500939,05/25/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.4,Yes,Billed,4.4,330.00,1452.00,L310,Written discovery
+TE-500736,05/26/2025,Estate of Harold Vance,M-1009,INV-1009-2,Henry Adams,Paralegal,3.9,Yes,Billed,3.9,185.00,721.50,L250,Other written motions and submissions
+TE-500799,05/26/2025,Keystone Retail Partners,M-1010,INV-1010-2,Michael Brennan,Partner,2.0,Yes,Billed,2.0,520.00,1040.00,A101,Plan and prepare for
+TE-500347,05/27/2025,Bluewater Logistics,M-1004,INV-1004-2,Elena Petrova,Partner,2.6,Yes,Billed,2.6,525.00,1365.00,C300,Analysis and advice
+TE-500349,05/27/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,2.0,Yes,Billed,2.0,395.00,790.00,A104,Review / analyze
+TE-500522,05/27/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,5.2,Yes,Billed,4.7,340.00,1598.00,L310,Written discovery
+TE-500523,05/27/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,3.0,Yes,Billed,3.0,340.00,1020.00,C300,Analysis and advice
+TE-500027,05/28/2025,Harborview Holdings LLC,M-1001,INV-1001-2,David Okafor,Partner,2.9,Yes,Billed,2.9,575.00,1667.50,A103,Draft / revise
+TE-500028,05/28/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Daniel Smith,Associate,0.9,Yes,Billed,0.9,395.00,355.50,L110,Fact investigation / development
+TE-500239,05/28/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,2.2,Yes,Billed,2.2,650.00,1430.00,L310,Written discovery
+TE-500435,05/28/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,3.7,Yes,Billed,3.7,340.00,1258.00,A106,Communicate (with client)
+TE-500519,05/28/2025,Northgate School District,M-1006,INV-1006-2,Michael Brennan,Partner,1.4,Yes,Billed,1.4,520.00,728.00,A101,Plan and prepare for
+TE-500940,05/28/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.2,Yes,Billed,4.2,330.00,1386.00,A108,Communicate (other external)
+TE-500355,06/01/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,0.8,Yes,Written Off,0,395.00,0.00,A103,Draft / revise
+TE-500441,06/01/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Priya Raman,Partner,0.9,Yes,Billed,0.9,540.00,486.00,L250,Other written motions and submissions
+TE-500530,06/01/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,5.5,Yes,Billed,5.5,340.00,1870.00,L310,Written discovery
+TE-500876,06/01/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Elena Petrova,Partner,3.2,Yes,Billed,3.2,525.00,1680.00,A106,Communicate (with client)
+TE-500950,06/01/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.7,No,Non-billable,0,330.00,0.00,L210,Internal file management / training
+TE-500602,06/02/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Aisha Mohammed,Partner,1.0,Yes,Billed,1.0,515.00,515.00,L310,Written discovery
+TE-500948,06/02/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,0.9,Yes,Billed,0.9,575.00,517.50,L310,Written discovery
+TE-500038,06/03/2025,Harborview Holdings LLC,M-1001,,Grace Liu,Paralegal,2.1,No,Non-billable,0,195.00,0.00,C300,Internal file management / training
+TE-500531,06/03/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,3.9,Yes,Billed,3.9,340.00,1326.00,L310,Written discovery
+TE-500606,06/03/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Rachel Jones,Associate,2.5,Yes,Billed,2.5,350.00,875.00,L250,Other written motions and submissions
+TE-500951,06/03/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.7,No,Non-billable,0,330.00,0.00,L210,Internal file management / training
+TE-500952,06/03/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.1,Yes,Billed,2.1,330.00,693.00,A101,Plan and prepare for
+TE-500133,06/04/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Margaret Chen,Partner,0.6,Yes,Billed,0.6,650.00,390.00,C100,Fact gathering
+TE-500603,06/04/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,4.7,Yes,Billed,4.7,520.00,2444.00,A101,Plan and prepare for
+TE-500677,06/04/2025,Riverside Credit Union,M-1008,INV-1008-2,Laura Martinez,Associate,0.6,Yes,Billed,0.6,330.00,198.00,L310,Written discovery
+TE-500035,06/05/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Daniel Smith,Associate,3.6,Yes,Billed,3.6,395.00,1422.00,L110,Fact investigation / development
+TE-500255,06/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Grace Liu,Paralegal,0.4,Yes,Billed,0.4,195.00,78.00,L120,Analysis / strategy
+TE-500353,06/05/2025,Bluewater Logistics,M-1004,INV-1004-2,Elena Petrova,Partner,3.5,Yes,Billed,3.5,525.00,1837.50,C100,Fact gathering
+TE-500125,06/06/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Sarah Lindqvist,Partner,0.5,Yes,Billed,0.5,560.00,280.00,L210,Pleadings
+TE-500352,06/06/2025,Bluewater Logistics,M-1004,INV-1004-2,Elena Petrova,Partner,3.7,Yes,Billed,3.7,525.00,1942.50,L120,Analysis / strategy
+TE-500354,06/06/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,1.9,Yes,Billed,1.9,395.00,750.50,L250,Other written motions and submissions
+TE-500448,06/06/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,4.1,Yes,Billed,4.1,185.00,758.50,A108,Communicate (other external)
+TE-500811,06/06/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,4.7,Yes,Billed,4.7,350.00,1645.00,A106,Communicate (with client)
+TE-500131,06/07/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,4.6,Yes,Billed,4.6,330.00,1518.00,L110,Fact investigation / development
+TE-500949,06/07/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,4.3,Yes,Written Off,0,575.00,0.00,A106,Communicate (with client)
+TE-500034,06/08/2025,Harborview Holdings LLC,M-1001,INV-1001-2,David Okafor,Partner,4.5,Yes,Billed,4.5,575.00,2587.50,A103,Draft / revise
+TE-500127,06/08/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Rachel Jones,Associate,3.1,Yes,Billed,3.1,350.00,1085.00,L120,Analysis / strategy
+TE-500251,06/08/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,1.2,Yes,Billed,0.7,395.00,276.50,L110,Fact investigation / development
+TE-500526,06/08/2025,Northgate School District,M-1006,,Michael Brennan,Partner,0.8,Yes,Written Off,0,520.00,0.00,A101,Plan and prepare for
+TE-500604,06/08/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Michael Brennan,Partner,2.5,Yes,Billed,2.5,520.00,1300.00,L250,Other written motions and submissions
+TE-500527,06/09/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,1.3,No,Non-billable,0,530.00,0.00,A103,Internal file management / training
+TE-500878,06/09/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,5.0,Yes,Billed,5.0,295.00,1475.00,L120,Analysis / strategy
+TE-500037,06/11/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,5.3,Yes,Billed,5.3,195.00,1033.50,A103,Draft / revise
+TE-500130,06/11/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,4.6,Yes,Billed,4.6,330.00,1518.00,A108,Communicate (other external)
+TE-500132,06/11/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,2.7,Yes,Billed,2.7,330.00,891.00,L310,Written discovery
+TE-500812,06/11/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,3.6,Yes,Billed,3.6,350.00,1260.00,C300,Analysis and advice
+TE-500877,06/11/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,4.2,Yes,Billed,4.2,295.00,1239.00,L210,Pleadings
+TE-500945,06/11/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,1.9,Yes,Billed,1.9,510.00,969.00,A106,Communicate (with client)
+TE-500439,06/12/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,4.8,Yes,Written Off,0,540.00,0.00,C100,Fact gathering
+TE-500447,06/12/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,0.7,Yes,Billed,0.7,185.00,129.50,L310,Written discovery
+TE-500739,06/12/2025,Estate of Harold Vance,M-1009,INV-1009-2,Nina Patel,Staff,2.1,Yes,Billed,2.1,150.00,315.00,L210,Pleadings
+TE-500449,06/13/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Henry Adams,Paralegal,4.4,Yes,Billed,4.4,185.00,814.00,A106,Communicate (with client)
+TE-500533,06/13/2025,Northgate School District,M-1006,,Kevin Park,Associate,3.2,No,Non-billable,0,340.00,0.00,A101,Internal file management / training
+TE-500737,06/13/2025,Estate of Harold Vance,M-1009,INV-1009-2,Catherine Doyle,Partner,1.2,Yes,Billed,1.2,505.00,606.00,L310,Written discovery
+TE-500944,06/13/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,1.6,Yes,Billed,1.6,510.00,816.00,A103,Draft / revise
+TE-500351,06/15/2025,Bluewater Logistics,M-1004,INV-1004-2,James Whitfield,Partner,4.8,Yes,Billed,4.8,550.00,2640.00,L310,Written discovery
+TE-500675,06/15/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,1.7,Yes,Written Off,0,510.00,0.00,C300,Analysis and advice
+TE-500247,06/16/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Margaret Chen,Partner,3.7,Yes,Billed,3.7,650.00,2405.00,L120,Analysis / strategy
+TE-500813,06/16/2025,Keystone Retail Partners,M-1010,INV-1010-2,James Whitfield,Partner,3.2,Yes,Billed,3.2,550.00,1760.00,L210,Pleadings
+TE-500879,06/16/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,3.9,Yes,Billed,3.9,295.00,1150.50,L120,Analysis / strategy
+TE-500254,06/17/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,0.6,Yes,Billed,0.6,395.00,237.00,L120,Analysis / strategy
+TE-500444,06/17/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,5.1,Yes,Billed,5.1,340.00,1734.00,C100,Fact gathering
+TE-500525,06/17/2025,Northgate School District,M-1006,INV-1006-2,Michael Brennan,Partner,3.7,Yes,Billed,3.7,520.00,1924.00,C100,Fact gathering
+TE-500676,06/17/2025,Riverside Credit Union,M-1008,INV-1008-2,Thomas Nakamura,Partner,5.1,Yes,Billed,4.6,510.00,2346.00,C100,Fact gathering
+TE-500947,06/17/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,4.2,Yes,Billed,4.2,575.00,2415.00,A101,Plan and prepare for
+TE-500249,06/18/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Robert Alvarez,Partner,3.5,Yes,Billed,3.5,530.00,1855.00,C100,Fact gathering
+TE-500445,06/18/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,5.2,Yes,Billed,5.2,340.00,1768.00,A106,Communicate (with client)
+TE-500740,06/19/2025,Estate of Harold Vance,M-1009,INV-1009-2,Henry Adams,Paralegal,0.7,Yes,Billed,0.2,185.00,37.00,L310,Written discovery
+TE-500810,06/19/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,5.1,Yes,Billed,5.1,350.00,1785.00,L110,Fact investigation / development
+TE-500946,06/19/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,3.7,Yes,Billed,3.7,510.00,1887.00,A106,Communicate (with client)
+TE-500129,06/20/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,1.6,Yes,Billed,1.1,330.00,363.00,L250,Other written motions and submissions
+TE-500250,06/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,3.8,Yes,Billed,3.8,395.00,1501.00,A101,Plan and prepare for
+TE-500809,06/20/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,3.2,Yes,Billed,2.7,350.00,945.00,A106,Communicate (with client)
+TE-500032,06/21/2025,Harborview Holdings LLC,M-1001,INV-1001-2,David Okafor,Partner,2.9,Yes,Billed,2.9,575.00,1667.50,L250,Other written motions and submissions
+TE-500134,06/21/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Margaret Chen,Partner,1.3,Yes,Billed,1.3,650.00,845.00,L310,Written discovery
+TE-500252,06/21/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,2.0,Yes,Billed,2.0,395.00,790.00,A101,Plan and prepare for
+TE-500440,06/21/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Priya Raman,Partner,5.1,Yes,Billed,4.6,540.00,2484.00,A104,Review / analyze
+TE-500442,06/21/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,2.7,Yes,Billed,2.7,340.00,918.00,L310,Written discovery
+TE-500033,06/22/2025,Harborview Holdings LLC,M-1001,INV-1001-2,David Okafor,Partner,1.1,Yes,Billed,1.1,575.00,632.50,L250,Other written motions and submissions
+TE-500039,06/22/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Grace Liu,Paralegal,4.1,Yes,Billed,4.1,195.00,799.50,L210,Pleadings
+TE-500356,06/23/2025,Bluewater Logistics,M-1004,INV-1004-2,Daniel Smith,Associate,4.2,Yes,Billed,4.2,395.00,1659.00,A101,Plan and prepare for
+TE-500446,06/23/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,1.2,Yes,Billed,1.2,340.00,408.00,A104,Review / analyze
+TE-500738,06/23/2025,Estate of Harold Vance,M-1009,INV-1009-2,Catherine Doyle,Partner,0.7,Yes,Billed,0.7,505.00,353.50,L250,Other written motions and submissions
+TE-500808,06/23/2025,Keystone Retail Partners,M-1010,INV-1010-2,Rachel Jones,Associate,1.4,Yes,Billed,1.4,350.00,490.00,C300,Analysis and advice
+TE-500126,06/24/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Sarah Lindqvist,Partner,3.7,Yes,Billed,3.7,560.00,2072.00,C300,Analysis and advice
+TE-500529,06/24/2025,Northgate School District,M-1006,INV-1006-2,Robert Alvarez,Partner,5.3,Yes,Billed,5.3,530.00,2809.00,A101,Plan and prepare for
+TE-500605,06/24/2025,Summit Biotech Corp.,M-1007,INV-1007-2,Rachel Jones,Associate,5.1,Yes,Billed,5.1,350.00,1785.00,A101,Plan and prepare for
+TE-500807,06/24/2025,Keystone Retail Partners,M-1010,INV-1010-2,Michael Brennan,Partner,2.7,Yes,Billed,2.7,520.00,1404.00,L110,Fact investigation / development
+TE-500880,06/24/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,4.6,Yes,Billed,4.6,295.00,1357.00,A103,Draft / revise
+TE-500881,06/24/2025,Cedar Point Hospitality,M-1011,INV-1011-2,Owen Fletcher,Associate,4.4,Yes,Billed,4.4,295.00,1298.00,L120,Analysis / strategy
+TE-500248,06/25/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,1.9,Yes,Written Off,0,650.00,0.00,A106,Communicate (with client)
+TE-500532,06/25/2025,Northgate School District,M-1006,INV-1006-2,Kevin Park,Associate,2.4,Yes,Billed,2.4,340.00,816.00,A106,Communicate (with client)
+TE-500128,06/26/2025,Pinecrest Medical Group,M-1002,INV-1002-2,Laura Martinez,Associate,1.5,Yes,Billed,1.5,330.00,495.00,A104,Review / analyze
+TE-500256,06/26/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Grace Liu,Paralegal,5.3,Yes,Billed,5.3,195.00,1033.50,L120,Analysis / strategy
+TE-500253,06/27/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-2,Daniel Smith,Associate,0.8,Yes,Billed,0.8,395.00,316.00,L250,Other written motions and submissions
+TE-500528,06/27/2025,Northgate School District,M-1006,INV-1006-2,Robert Alvarez,Partner,4.2,Yes,Billed,4.2,530.00,2226.00,L110,Fact investigation / development
+TE-500036,06/28/2025,Harborview Holdings LLC,M-1001,INV-1001-2,Daniel Smith,Associate,3.8,Yes,Billed,3.8,395.00,1501.00,A103,Draft / revise
+TE-500443,06/28/2025,Greenfield Energy Partners,M-1005,INV-1005-2,Kevin Park,Associate,2.3,Yes,Billed,2.3,340.00,782.00,A101,Plan and prepare for
+TE-500041,07/02/2025,Harborview Holdings LLC,M-1001,INV-1001-3,David Okafor,Partner,0.7,Yes,Billed,0.7,575.00,402.50,A103,Draft / revise
+TE-500143,07/02/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Margaret Chen,Partner,2.0,Yes,Billed,2.0,650.00,1300.00,L310,Written discovery
+TE-500261,07/03/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,1.6,Yes,Billed,1.6,395.00,632.00,L120,Analysis / strategy
+TE-500607,07/03/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,3.3,Yes,Billed,3.3,515.00,1699.50,A108,Communicate (other external)
+TE-500741,07/03/2025,Estate of Harold Vance,M-1009,INV-1009-3,Catherine Doyle,Partner,4.7,Yes,Billed,4.7,505.00,2373.50,C300,Analysis and advice
+TE-500815,07/03/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,3.2,Yes,Billed,2.7,350.00,945.00,A103,Draft / revise
+TE-500138,07/04/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,1.2,Yes,Billed,1.2,350.00,420.00,A104,Review / analyze
+TE-500453,07/04/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,1.7,Yes,Billed,1.7,340.00,578.00,C300,Analysis and advice
+TE-500535,07/04/2025,Northgate School District,M-1006,INV-1006-3,Robert Alvarez,Partner,2.8,Yes,Billed,2.8,530.00,1484.00,L250,Other written motions and submissions
+TE-500746,07/04/2025,Estate of Harold Vance,M-1009,INV-1009-3,Henry Adams,Paralegal,1.6,Yes,Billed,1.6,185.00,296.00,L250,Other written motions and submissions
+TE-500258,07/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Robert Alvarez,Partner,0.8,Yes,Billed,0.8,530.00,424.00,A108,Communicate (other external)
+TE-500361,07/05/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,2.9,Yes,Billed,2.4,395.00,948.00,A106,Communicate (with client)
+TE-500678,07/05/2025,Riverside Credit Union,M-1008,INV-1008-3,Thomas Nakamura,Partner,4.3,Yes,Billed,4.3,510.00,2193.00,A108,Communicate (other external)
+TE-500742,07/05/2025,Estate of Harold Vance,M-1009,INV-1009-3,Nina Patel,Staff,3.4,Yes,Billed,3.4,150.00,510.00,C100,Fact gathering
+TE-500043,07/06/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,3.3,Yes,Billed,3.3,395.00,1303.50,A101,Plan and prepare for
+TE-500045,07/06/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,4.2,Yes,Billed,4.2,395.00,1659.00,L310,Written discovery
+TE-500452,07/06/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,3.2,Yes,Billed,3.2,340.00,1088.00,C300,Analysis and advice
+TE-500454,07/06/2025,Greenfield Energy Partners,M-1005,,Henry Adams,Paralegal,0.5,No,Non-billable,0,185.00,0.00,A106,Internal file management / training
+TE-500816,07/06/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,3.5,Yes,Billed,3.5,350.00,1225.00,L310,Written discovery
+TE-500537,07/07/2025,Northgate School District,M-1006,INV-1006-3,Kevin Park,Associate,4.4,Yes,Billed,3.9,340.00,1326.00,L310,Written discovery
+TE-500140,07/08/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,4.6,Yes,Billed,4.6,350.00,1610.00,A106,Communicate (with client)
+TE-500260,07/08/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Robert Alvarez,Partner,4.8,Yes,Billed,4.8,530.00,2544.00,A104,Review / analyze
+TE-500818,07/08/2025,Keystone Retail Partners,M-1010,INV-1010-3,James Whitfield,Partner,4.9,Yes,Billed,4.9,550.00,2695.00,C300,Analysis and advice
+TE-500883,07/09/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Owen Fletcher,Associate,5.5,Yes,Billed,5.5,295.00,1622.50,L120,Analysis / strategy
+TE-500044,07/10/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,2.5,Yes,Billed,2.5,395.00,987.50,A108,Communicate (other external)
+TE-500536,07/11/2025,Northgate School District,M-1006,INV-1006-3,Robert Alvarez,Partner,0.6,Yes,Billed,0.6,530.00,318.00,L250,Other written motions and submissions
+TE-500957,07/11/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,3.4,Yes,Billed,3.4,575.00,1955.00,L210,Pleadings
+TE-500136,07/12/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,1.3,Yes,Billed,1.3,560.00,728.00,A108,Communicate (other external)
+TE-500142,07/12/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Margaret Chen,Partner,2.9,Yes,Billed,2.9,650.00,1885.00,A103,Draft / revise
+TE-500538,07/12/2025,Northgate School District,M-1006,INV-1006-3,Kevin Park,Associate,2.5,Yes,Billed,2.0,340.00,680.00,C300,Analysis and advice
+TE-500611,07/12/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Rachel Jones,Associate,3.4,Yes,Billed,3.4,350.00,1190.00,A106,Communicate (with client)
+TE-500679,07/12/2025,Riverside Credit Union,M-1008,INV-1008-3,Laura Martinez,Associate,1.8,Yes,Billed,1.8,330.00,594.00,L250,Other written motions and submissions
+TE-500680,07/12/2025,Riverside Credit Union,M-1008,INV-1008-3,Laura Martinez,Associate,5.0,Yes,Billed,5.0,330.00,1650.00,A104,Review / analyze
+TE-500745,07/12/2025,Estate of Harold Vance,M-1009,INV-1009-3,Henry Adams,Paralegal,1.6,Yes,Billed,1.6,185.00,296.00,L310,Written discovery
+TE-500954,07/12/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,4.9,Yes,Billed,4.9,510.00,2499.00,C300,Analysis and advice
+TE-500135,07/14/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,3.6,Yes,Billed,3.6,560.00,2016.00,A101,Plan and prepare for
+TE-500048,07/15/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,0.4,Yes,Billed,0.4,195.00,78.00,A108,Communicate (other external)
+TE-500956,07/15/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,1.7,Yes,Billed,1.7,575.00,977.50,L110,Fact investigation / development
+TE-500257,07/16/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Margaret Chen,Partner,5.2,Yes,Billed,5.2,650.00,3380.00,A104,Review / analyze
+TE-500047,07/17/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,3.2,Yes,Billed,3.2,395.00,1264.00,L310,Written discovery
+TE-500451,07/17/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,3.5,Yes,Billed,3.5,340.00,1190.00,L250,Other written motions and submissions
+TE-500141,07/18/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,3.4,Yes,Billed,3.4,330.00,1122.00,A108,Communicate (other external)
+TE-500362,07/18/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,3.3,Yes,Billed,3.3,395.00,1303.50,A101,Plan and prepare for
+TE-500612,07/18/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Rachel Jones,Associate,4.8,Yes,Billed,4.3,350.00,1505.00,A106,Communicate (with client)
+TE-500817,07/18/2025,Keystone Retail Partners,M-1010,INV-1010-3,James Whitfield,Partner,3.8,Yes,Billed,3.8,550.00,2090.00,L250,Other written motions and submissions
+TE-500744,07/19/2025,Estate of Harold Vance,M-1009,INV-1009-3,Henry Adams,Paralegal,3.9,Yes,Billed,3.9,185.00,721.50,C300,Analysis and advice
+TE-500814,07/19/2025,Keystone Retail Partners,M-1010,INV-1010-3,Michael Brennan,Partner,2.1,Yes,Billed,1.6,520.00,832.00,A106,Communicate (with client)
+TE-500959,07/19/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.0,Yes,Billed,4.0,330.00,1320.00,C300,Analysis and advice
+TE-500137,07/20/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,1.0,Yes,Billed,1.0,560.00,560.00,L110,Fact investigation / development
+TE-500259,07/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Robert Alvarez,Partner,3.1,Yes,Billed,3.1,530.00,1643.00,L120,Analysis / strategy
+TE-500358,07/20/2025,Bluewater Logistics,M-1004,INV-1004-3,James Whitfield,Partner,3.4,Yes,Billed,3.4,550.00,1870.00,C300,Analysis and advice
+TE-500360,07/20/2025,Bluewater Logistics,M-1004,INV-1004-3,Elena Petrova,Partner,2.7,Yes,Billed,2.7,525.00,1417.50,C100,Fact gathering
+TE-500263,07/21/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,3.7,Yes,Billed,3.7,395.00,1461.50,A101,Plan and prepare for
+TE-500613,07/21/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Rachel Jones,Associate,2.2,Yes,Billed,2.2,350.00,770.00,A104,Review / analyze
+TE-500743,07/21/2025,Estate of Harold Vance,M-1009,INV-1009-3,Nina Patel,Staff,2.9,Yes,Billed,2.9,150.00,435.00,L250,Other written motions and submissions
+TE-500046,07/22/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,5.1,Yes,Billed,5.1,395.00,2014.50,L250,Other written motions and submissions
+TE-500608,07/22/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,5.5,Yes,Billed,5.5,515.00,2832.50,A103,Draft / revise
+TE-500958,07/22/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,3.1,Yes,Billed,3.1,575.00,1782.50,C100,Fact gathering
+TE-500040,07/23/2025,Harborview Holdings LLC,M-1001,INV-1001-3,David Okafor,Partner,3.4,Yes,Billed,2.9,575.00,1667.50,L250,Other written motions and submissions
+TE-500264,07/23/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Grace Liu,Paralegal,4.5,Yes,Billed,4.5,195.00,877.50,C300,Analysis and advice
+TE-500359,07/23/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,3.1,No,Non-billable,0,525.00,0.00,L310,Internal file management / training
+TE-500534,07/23/2025,Northgate School District,M-1006,INV-1006-3,Michael Brennan,Partner,2.1,Yes,Billed,2.1,520.00,1092.00,C300,Analysis and advice
+TE-500882,07/23/2025,Cedar Point Hospitality,M-1011,,Elena Petrova,Partner,2.0,Yes,Written Off,0,525.00,0.00,A108,Communicate (other external)
+TE-500139,07/24/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,4.5,Yes,Billed,4.5,350.00,1575.00,A106,Communicate (with client)
+TE-500049,07/25/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,1.4,Yes,Billed,1.4,195.00,273.00,A108,Communicate (other external)
+TE-500357,07/25/2025,Bluewater Logistics,M-1004,INV-1004-3,James Whitfield,Partner,1.0,Yes,Billed,1.0,550.00,550.00,C100,Fact gathering
+TE-500953,07/25/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,2.1,Yes,Billed,2.1,510.00,1071.00,C300,Analysis and advice
+TE-500262,07/26/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,4.0,Yes,Billed,4.0,395.00,1580.00,A103,Draft / revise
+TE-500609,07/26/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Michael Brennan,Partner,2.9,Yes,Billed,2.9,520.00,1508.00,C300,Analysis and advice
+TE-500819,07/26/2025,Keystone Retail Partners,M-1010,,James Whitfield,Partner,2.5,Yes,Written Off,0,550.00,0.00,L250,Other written motions and submissions
+TE-500955,07/26/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,1.2,Yes,Billed,1.2,510.00,612.00,A101,Plan and prepare for
+TE-500042,07/28/2025,Harborview Holdings LLC,M-1001,INV-1001-3,David Okafor,Partner,2.0,Yes,Billed,2.0,575.00,1150.00,L310,Written discovery
+TE-500450,07/28/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Priya Raman,Partner,3.8,Yes,Billed,3.8,540.00,2052.00,L110,Fact investigation / development
+TE-500610,07/28/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Michael Brennan,Partner,4.5,Yes,Billed,4.5,520.00,2340.00,A101,Plan and prepare for
+TE-500056,08/01/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,1.1,Yes,Billed,1.1,395.00,434.50,L120,Analysis / strategy
+TE-500145,08/01/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,5.3,Yes,Billed,5.3,350.00,1855.00,L210,Pleadings
+TE-500267,08/01/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Margaret Chen,Partner,4.4,Yes,Billed,4.4,650.00,2860.00,C300,Analysis and advice
+TE-500748,08/02/2025,Estate of Harold Vance,M-1009,INV-1009-3,Catherine Doyle,Partner,1.4,Yes,Billed,1.4,505.00,707.00,L310,Written discovery
+TE-500961,08/02/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,1.8,Yes,Billed,1.8,510.00,918.00,L110,Fact investigation / development
+TE-500364,08/03/2025,Bluewater Logistics,M-1004,INV-1004-3,James Whitfield,Partner,1.5,Yes,Billed,1.5,550.00,825.00,L120,Analysis / strategy
+TE-500369,08/03/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,2.4,Yes,Written Off,0,395.00,0.00,A104,Review / analyze
+TE-500461,08/04/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,2.2,Yes,Billed,2.2,340.00,748.00,A108,Communicate (other external)
+TE-500462,08/04/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,1.4,Yes,Billed,1.4,340.00,476.00,C100,Fact gathering
+TE-500885,08/04/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Elena Petrova,Partner,4.4,Yes,Billed,4.4,525.00,2310.00,C100,Fact gathering
+TE-500051,08/05/2025,Harborview Holdings LLC,M-1001,INV-1001-3,David Okafor,Partner,3.4,Yes,Billed,3.4,575.00,1955.00,C300,Analysis and advice
+TE-500058,08/05/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,3.4,Yes,Billed,3.4,195.00,663.00,L120,Analysis / strategy
+TE-500268,08/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Robert Alvarez,Partner,5.3,Yes,Billed,5.3,530.00,2809.00,A106,Communicate (with client)
+TE-500273,08/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,4.1,Yes,Billed,4.1,395.00,1619.50,A108,Communicate (other external)
+TE-500464,08/05/2025,Greenfield Energy Partners,M-1005,,Henry Adams,Paralegal,2.9,Yes,Written Off,0,185.00,0.00,L310,Written discovery
+TE-500367,08/06/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,2.6,Yes,Billed,2.1,395.00,829.50,L120,Analysis / strategy
+TE-500749,08/06/2025,Estate of Harold Vance,M-1009,INV-1009-3,Nina Patel,Staff,5.4,Yes,Billed,5.4,150.00,810.00,A104,Review / analyze
+TE-500054,08/07/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,0.9,Yes,Billed,0.9,395.00,355.50,A103,Draft / revise
+TE-500370,08/07/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,4.5,Yes,Billed,4.5,395.00,1777.50,A101,Plan and prepare for
+TE-500682,08/07/2025,Riverside Credit Union,M-1008,INV-1008-3,Thomas Nakamura,Partner,4.2,Yes,Billed,4.2,510.00,2142.00,L110,Fact investigation / development
+TE-500960,08/07/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,3.4,Yes,Billed,3.4,510.00,1734.00,C100,Fact gathering
+TE-500151,08/08/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,3.6,Yes,Billed,3.6,330.00,1188.00,A108,Communicate (other external)
+TE-500542,08/08/2025,Northgate School District,M-1006,INV-1006-3,Robert Alvarez,Partner,3.7,Yes,Billed,3.7,530.00,1961.00,C300,Analysis and advice
+TE-500149,08/10/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,0.4,Yes,Billed,0.1,330.00,33.00,L250,Other written motions and submissions
+TE-500266,08/10/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,1.1,No,Non-billable,0,650.00,0.00,A108,Internal file management / training
+TE-500820,08/10/2025,Keystone Retail Partners,M-1010,INV-1010-3,Michael Brennan,Partner,4.4,Yes,Billed,4.4,520.00,2288.00,L110,Fact investigation / development
+TE-500146,08/11/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,2.4,Yes,Billed,2.4,350.00,840.00,L210,Pleadings
+TE-500144,08/12/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,3.2,Yes,Billed,3.2,560.00,1792.00,L120,Analysis / strategy
+TE-500271,08/12/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,4.3,Yes,Billed,4.3,395.00,1698.50,A103,Draft / revise
+TE-500618,08/12/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Rachel Jones,Associate,2.2,Yes,Billed,2.2,350.00,770.00,A103,Draft / revise
+TE-500750,08/12/2025,Estate of Harold Vance,M-1009,INV-1009-3,Henry Adams,Paralegal,5.4,Yes,Billed,5.4,185.00,999.00,C300,Analysis and advice
+TE-500821,08/12/2025,Keystone Retail Partners,M-1010,INV-1010-3,Michael Brennan,Partner,2.1,Yes,Billed,2.1,520.00,1092.00,L110,Fact investigation / development
+TE-500368,08/13/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,5.2,Yes,Billed,5.2,395.00,2054.00,A106,Communicate (with client)
+TE-500457,08/13/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Priya Raman,Partner,3.2,Yes,Billed,3.2,540.00,1728.00,L120,Analysis / strategy
+TE-500465,08/13/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Henry Adams,Paralegal,2.8,Yes,Billed,2.8,185.00,518.00,C300,Analysis and advice
+TE-500681,08/13/2025,Riverside Credit Union,M-1008,INV-1008-3,Thomas Nakamura,Partner,4.6,Yes,Billed,4.6,510.00,2346.00,L250,Other written motions and submissions
+TE-500684,08/14/2025,Riverside Credit Union,M-1008,INV-1008-3,Laura Martinez,Associate,3.6,Yes,Billed,3.6,330.00,1188.00,L250,Other written motions and submissions
+TE-500456,08/15/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Priya Raman,Partner,5.5,Yes,Billed,5.5,540.00,2970.00,L250,Other written motions and submissions
+TE-500823,08/15/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,4.4,Yes,Billed,4.4,350.00,1540.00,L110,Fact investigation / development
+TE-500824,08/15/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,2.1,Yes,Billed,2.1,350.00,735.00,L310,Written discovery
+TE-500966,08/15/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,0.9,Yes,Billed,0.9,330.00,297.00,L210,Pleadings
+TE-500150,08/16/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,2.3,Yes,Billed,2.3,330.00,759.00,L120,Analysis / strategy
+TE-500616,08/16/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,4.4,Yes,Billed,4.4,515.00,2266.00,C100,Fact gathering
+TE-500683,08/16/2025,Riverside Credit Union,M-1008,INV-1008-3,Thomas Nakamura,Partner,3.6,Yes,Billed,3.6,510.00,1836.00,A106,Communicate (with client)
+TE-500962,08/16/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,1.0,Yes,Billed,1.0,575.00,575.00,A103,Draft / revise
+TE-500968,08/16/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.4,Yes,Billed,1.4,330.00,462.00,A101,Plan and prepare for
+TE-500541,08/17/2025,Northgate School District,M-1006,INV-1006-3,Robert Alvarez,Partner,4.0,Yes,Billed,4.0,530.00,2120.00,A104,Review / analyze
+TE-500886,08/17/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Owen Fletcher,Associate,1.3,Yes,Billed,1.3,295.00,383.50,A108,Communicate (other external)
+TE-500057,08/18/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,1.4,Yes,Billed,1.4,195.00,273.00,L210,Pleadings
+TE-500884,08/18/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Elena Petrova,Partner,1.7,Yes,Billed,1.7,525.00,892.50,L250,Other written motions and submissions
+TE-500365,08/19/2025,Bluewater Logistics,M-1004,INV-1004-3,James Whitfield,Partner,1.6,Yes,Billed,1.6,550.00,880.00,L250,Other written motions and submissions
+TE-500747,08/19/2025,Estate of Harold Vance,M-1009,INV-1009-3,Catherine Doyle,Partner,0.9,Yes,Billed,0.9,505.00,454.50,L310,Written discovery
+TE-500275,08/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Grace Liu,Paralegal,4.0,Yes,Billed,4.0,195.00,780.00,A108,Communicate (other external)
+TE-500455,08/20/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Priya Raman,Partner,4.2,Yes,Billed,4.2,540.00,2268.00,A103,Draft / revise
+TE-500050,08/21/2025,Harborview Holdings LLC,M-1001,INV-1001-3,David Okafor,Partner,1.6,Yes,Billed,1.6,575.00,920.00,C100,Fact gathering
+TE-500152,08/21/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Margaret Chen,Partner,2.0,Yes,Billed,2.0,650.00,1300.00,L110,Fact investigation / development
+TE-500366,08/21/2025,Bluewater Logistics,M-1004,INV-1004-3,Elena Petrova,Partner,4.1,Yes,Billed,4.1,525.00,2152.50,A101,Plan and prepare for
+TE-500458,08/21/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,5.4,Yes,Billed,5.4,340.00,1836.00,A101,Plan and prepare for
+TE-500059,08/22/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,2.9,Yes,Billed,2.9,195.00,565.50,C300,Analysis and advice
+TE-500964,08/22/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.0,Yes,Billed,0.5,330.00,165.00,L310,Written discovery
+TE-500965,08/22/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.2,Yes,Billed,2.2,330.00,726.00,C100,Fact gathering
+TE-500363,08/23/2025,Bluewater Logistics,M-1004,INV-1004-3,James Whitfield,Partner,0.4,Yes,Billed,0.4,550.00,220.00,L310,Written discovery
+TE-500272,08/24/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,0.5,Yes,Billed,0.5,395.00,197.50,A104,Review / analyze
+TE-500460,08/24/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,2.0,Yes,Billed,2.0,340.00,680.00,C300,Analysis and advice
+TE-500539,08/24/2025,Northgate School District,M-1006,INV-1006-3,Michael Brennan,Partner,3.5,Yes,Billed,3.0,520.00,1560.00,C300,Analysis and advice
+TE-500617,08/24/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Michael Brennan,Partner,1.3,Yes,Billed,1.3,520.00,676.00,L310,Written discovery
+TE-500822,08/24/2025,Keystone Retail Partners,M-1010,INV-1010-3,Michael Brennan,Partner,2.1,Yes,Billed,2.1,520.00,1092.00,C100,Fact gathering
+TE-500825,08/24/2025,Keystone Retail Partners,M-1010,INV-1010-3,James Whitfield,Partner,4.2,Yes,Billed,4.2,550.00,2310.00,L210,Pleadings
+TE-500052,08/25/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,2.0,Yes,Billed,2.0,395.00,790.00,A104,Review / analyze
+TE-500053,08/25/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,4.6,Yes,Billed,4.1,395.00,1619.50,A104,Review / analyze
+TE-500265,08/25/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Margaret Chen,Partner,1.2,Yes,Billed,1.2,650.00,780.00,A106,Communicate (with client)
+TE-500274,08/25/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,3.7,Yes,Billed,3.7,395.00,1461.50,A103,Draft / revise
+TE-500459,08/25/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,5.1,Yes,Billed,5.1,340.00,1734.00,C300,Analysis and advice
+TE-500967,08/25/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,5.0,Yes,Billed,5.0,330.00,1650.00,L310,Written discovery
+TE-500148,08/26/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,0.3,No,Non-billable,0,350.00,0.00,A108,Internal file management / training
+TE-500269,08/26/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Robert Alvarez,Partner,0.5,Yes,Billed,0.5,530.00,265.00,A103,Draft / revise
+TE-500270,08/26/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,1.4,No,Non-billable,0,395.00,0.00,L310,Internal file management / training
+TE-500543,08/26/2025,Northgate School District,M-1006,INV-1006-3,Kevin Park,Associate,5.4,Yes,Billed,5.4,340.00,1836.00,L110,Fact investigation / development
+TE-500614,08/26/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,5.4,Yes,Billed,4.9,515.00,2523.50,A101,Plan and prepare for
+TE-500147,08/27/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,5.4,Yes,Billed,5.4,350.00,1890.00,L110,Fact investigation / development
+TE-500276,08/27/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Grace Liu,Paralegal,2.2,Yes,Billed,2.2,195.00,429.00,L210,Pleadings
+TE-500463,08/27/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Henry Adams,Paralegal,2.2,Yes,Billed,2.2,185.00,407.00,A103,Draft / revise
+TE-500615,08/27/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,3.6,Yes,Billed,3.6,515.00,1854.00,L250,Other written motions and submissions
+TE-500963,08/27/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,3.8,Yes,Billed,3.8,575.00,2185.00,C300,Analysis and advice
+TE-500055,08/28/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,1.0,Yes,Billed,0.5,395.00,197.50,A106,Communicate (with client)
+TE-500540,08/28/2025,Northgate School District,M-1006,INV-1006-3,Michael Brennan,Partner,2.3,Yes,Billed,2.3,520.00,1196.00,L250,Other written motions and submissions
+TE-500153,09/01/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,2.1,Yes,Billed,1.6,560.00,896.00,L250,Other written motions and submissions
+TE-500164,09/01/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Margaret Chen,Partner,4.8,Yes,Billed,4.8,650.00,3120.00,L250,Other written motions and submissions
+TE-500751,09/01/2025,Estate of Harold Vance,M-1009,INV-1009-3,Catherine Doyle,Partner,2.8,Yes,Billed,2.8,505.00,1414.00,L210,Pleadings
+TE-500970,09/01/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,0.3,Yes,Billed,0.3,510.00,153.00,A108,Communicate (other external)
+TE-500278,09/02/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Margaret Chen,Partner,2.9,Yes,Billed,2.9,650.00,1885.00,C100,Fact gathering
+TE-500281,09/03/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,4.6,Yes,Billed,4.1,395.00,1619.50,A101,Plan and prepare for
+TE-500471,09/03/2025,Greenfield Energy Partners,M-1005,,Kevin Park,Associate,1.5,No,Non-billable,0,340.00,0.00,L210,Internal file management / training
+TE-500753,09/03/2025,Estate of Harold Vance,M-1009,INV-1009-3,Nina Patel,Staff,5.4,Yes,Billed,5.4,150.00,810.00,L210,Pleadings
+TE-500280,09/04/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Robert Alvarez,Partner,2.1,Yes,Billed,2.1,530.00,1113.00,C100,Fact gathering
+TE-500466,09/04/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Priya Raman,Partner,1.6,Yes,Billed,1.6,540.00,864.00,A101,Plan and prepare for
+TE-500627,09/04/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Rachel Jones,Associate,3.7,Yes,Billed,3.7,350.00,1295.00,A106,Communicate (with client)
+TE-500162,09/05/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,2.6,No,Non-billable,0,330.00,0.00,L210,Internal file management / training
+TE-500279,09/05/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Margaret Chen,Partner,1.0,Yes,Billed,1.0,650.00,650.00,L310,Written discovery
+TE-500372,09/05/2025,Bluewater Logistics,M-1004,INV-1004-3,James Whitfield,Partner,4.0,Yes,Billed,4.0,550.00,2200.00,A106,Communicate (with client)
+TE-500468,09/06/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,1.1,Yes,Billed,1.1,340.00,374.00,L110,Fact investigation / development
+TE-500544,09/06/2025,Northgate School District,M-1006,INV-1006-3,Michael Brennan,Partner,5.0,Yes,Billed,5.0,520.00,2600.00,A101,Plan and prepare for
+TE-500619,09/06/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,3.5,Yes,Billed,3.5,515.00,1802.50,C300,Analysis and advice
+TE-500975,09/06/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.7,Yes,Billed,4.7,330.00,1551.00,A103,Draft / revise
+TE-500687,09/07/2025,Riverside Credit Union,M-1008,INV-1008-3,Laura Martinez,Associate,1.9,Yes,Billed,1.9,330.00,627.00,A108,Communicate (other external)
+TE-500974,09/07/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,3.7,Yes,Billed,3.7,330.00,1221.00,A108,Communicate (other external)
+TE-500158,09/08/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,0.3,Yes,Billed,0.3,350.00,105.00,L120,Analysis / strategy
+TE-500160,09/08/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,5.2,Yes,Billed,5.2,330.00,1716.00,A101,Plan and prepare for
+TE-500161,09/08/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,4.6,Yes,Billed,4.6,330.00,1518.00,L210,Pleadings
+TE-500827,09/08/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,5.2,Yes,Billed,5.2,350.00,1820.00,A103,Draft / revise
+TE-500892,09/08/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Owen Fletcher,Associate,1.7,Yes,Billed,1.7,295.00,501.50,A104,Review / analyze
+TE-500752,09/09/2025,Estate of Harold Vance,M-1009,INV-1009-3,Catherine Doyle,Partner,2.1,Yes,Billed,2.1,505.00,1060.50,L120,Analysis / strategy
+TE-500156,09/10/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Rachel Jones,Associate,2.7,Yes,Billed,2.7,350.00,945.00,L120,Analysis / strategy
+TE-500373,09/10/2025,Bluewater Logistics,M-1004,INV-1004-3,Elena Petrova,Partner,4.4,Yes,Billed,4.4,525.00,2310.00,C300,Analysis and advice
+TE-500889,09/10/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Owen Fletcher,Associate,1.5,Yes,Billed,1.5,295.00,442.50,A108,Communicate (other external)
+TE-500890,09/10/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Owen Fletcher,Associate,4.0,Yes,Billed,4.0,295.00,1180.00,C300,Analysis and advice
+TE-500163,09/11/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,5.3,Yes,Billed,4.8,330.00,1584.00,A106,Communicate (with client)
+TE-500282,09/11/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,0.5,Yes,Billed,0.5,395.00,197.50,L120,Analysis / strategy
+TE-500371,09/11/2025,Bluewater Logistics,M-1004,,James Whitfield,Partner,2.7,No,Non-billable,0,550.00,0.00,L210,Internal file management / training
+TE-500157,09/12/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,1.5,No,Non-billable,0,350.00,0.00,L210,Internal file management / training
+TE-500977,09/13/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.5,Yes,Billed,2.5,330.00,825.00,A103,Draft / revise
+TE-500155,09/14/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,2.3,Yes,Billed,2.3,560.00,1288.00,A104,Review / analyze
+TE-500377,09/14/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,1.7,Yes,Billed,1.7,395.00,671.50,L250,Other written motions and submissions
+TE-500622,09/14/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Michael Brennan,Partner,4.8,Yes,Billed,4.8,520.00,2496.00,C300,Analysis and advice
+TE-500624,09/14/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Michael Brennan,Partner,3.7,Yes,Billed,3.7,520.00,1924.00,L250,Other written motions and submissions
+TE-500969,09/14/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,1.2,Yes,Billed,1.2,510.00,612.00,A101,Plan and prepare for
+TE-500973,09/14/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,0.9,Yes,Billed,0.9,330.00,297.00,A108,Communicate (other external)
+TE-500472,09/15/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,0.9,Yes,Billed,0.9,340.00,306.00,L110,Fact investigation / development
+TE-500830,09/15/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,4.1,Yes,Billed,4.1,350.00,1435.00,L120,Analysis / strategy
+TE-500284,09/16/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,0.9,Yes,Written Off,0,195.00,0.00,A103,Draft / revise
+TE-500376,09/16/2025,Bluewater Logistics,M-1004,INV-1004-3,Daniel Smith,Associate,4.8,Yes,Billed,4.8,395.00,1896.00,A108,Communicate (other external)
+TE-500826,09/16/2025,Keystone Retail Partners,M-1010,INV-1010-3,Michael Brennan,Partner,3.1,Yes,Billed,3.1,520.00,1612.00,L120,Analysis / strategy
+TE-500469,09/17/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Kevin Park,Associate,4.2,Yes,Billed,4.2,340.00,1428.00,A104,Review / analyze
+TE-500685,09/17/2025,Riverside Credit Union,M-1008,INV-1008-3,Thomas Nakamura,Partner,1.7,Yes,Billed,1.2,510.00,612.00,L310,Written discovery
+TE-500831,09/17/2025,Keystone Retail Partners,M-1010,INV-1010-3,James Whitfield,Partner,2.0,Yes,Billed,2.0,550.00,1100.00,L250,Other written motions and submissions
+TE-500063,09/18/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,1.2,Yes,Billed,1.2,195.00,234.00,A101,Plan and prepare for
+TE-500277,09/18/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Margaret Chen,Partner,4.9,Yes,Billed,4.9,650.00,3185.00,L120,Analysis / strategy
+TE-500473,09/18/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Henry Adams,Paralegal,1.1,Yes,Billed,1.1,185.00,203.50,A106,Communicate (with client)
+TE-500546,09/18/2025,Northgate School District,M-1006,INV-1006-3,Kevin Park,Associate,4.3,Yes,Billed,4.3,340.00,1462.00,L120,Analysis / strategy
+TE-500547,09/18/2025,Northgate School District,M-1006,INV-1006-3,Kevin Park,Associate,1.1,Yes,Billed,1.1,340.00,374.00,L110,Fact investigation / development
+TE-500625,09/18/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Rachel Jones,Associate,4.5,Yes,Billed,4.5,350.00,1575.00,C100,Fact gathering
+TE-500688,09/18/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,1.4,Yes,Written Off,0,330.00,0.00,L210,Pleadings
+TE-500474,09/19/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Henry Adams,Paralegal,2.2,Yes,Billed,2.2,185.00,407.00,L120,Analysis / strategy
+TE-500756,09/20/2025,Estate of Harold Vance,M-1009,,Henry Adams,Paralegal,0.8,No,Non-billable,0,185.00,0.00,L120,Internal file management / training
+TE-500887,09/20/2025,Cedar Point Hospitality,M-1011,INV-1011-3,Elena Petrova,Partner,2.1,Yes,Billed,2.1,525.00,1102.50,L110,Fact investigation / development
+TE-500375,09/21/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,1.5,No,Non-billable,0,395.00,0.00,L120,Internal file management / training
+TE-500467,09/21/2025,Greenfield Energy Partners,M-1005,INV-1005-3,Priya Raman,Partner,3.2,Yes,Billed,3.2,540.00,1728.00,L120,Analysis / strategy
+TE-500548,09/21/2025,Northgate School District,M-1006,INV-1006-3,Kevin Park,Associate,2.4,Yes,Billed,2.4,340.00,816.00,A108,Communicate (other external)
+TE-500620,09/21/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,1.1,Yes,Billed,1.1,515.00,566.50,L310,Written discovery
+TE-500754,09/21/2025,Estate of Harold Vance,M-1009,INV-1009-3,Nina Patel,Staff,1.0,Yes,Billed,1.0,150.00,150.00,A101,Plan and prepare for
+TE-500062,09/22/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Grace Liu,Paralegal,4.8,Yes,Billed,4.8,195.00,936.00,A101,Plan and prepare for
+TE-500060,09/23/2025,Harborview Holdings LLC,M-1001,INV-1001-3,David Okafor,Partner,0.7,Yes,Billed,0.7,575.00,402.50,A108,Communicate (other external)
+TE-500159,09/24/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Laura Martinez,Associate,1.2,Yes,Billed,1.2,330.00,396.00,A103,Draft / revise
+TE-500972,09/24/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,2.8,Yes,Billed,2.8,575.00,1610.00,L210,Pleadings
+TE-500621,09/25/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Aisha Mohammed,Partner,3.1,Yes,Billed,3.1,515.00,1596.50,C300,Analysis and advice
+TE-500623,09/25/2025,Summit Biotech Corp.,M-1007,INV-1007-3,Michael Brennan,Partner,0.6,Yes,Billed,0.6,520.00,312.00,C100,Fact gathering
+TE-500828,09/25/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,0.9,Yes,Billed,0.9,350.00,315.00,L310,Written discovery
+TE-500888,09/25/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,1.3,No,Non-billable,0,295.00,0.00,L310,Internal file management / training
+TE-500154,09/26/2025,Pinecrest Medical Group,M-1002,INV-1002-3,Sarah Lindqvist,Partner,0.6,Yes,Billed,0.1,560.00,56.00,A108,Communicate (other external)
+TE-500545,09/26/2025,Northgate School District,M-1006,INV-1006-3,Robert Alvarez,Partner,5.0,Yes,Billed,5.0,530.00,2650.00,L210,Pleadings
+TE-500891,09/26/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,3.2,Yes,Written Off,0,295.00,0.00,L120,Analysis / strategy
+TE-500976,09/26/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.9,Yes,Billed,4.9,330.00,1617.00,L310,Written discovery
+TE-500061,09/27/2025,Harborview Holdings LLC,M-1001,INV-1001-3,Daniel Smith,Associate,0.7,Yes,Billed,0.7,395.00,276.50,L110,Fact investigation / development
+TE-500374,09/27/2025,Bluewater Logistics,M-1004,INV-1004-3,Elena Petrova,Partner,4.0,Yes,Billed,4.0,525.00,2100.00,L210,Pleadings
+TE-500626,09/27/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,4.5,No,Non-billable,0,350.00,0.00,L310,Internal file management / training
+TE-500686,09/27/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,4.6,No,Non-billable,0,510.00,0.00,L310,Internal file management / training
+TE-500755,09/27/2025,Estate of Harold Vance,M-1009,INV-1009-3,Henry Adams,Paralegal,3.8,Yes,Billed,3.8,185.00,703.00,A104,Review / analyze
+TE-500829,09/27/2025,Keystone Retail Partners,M-1010,INV-1010-3,Rachel Jones,Associate,1.5,Yes,Billed,1.5,350.00,525.00,C300,Analysis and advice
+TE-500283,09/28/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-3,Daniel Smith,Associate,2.0,Yes,Billed,2.0,395.00,790.00,A108,Communicate (other external)
+TE-500470,09/28/2025,Greenfield Energy Partners,M-1005,,Kevin Park,Associate,3.1,No,Non-billable,0,340.00,0.00,L110,Internal file management / training
+TE-500971,09/28/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,4.0,Yes,Billed,4.0,510.00,2040.00,L110,Fact investigation / development
+TE-500172,10/01/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Laura Martinez,Associate,3.1,Yes,Billed,2.6,330.00,858.00,C300,Analysis and advice
+TE-500072,10/02/2025,Harborview Holdings LLC,M-1001,INV-1001-4,Grace Liu,Paralegal,4.7,Yes,Billed,4.7,195.00,916.50,L110,Fact investigation / development
+TE-500171,10/02/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Laura Martinez,Associate,4.9,Yes,Billed,4.9,330.00,1617.00,C300,Analysis and advice
+TE-500291,10/02/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Daniel Smith,Associate,3.3,Yes,Billed,3.3,395.00,1303.50,L110,Fact investigation / development
+TE-500293,10/02/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Daniel Smith,Associate,0.9,Yes,Billed,0.9,395.00,355.50,A104,Review / analyze
+TE-500384,10/02/2025,Bluewater Logistics,M-1004,INV-1004-4,Daniel Smith,Associate,1.0,Yes,Billed,1.0,395.00,395.00,L250,Other written motions and submissions
+TE-500385,10/02/2025,Bluewater Logistics,M-1004,INV-1004-4,Daniel Smith,Associate,2.3,Yes,Billed,2.3,395.00,908.50,L310,Written discovery
+TE-500761,10/02/2025,Estate of Harold Vance,M-1009,INV-1009-4,Henry Adams,Paralegal,4.6,Yes,Billed,4.6,185.00,851.00,A104,Review / analyze
+TE-500978,10/02/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,2.9,Yes,Billed,2.9,510.00,1479.00,L310,Written discovery
+TE-500288,10/03/2025,Atlas Manufacturing Inc.,M-1003,,Robert Alvarez,Partner,3.6,Yes,Written Off,0,530.00,0.00,L120,Analysis / strategy
+TE-500294,10/03/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Grace Liu,Paralegal,4.1,Yes,Billed,4.1,195.00,799.50,L250,Other written motions and submissions
+TE-500894,10/03/2025,Cedar Point Hospitality,M-1011,INV-1011-4,Owen Fletcher,Associate,1.4,Yes,Billed,1.4,295.00,413.00,C100,Fact gathering
+TE-500071,10/04/2025,Harborview Holdings LLC,M-1001,INV-1001-4,Grace Liu,Paralegal,1.2,Yes,Billed,1.2,195.00,234.00,A103,Draft / revise
+TE-500691,10/04/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,1.2,No,Non-billable,0,330.00,0.00,L250,Internal file management / training
+TE-500762,10/04/2025,Estate of Harold Vance,M-1009,INV-1009-4,Henry Adams,Paralegal,3.3,Yes,Billed,3.3,185.00,610.50,A101,Plan and prepare for
+TE-500763,10/04/2025,Estate of Harold Vance,M-1009,INV-1009-4,Henry Adams,Paralegal,1.1,Yes,Billed,1.1,185.00,203.50,A104,Review / analyze
+TE-500693,10/05/2025,Riverside Credit Union,M-1008,INV-1008-4,Laura Martinez,Associate,2.4,Yes,Billed,1.9,330.00,627.00,A104,Review / analyze
+TE-500833,10/05/2025,Keystone Retail Partners,M-1010,INV-1010-4,Michael Brennan,Partner,1.6,Yes,Billed,1.6,520.00,832.00,L120,Analysis / strategy
+TE-500169,10/06/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Laura Martinez,Associate,2.7,Yes,Billed,2.2,330.00,726.00,A103,Draft / revise
+TE-500167,10/07/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Rachel Jones,Associate,3.1,Yes,Billed,3.1,350.00,1085.00,L120,Analysis / strategy
+TE-500170,10/07/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Laura Martinez,Associate,3.3,Yes,Billed,2.8,330.00,924.00,L110,Fact investigation / development
+TE-500381,10/07/2025,Bluewater Logistics,M-1004,INV-1004-4,Elena Petrova,Partner,5.5,Yes,Billed,5.0,525.00,2625.00,L310,Written discovery
+TE-500690,10/07/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,5.2,Yes,Written Off,0,510.00,0.00,A104,Review / analyze
+TE-500165,10/08/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Sarah Lindqvist,Partner,1.6,Yes,Billed,1.6,560.00,896.00,A101,Plan and prepare for
+TE-500290,10/08/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Daniel Smith,Associate,5.4,Yes,Billed,4.9,395.00,1935.50,L210,Pleadings
+TE-500551,10/08/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,2.7,Yes,Written Off,0,530.00,0.00,A106,Communicate (with client)
+TE-500634,10/08/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,1.3,No,Non-billable,0,350.00,0.00,A103,Internal file management / training
+TE-500893,10/08/2025,Cedar Point Hospitality,M-1011,INV-1011-4,Elena Petrova,Partner,0.3,Yes,Billed,0.3,525.00,157.50,A108,Communicate (other external)
+TE-500387,10/09/2025,Bluewater Logistics,M-1004,INV-1004-4,Daniel Smith,Associate,2.6,Yes,Billed,2.6,395.00,1027.00,C100,Fact gathering
+TE-500633,10/09/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Rachel Jones,Associate,4.7,Yes,Billed,4.7,350.00,1645.00,L310,Written discovery
+TE-500982,10/09/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,0.7,Yes,Billed,0.7,330.00,231.00,A101,Plan and prepare for
+TE-500065,10/10/2025,Harborview Holdings LLC,M-1001,INV-1001-4,David Okafor,Partner,3.1,Yes,Billed,3.1,575.00,1782.50,L110,Fact investigation / development
+TE-500070,10/10/2025,Harborview Holdings LLC,M-1001,INV-1001-4,Daniel Smith,Associate,0.9,Yes,Billed,0.9,395.00,355.50,A108,Communicate (other external)
+TE-500758,10/10/2025,Estate of Harold Vance,M-1009,INV-1009-4,Catherine Doyle,Partner,2.2,Yes,Billed,2.2,505.00,1111.00,A101,Plan and prepare for
+TE-500476,10/11/2025,Greenfield Energy Partners,M-1005,INV-1005-4,Kevin Park,Associate,1.3,Yes,Billed,1.3,340.00,442.00,A108,Communicate (other external)
+TE-500632,10/11/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Michael Brennan,Partner,1.8,Yes,Billed,1.8,520.00,936.00,L310,Written discovery
+TE-500832,10/11/2025,Keystone Retail Partners,M-1010,INV-1010-4,Michael Brennan,Partner,3.3,Yes,Billed,3.3,520.00,1716.00,L210,Pleadings
+TE-500067,10/12/2025,Harborview Holdings LLC,M-1001,INV-1001-4,Daniel Smith,Associate,3.7,Yes,Billed,3.7,395.00,1461.50,L310,Written discovery
+TE-500382,10/12/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,3.5,Yes,Written Off,0,525.00,0.00,A106,Communicate (with client)
+TE-500386,10/12/2025,Bluewater Logistics,M-1004,INV-1004-4,Daniel Smith,Associate,0.8,Yes,Billed,0.8,395.00,316.00,L210,Pleadings
+TE-500549,10/13/2025,Northgate School District,M-1006,INV-1006-4,Michael Brennan,Partner,1.3,Yes,Billed,1.3,520.00,676.00,A108,Communicate (other external)
+TE-500834,10/13/2025,Keystone Retail Partners,M-1010,INV-1010-4,Rachel Jones,Associate,0.8,Yes,Billed,0.3,350.00,105.00,A101,Plan and prepare for
+TE-500896,10/13/2025,Cedar Point Hospitality,M-1011,INV-1011-4,Owen Fletcher,Associate,1.9,Yes,Billed,1.9,295.00,560.50,C300,Analysis and advice
+TE-500287,10/14/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Robert Alvarez,Partner,1.9,Yes,Billed,1.9,530.00,1007.00,L310,Written discovery
+TE-500760,10/14/2025,Estate of Harold Vance,M-1009,INV-1009-4,Nina Patel,Staff,3.7,Yes,Billed,3.7,150.00,555.00,A108,Communicate (other external)
+TE-500380,10/16/2025,Bluewater Logistics,M-1004,INV-1004-4,Elena Petrova,Partner,0.5,Yes,Billed,0.5,525.00,262.50,A106,Communicate (with client)
+TE-500383,10/16/2025,Bluewater Logistics,M-1004,INV-1004-4,Daniel Smith,Associate,4.0,Yes,Billed,4.0,395.00,1580.00,L250,Other written motions and submissions
+TE-500477,10/16/2025,Greenfield Energy Partners,M-1005,INV-1005-4,Henry Adams,Paralegal,2.3,Yes,Billed,1.8,185.00,333.00,L110,Fact investigation / development
+TE-500068,10/17/2025,Harborview Holdings LLC,M-1001,INV-1001-4,Daniel Smith,Associate,2.8,Yes,Billed,2.3,395.00,908.50,C100,Fact gathering
+TE-500175,10/17/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Margaret Chen,Partner,1.2,Yes,Billed,1.2,650.00,780.00,L210,Pleadings
+TE-500166,10/18/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Sarah Lindqvist,Partner,2.2,Yes,Billed,2.2,560.00,1232.00,L250,Other written motions and submissions
+TE-500379,10/18/2025,Bluewater Logistics,M-1004,INV-1004-4,James Whitfield,Partner,3.6,Yes,Billed,3.6,550.00,1980.00,A101,Plan and prepare for
+TE-500630,10/18/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Aisha Mohammed,Partner,2.3,Yes,Billed,2.3,515.00,1184.50,L120,Analysis / strategy
+TE-500378,10/19/2025,Bluewater Logistics,M-1004,INV-1004-4,James Whitfield,Partner,4.5,Yes,Billed,4.5,550.00,2475.00,A101,Plan and prepare for
+TE-500475,10/19/2025,Greenfield Energy Partners,M-1005,INV-1005-4,Priya Raman,Partner,5.2,Yes,Billed,5.2,540.00,2808.00,L250,Other written motions and submissions
+TE-500692,10/19/2025,Riverside Credit Union,M-1008,INV-1008-4,Laura Martinez,Associate,3.8,Yes,Billed,3.8,330.00,1254.00,L210,Pleadings
+TE-500066,10/20/2025,Harborview Holdings LLC,M-1001,INV-1001-4,David Okafor,Partner,2.4,Yes,Billed,2.4,575.00,1380.00,L210,Pleadings
+TE-500286,10/20/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Robert Alvarez,Partner,1.2,Yes,Billed,0.7,530.00,371.00,A108,Communicate (other external)
+TE-500759,10/20/2025,Estate of Harold Vance,M-1009,INV-1009-4,Catherine Doyle,Partner,3.6,Yes,Billed,3.6,505.00,1818.00,L120,Analysis / strategy
+TE-500174,10/21/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,1.4,No,Non-billable,0,650.00,0.00,L120,Internal file management / training
+TE-500629,10/21/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Aisha Mohammed,Partner,3.4,Yes,Billed,3.4,515.00,1751.00,A104,Review / analyze
+TE-500168,10/22/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Rachel Jones,Associate,3.8,Yes,Billed,3.3,350.00,1155.00,A104,Review / analyze
+TE-500173,10/22/2025,Pinecrest Medical Group,M-1002,INV-1002-4,Laura Martinez,Associate,3.6,Yes,Billed,3.6,330.00,1188.00,C300,Analysis and advice
+TE-500550,10/22/2025,Northgate School District,M-1006,INV-1006-4,Robert Alvarez,Partner,1.3,Yes,Billed,1.3,530.00,689.00,A106,Communicate (with client)
+TE-500552,10/22/2025,Northgate School District,M-1006,INV-1006-4,Kevin Park,Associate,4.2,Yes,Billed,4.2,340.00,1428.00,C100,Fact gathering
+TE-500631,10/22/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Michael Brennan,Partner,5.4,Yes,Billed,5.4,520.00,2808.00,L110,Fact investigation / development
+TE-500064,10/23/2025,Harborview Holdings LLC,M-1001,INV-1001-4,David Okafor,Partner,3.7,Yes,Billed,3.7,575.00,2127.50,C300,Analysis and advice
+TE-500981,10/23/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.1,Yes,Billed,1.1,330.00,363.00,A108,Communicate (other external)
+TE-500289,10/24/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Daniel Smith,Associate,0.8,Yes,Billed,0.8,395.00,316.00,C100,Fact gathering
+TE-500635,10/24/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Rachel Jones,Associate,4.5,Yes,Billed,4.5,350.00,1575.00,C300,Analysis and advice
+TE-500689,10/24/2025,Riverside Credit Union,M-1008,INV-1008-4,Thomas Nakamura,Partner,0.9,Yes,Billed,0.9,510.00,459.00,A104,Review / analyze
+TE-500628,10/25/2025,Summit Biotech Corp.,M-1007,INV-1007-4,Aisha Mohammed,Partner,2.0,Yes,Billed,2.0,515.00,1030.00,A104,Review / analyze
+TE-500069,10/26/2025,Harborview Holdings LLC,M-1001,INV-1001-4,Daniel Smith,Associate,1.4,Yes,Billed,0.9,395.00,355.50,A104,Review / analyze
+TE-500757,10/26/2025,Estate of Harold Vance,M-1009,INV-1009-4,Catherine Doyle,Partner,5.1,Yes,Billed,5.1,505.00,2575.50,A101,Plan and prepare for
+TE-500285,10/27/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,1.7,Yes,Written Off,0,650.00,0.00,C100,Fact gathering
+TE-500553,10/27/2025,Northgate School District,M-1006,INV-1006-4,Kevin Park,Associate,1.5,Yes,Billed,1.5,340.00,510.00,L110,Fact investigation / development
+TE-500835,10/27/2025,Keystone Retail Partners,M-1010,INV-1010-4,Rachel Jones,Associate,2.4,Yes,Billed,2.4,350.00,840.00,L110,Fact investigation / development
+TE-500836,10/27/2025,Keystone Retail Partners,M-1010,INV-1010-4,James Whitfield,Partner,4.7,Yes,Billed,4.7,550.00,2585.00,A106,Communicate (with client)
+TE-500979,10/27/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,4.3,Yes,Billed,4.3,575.00,2472.50,L110,Fact investigation / development
+TE-500292,10/28/2025,Atlas Manufacturing Inc.,M-1003,INV-1003-4,Daniel Smith,Associate,1.7,Yes,Billed,1.7,395.00,671.50,A104,Review / analyze
+TE-500895,10/28/2025,Cedar Point Hospitality,M-1011,INV-1011-4,Owen Fletcher,Associate,2.3,Yes,Billed,2.3,295.00,678.50,A101,Plan and prepare for
+TE-500980,10/28/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,2.7,Yes,Billed,2.2,575.00,1265.00,A106,Communicate (with client)
+TE-500183,11/01/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,2.7,No,Non-billable,0,330.00,0.00,L210,Internal file management / training
+TE-500304,11/01/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,3.9,Yes,Unbilled,0,195.00,0.00,L250,Other written motions and submissions
+TE-500555,11/01/2025,Northgate School District,M-1006,,Michael Brennan,Partner,5.0,Yes,Unbilled,0,520.00,0.00,L210,Pleadings
+TE-500303,11/02/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,1.1,Yes,Unbilled,0,395.00,0.00,L210,Pleadings
+TE-500392,11/02/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,3.5,No,Non-billable,0,395.00,0.00,L310,Internal file management / training
+TE-500900,11/02/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,1.5,Yes,Unbilled,0,295.00,0.00,A108,Communicate (other external)
+TE-500561,11/03/2025,Northgate School District,M-1006,,Kevin Park,Associate,1.5,Yes,Unbilled,0,340.00,0.00,A106,Communicate (with client)
+TE-500898,11/03/2025,Cedar Point Hospitality,M-1011,,Elena Petrova,Partner,0.5,Yes,Unbilled,0,525.00,0.00,C100,Fact gathering
+TE-500178,11/04/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,0.5,No,Non-billable,0,350.00,0.00,L310,Internal file management / training
+TE-500179,11/04/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,1.3,Yes,Unbilled,0,350.00,0.00,C300,Analysis and advice
+TE-500305,11/04/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,3.7,Yes,Unbilled,0,195.00,0.00,L120,Analysis / strategy
+TE-500697,11/04/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,1.9,Yes,Unbilled,0,330.00,0.00,L110,Fact investigation / development
+TE-500695,11/05/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,3.9,No,Non-billable,0,330.00,0.00,C100,Internal file management / training
+TE-500987,11/05/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.9,Yes,Unbilled,0,330.00,0.00,L110,Fact investigation / development
+TE-500989,11/05/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.9,Yes,Unbilled,0,330.00,0.00,A101,Plan and prepare for
+TE-500180,11/06/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,1.0,Yes,Unbilled,0,330.00,0.00,L210,Pleadings
+TE-500298,11/06/2025,Atlas Manufacturing Inc.,M-1003,,Robert Alvarez,Partner,5.2,Yes,Unbilled,0,530.00,0.00,C100,Fact gathering
+TE-500482,11/06/2025,Greenfield Energy Partners,M-1005,,Henry Adams,Paralegal,3.9,Yes,Unbilled,0,185.00,0.00,A106,Communicate (with client)
+TE-500073,11/07/2025,Harborview Holdings LLC,M-1001,,David Okafor,Partner,3.2,Yes,Unbilled,0,575.00,0.00,A103,Draft / revise
+TE-500389,11/07/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,3.6,Yes,Unbilled,0,525.00,0.00,L110,Fact investigation / development
+TE-500899,11/07/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,4.8,Yes,Unbilled,0,295.00,0.00,L210,Pleadings
+TE-500901,11/07/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,1.8,Yes,Unbilled,0,295.00,0.00,A104,Review / analyze
+TE-500177,11/08/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,4.7,Yes,Unbilled,0,350.00,0.00,L310,Written discovery
+TE-500558,11/08/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,2.8,Yes,Unbilled,0,530.00,0.00,L110,Fact investigation / development
+TE-500185,11/09/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,0.7,Yes,Unbilled,0,650.00,0.00,L110,Fact investigation / development
+TE-500556,11/09/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,2.0,Yes,Unbilled,0,530.00,0.00,L110,Fact investigation / development
+TE-500393,11/10/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,3.1,Yes,Unbilled,0,395.00,0.00,L120,Analysis / strategy
+TE-500840,11/10/2025,Keystone Retail Partners,M-1010,,James Whitfield,Partner,1.4,Yes,Unbilled,0,550.00,0.00,A103,Draft / revise
+TE-500075,11/11/2025,Harborview Holdings LLC,M-1001,,Daniel Smith,Associate,4.0,Yes,Unbilled,0,395.00,0.00,L110,Fact investigation / development
+TE-500985,11/11/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,3.7,Yes,Unbilled,0,575.00,0.00,C100,Fact gathering
+TE-500394,11/12/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,2.0,Yes,Unbilled,0,395.00,0.00,C100,Fact gathering
+TE-500182,11/13/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,3.7,No,Non-billable,0,330.00,0.00,L250,Internal file management / training
+TE-500184,11/13/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,3.7,Yes,Unbilled,0,650.00,0.00,A104,Review / analyze
+TE-500768,11/13/2025,Estate of Harold Vance,M-1009,,Henry Adams,Paralegal,2.2,No,Non-billable,0,185.00,0.00,A104,Internal file management / training
+TE-500988,11/13/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,3.0,Yes,Unbilled,0,330.00,0.00,A108,Communicate (other external)
+TE-500074,11/14/2025,Harborview Holdings LLC,M-1001,,David Okafor,Partner,3.8,No,Non-billable,0,575.00,0.00,L210,Internal file management / training
+TE-500301,11/14/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,3.1,Yes,Unbilled,0,395.00,0.00,L120,Analysis / strategy
+TE-500478,11/15/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,4.3,Yes,Unbilled,0,540.00,0.00,A108,Communicate (other external)
+TE-500640,11/15/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,5.0,Yes,Unbilled,0,350.00,0.00,C300,Analysis and advice
+TE-500176,11/16/2025,Pinecrest Medical Group,M-1002,,Sarah Lindqvist,Partner,1.0,Yes,Unbilled,0,560.00,0.00,L250,Other written motions and submissions
+TE-500391,11/16/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,0.6,Yes,Unbilled,0,525.00,0.00,A108,Communicate (other external)
+TE-500902,11/16/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,2.7,Yes,Unbilled,0,295.00,0.00,A103,Draft / revise
+TE-500297,11/17/2025,Atlas Manufacturing Inc.,M-1003,,Robert Alvarez,Partner,0.5,Yes,Unbilled,0,530.00,0.00,L250,Other written motions and submissions
+TE-500560,11/17/2025,Northgate School District,M-1006,,Kevin Park,Associate,1.6,Yes,Unbilled,0,340.00,0.00,C100,Fact gathering
+TE-500698,11/17/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,1.5,Yes,Unbilled,0,330.00,0.00,C300,Analysis and advice
+TE-500764,11/17/2025,Estate of Harold Vance,M-1009,,Catherine Doyle,Partner,2.1,Yes,Unbilled,0,505.00,0.00,A104,Review / analyze
+TE-500837,11/17/2025,Keystone Retail Partners,M-1010,,Michael Brennan,Partner,5.4,Yes,Unbilled,0,520.00,0.00,L250,Other written motions and submissions
+TE-500897,11/17/2025,Cedar Point Hospitality,M-1011,,Elena Petrova,Partner,3.5,Yes,Unbilled,0,525.00,0.00,A108,Communicate (other external)
+TE-500076,11/18/2025,Harborview Holdings LLC,M-1001,,Daniel Smith,Associate,1.1,Yes,Unbilled,0,395.00,0.00,C100,Fact gathering
+TE-500078,11/18/2025,Harborview Holdings LLC,M-1001,,Grace Liu,Paralegal,3.2,Yes,Unbilled,0,195.00,0.00,A104,Review / analyze
+TE-500181,11/18/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,5.0,Yes,Unbilled,0,330.00,0.00,A104,Review / analyze
+TE-500295,11/18/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,3.6,Yes,Unbilled,0,650.00,0.00,A104,Review / analyze
+TE-500639,11/18/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,5.4,Yes,Unbilled,0,350.00,0.00,L310,Written discovery
+TE-500388,11/19/2025,Bluewater Logistics,M-1004,,James Whitfield,Partner,5.3,Yes,Unbilled,0,550.00,0.00,L310,Written discovery
+TE-500299,11/20/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,0.8,Yes,Unbilled,0,395.00,0.00,L250,Other written motions and submissions
+TE-500557,11/20/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,3.6,Yes,Unbilled,0,530.00,0.00,C100,Fact gathering
+TE-500986,11/20/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,1.5,No,Non-billable,0,575.00,0.00,A108,Internal file management / training
+TE-500186,11/21/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,2.4,Yes,Unbilled,0,650.00,0.00,A108,Communicate (other external)
+TE-500984,11/21/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,4.7,Yes,Unbilled,0,510.00,0.00,L250,Other written motions and submissions
+TE-500296,11/22/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,3.4,Yes,Unbilled,0,650.00,0.00,C100,Fact gathering
+TE-500479,11/22/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,4.8,Yes,Unbilled,0,540.00,0.00,L250,Other written motions and submissions
+TE-500480,11/22/2025,Greenfield Energy Partners,M-1005,,Kevin Park,Associate,5.5,Yes,Unbilled,0,340.00,0.00,C300,Analysis and advice
+TE-500636,11/23/2025,Summit Biotech Corp.,M-1007,,Aisha Mohammed,Partner,3.1,Yes,Unbilled,0,515.00,0.00,A103,Draft / revise
+TE-500638,11/24/2025,Summit Biotech Corp.,M-1007,,Michael Brennan,Partner,0.6,Yes,Unbilled,0,520.00,0.00,L210,Pleadings
+TE-500838,11/24/2025,Keystone Retail Partners,M-1010,,Michael Brennan,Partner,4.2,Yes,Unbilled,0,520.00,0.00,C300,Analysis and advice
+TE-500481,11/25/2025,Greenfield Energy Partners,M-1005,,Henry Adams,Paralegal,3.6,Yes,Unbilled,0,185.00,0.00,A103,Draft / revise
+TE-500554,11/25/2025,Northgate School District,M-1006,,Michael Brennan,Partner,2.9,Yes,Unbilled,0,520.00,0.00,L210,Pleadings
+TE-500559,11/25/2025,Northgate School District,M-1006,,Kevin Park,Associate,5.0,No,Non-billable,0,340.00,0.00,L210,Internal file management / training
+TE-500300,11/26/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,2.8,Yes,Unbilled,0,395.00,0.00,A104,Review / analyze
+TE-500302,11/26/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,3.3,Yes,Unbilled,0,395.00,0.00,L250,Other written motions and submissions
+TE-500765,11/26/2025,Estate of Harold Vance,M-1009,,Catherine Doyle,Partner,2.5,Yes,Unbilled,0,505.00,0.00,A104,Review / analyze
+TE-500903,11/26/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,2.6,Yes,Unbilled,0,295.00,0.00,L210,Pleadings
+TE-500637,11/27/2025,Summit Biotech Corp.,M-1007,,Aisha Mohammed,Partner,1.0,Yes,Unbilled,0,515.00,0.00,A108,Communicate (other external)
+TE-500694,11/27/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,4.0,Yes,Unbilled,0,510.00,0.00,L210,Pleadings
+TE-500696,11/27/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,3.3,Yes,Unbilled,0,330.00,0.00,A106,Communicate (with client)
+TE-500766,11/27/2025,Estate of Harold Vance,M-1009,,Catherine Doyle,Partner,2.1,Yes,Unbilled,0,505.00,0.00,A106,Communicate (with client)
+TE-500839,11/27/2025,Keystone Retail Partners,M-1010,,Rachel Jones,Associate,5.0,Yes,Unbilled,0,350.00,0.00,L310,Written discovery
+TE-500983,11/27/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,4.1,Yes,Unbilled,0,510.00,0.00,L120,Analysis / strategy
+TE-500077,11/28/2025,Harborview Holdings LLC,M-1001,,Daniel Smith,Associate,4.2,Yes,Unbilled,0,395.00,0.00,A106,Communicate (with client)
+TE-500306,11/28/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,1.4,Yes,Unbilled,0,195.00,0.00,L250,Other written motions and submissions
+TE-500390,11/28/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,2.4,Yes,Unbilled,0,525.00,0.00,C100,Fact gathering
+TE-500641,11/28/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,2.0,Yes,Unbilled,0,350.00,0.00,L120,Analysis / strategy
+TE-500767,11/28/2025,Estate of Harold Vance,M-1009,,Nina Patel,Staff,2.2,No,Non-billable,0,150.00,0.00,A103,Internal file management / training
+TE-500990,11/28/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.5,Yes,Unbilled,0,330.00,0.00,L120,Analysis / strategy
+TE-500904,12/01/2025,Cedar Point Hospitality,M-1011,,Elena Petrova,Partner,0.3,Yes,Unbilled,0,525.00,0.00,C300,Analysis and advice
+TE-500190,12/02/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,0.4,Yes,Unbilled,0,350.00,0.00,L210,Pleadings
+TE-500644,12/02/2025,Summit Biotech Corp.,M-1007,,Michael Brennan,Partner,3.5,Yes,Unbilled,0,520.00,0.00,A104,Review / analyze
+TE-500699,12/02/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,5.0,Yes,Unbilled,0,510.00,0.00,C300,Analysis and advice
+TE-500996,12/02/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.2,Yes,Unbilled,0,330.00,0.00,A106,Communicate (with client)
+TE-500198,12/03/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,4.7,Yes,Unbilled,0,650.00,0.00,L310,Written discovery
+TE-500400,12/04/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,5.5,Yes,Unbilled,0,395.00,0.00,L310,Written discovery
+TE-500562,12/04/2025,Northgate School District,M-1006,,Michael Brennan,Partner,0.3,Yes,Unbilled,0,520.00,0.00,C300,Analysis and advice
+TE-500312,12/05/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,3.9,Yes,Unbilled,0,395.00,0.00,L110,Fact investigation / development
+TE-500702,12/05/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,4.3,Yes,Unbilled,0,330.00,0.00,L310,Written discovery
+TE-500991,12/05/2025,Meridian Software Ltd.,M-1012,,Thomas Nakamura,Partner,4.9,Yes,Unbilled,0,510.00,0.00,A106,Communicate (with client)
+TE-500188,12/06/2025,Pinecrest Medical Group,M-1002,,Sarah Lindqvist,Partner,2.2,Yes,Unbilled,0,560.00,0.00,A106,Communicate (with client)
+TE-500646,12/06/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,4.0,No,Non-billable,0,350.00,0.00,A106,Internal file management / training
+TE-500081,12/07/2025,Harborview Holdings LLC,M-1001,,Daniel Smith,Associate,1.0,Yes,Unbilled,0,395.00,0.00,A103,Draft / revise
+TE-500565,12/07/2025,Northgate School District,M-1006,,Kevin Park,Associate,2.9,Yes,Unbilled,0,340.00,0.00,A101,Plan and prepare for
+TE-500845,12/07/2025,Keystone Retail Partners,M-1010,,James Whitfield,Partner,4.2,Yes,Unbilled,0,550.00,0.00,A108,Communicate (other external)
+TE-500564,12/09/2025,Northgate School District,M-1006,,Robert Alvarez,Partner,3.8,Yes,Unbilled,0,530.00,0.00,C300,Analysis and advice
+TE-500648,12/09/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,4.3,Yes,Unbilled,0,350.00,0.00,A108,Communicate (other external)
+TE-500401,12/10/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,2.7,Yes,Unbilled,0,395.00,0.00,L250,Other written motions and submissions
+TE-500483,12/10/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,2.0,Yes,Unbilled,0,540.00,0.00,C300,Analysis and advice
+TE-500398,12/11/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,4.2,Yes,Unbilled,0,395.00,0.00,L310,Written discovery
+TE-500567,12/11/2025,Northgate School District,M-1006,,Kevin Park,Associate,3.5,Yes,Unbilled,0,340.00,0.00,A103,Draft / revise
+TE-500701,12/11/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,0.5,Yes,Unbilled,0,510.00,0.00,A103,Draft / revise
+TE-500197,12/12/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,4.3,Yes,Unbilled,0,650.00,0.00,L110,Fact investigation / development
+TE-500402,12/12/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,1.6,Yes,Unbilled,0,395.00,0.00,L120,Analysis / strategy
+TE-500907,12/12/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,2.7,Yes,Unbilled,0,295.00,0.00,C100,Fact gathering
+TE-500082,12/13/2025,Harborview Holdings LLC,M-1001,,Grace Liu,Paralegal,4.8,Yes,Unbilled,0,195.00,0.00,C100,Fact gathering
+TE-500309,12/13/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,2.0,Yes,Unbilled,0,650.00,0.00,L210,Pleadings
+TE-500313,12/13/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,0.4,Yes,Unbilled,0,395.00,0.00,L310,Written discovery
+TE-500318,12/13/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,3.9,Yes,Unbilled,0,195.00,0.00,L110,Fact investigation / development
+TE-500563,12/13/2025,Northgate School District,M-1006,,Michael Brennan,Partner,5.2,Yes,Unbilled,0,520.00,0.00,C300,Analysis and advice
+TE-500647,12/13/2025,Summit Biotech Corp.,M-1007,,Rachel Jones,Associate,0.5,Yes,Unbilled,0,350.00,0.00,L310,Written discovery
+TE-500706,12/13/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,1.3,Yes,Unbilled,0,330.00,0.00,C300,Analysis and advice
+TE-500843,12/13/2025,Keystone Retail Partners,M-1010,,Rachel Jones,Associate,0.7,Yes,Unbilled,0,350.00,0.00,C300,Analysis and advice
+TE-500844,12/13/2025,Keystone Retail Partners,M-1010,,Rachel Jones,Associate,1.8,Yes,Unbilled,0,350.00,0.00,L310,Written discovery
+TE-500192,12/14/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,2.3,Yes,Unbilled,0,350.00,0.00,A103,Draft / revise
+TE-500307,12/14/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,1.8,Yes,Unbilled,0,650.00,0.00,A106,Communicate (with client)
+TE-500486,12/14/2025,Greenfield Energy Partners,M-1005,,Henry Adams,Paralegal,4.1,Yes,Unbilled,0,185.00,0.00,A103,Draft / revise
+TE-500906,12/14/2025,Cedar Point Hospitality,M-1011,,Owen Fletcher,Associate,1.0,Yes,Unbilled,0,295.00,0.00,L120,Analysis / strategy
+TE-500992,12/14/2025,Meridian Software Ltd.,M-1012,,David Okafor,Partner,5.0,Yes,Unbilled,0,575.00,0.00,A104,Review / analyze
+TE-500994,12/15/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.5,Yes,Unbilled,0,330.00,0.00,A108,Communicate (other external)
+TE-500995,12/15/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,1.8,Yes,Unbilled,0,330.00,0.00,L310,Written discovery
+TE-500997,12/16/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,4.3,Yes,Unbilled,0,330.00,0.00,C300,Analysis and advice
+TE-500395,12/17/2025,Bluewater Logistics,M-1004,,James Whitfield,Partner,1.8,Yes,Unbilled,0,550.00,0.00,A104,Review / analyze
+TE-500484,12/17/2025,Greenfield Energy Partners,M-1005,,Priya Raman,Partner,3.6,Yes,Unbilled,0,540.00,0.00,A108,Communicate (other external)
+TE-500191,12/19/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,1.7,Yes,Unbilled,0,350.00,0.00,A106,Communicate (with client)
+TE-500485,12/19/2025,Greenfield Energy Partners,M-1005,,Kevin Park,Associate,2.1,Yes,Unbilled,0,340.00,0.00,L210,Pleadings
+TE-500566,12/19/2025,Northgate School District,M-1006,,Kevin Park,Associate,2.3,Yes,Unbilled,0,340.00,0.00,L110,Fact investigation / development
+TE-500195,12/20/2025,Pinecrest Medical Group,M-1002,,Laura Martinez,Associate,4.8,Yes,Unbilled,0,330.00,0.00,A101,Plan and prepare for
+TE-500314,12/20/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,4.8,Yes,Unbilled,0,395.00,0.00,L110,Fact investigation / development
+TE-500703,12/20/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,1.0,Yes,Unbilled,0,330.00,0.00,C300,Analysis and advice
+TE-500311,12/21/2025,Atlas Manufacturing Inc.,M-1003,,Robert Alvarez,Partner,2.4,Yes,Unbilled,0,530.00,0.00,A103,Draft / revise
+TE-500700,12/21/2025,Riverside Credit Union,M-1008,,Thomas Nakamura,Partner,4.8,Yes,Unbilled,0,510.00,0.00,A101,Plan and prepare for
+TE-500905,12/21/2025,Cedar Point Hospitality,M-1011,,Elena Petrova,Partner,0.9,Yes,Unbilled,0,525.00,0.00,C300,Analysis and advice
+TE-500310,12/22/2025,Atlas Manufacturing Inc.,M-1003,,Robert Alvarez,Partner,3.4,Yes,Unbilled,0,530.00,0.00,A108,Communicate (other external)
+TE-500193,12/23/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,3.5,Yes,Unbilled,0,350.00,0.00,L120,Analysis / strategy
+TE-500315,12/23/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,3.6,Yes,Unbilled,0,395.00,0.00,A101,Plan and prepare for
+TE-500397,12/23/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,2.3,Yes,Unbilled,0,525.00,0.00,A108,Communicate (other external)
+TE-500642,12/23/2025,Summit Biotech Corp.,M-1007,,Aisha Mohammed,Partner,4.6,Yes,Unbilled,0,515.00,0.00,A104,Review / analyze
+TE-500841,12/23/2025,Keystone Retail Partners,M-1010,,Michael Brennan,Partner,2.3,Yes,Unbilled,0,520.00,0.00,A106,Communicate (with client)
+TE-500308,12/24/2025,Atlas Manufacturing Inc.,M-1003,,Margaret Chen,Partner,4.4,Yes,Unbilled,0,650.00,0.00,A101,Plan and prepare for
+TE-500705,12/24/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,2.6,Yes,Unbilled,0,330.00,0.00,L310,Written discovery
+TE-500196,12/25/2025,Pinecrest Medical Group,M-1002,,Margaret Chen,Partner,1.3,Yes,Unbilled,0,650.00,0.00,A104,Review / analyze
+TE-500396,12/25/2025,Bluewater Logistics,M-1004,,Elena Petrova,Partner,2.6,Yes,Unbilled,0,525.00,0.00,L120,Analysis / strategy
+TE-500704,12/25/2025,Riverside Credit Union,M-1008,,Laura Martinez,Associate,4.2,Yes,Unbilled,0,330.00,0.00,L310,Written discovery
+TE-500846,12/26/2025,Keystone Retail Partners,M-1010,,James Whitfield,Partner,3.3,Yes,Unbilled,0,550.00,0.00,A103,Draft / revise
+TE-500189,12/27/2025,Pinecrest Medical Group,M-1002,,Sarah Lindqvist,Partner,4.8,Yes,Unbilled,0,560.00,0.00,A104,Review / analyze
+TE-500194,12/27/2025,Pinecrest Medical Group,M-1002,,Rachel Jones,Associate,1.1,Yes,Unbilled,0,350.00,0.00,A103,Draft / revise
+TE-500316,12/27/2025,Atlas Manufacturing Inc.,M-1003,,Daniel Smith,Associate,2.1,Yes,Unbilled,0,395.00,0.00,L310,Written discovery
+TE-500317,12/27/2025,Atlas Manufacturing Inc.,M-1003,,Grace Liu,Paralegal,4.4,Yes,Unbilled,0,195.00,0.00,L310,Written discovery
+TE-500643,12/27/2025,Summit Biotech Corp.,M-1007,,Aisha Mohammed,Partner,3.1,Yes,Unbilled,0,515.00,0.00,C300,Analysis and advice
+TE-500645,12/27/2025,Summit Biotech Corp.,M-1007,,Michael Brennan,Partner,2.5,Yes,Unbilled,0,520.00,0.00,C100,Fact gathering
+TE-500079,12/28/2025,Harborview Holdings LLC,M-1001,,David Okafor,Partner,2.3,Yes,Unbilled,0,575.00,0.00,C100,Fact gathering
+TE-500080,12/28/2025,Harborview Holdings LLC,M-1001,,David Okafor,Partner,3.8,Yes,Unbilled,0,575.00,0.00,L110,Fact investigation / development
+TE-500187,12/28/2025,Pinecrest Medical Group,M-1002,,Sarah Lindqvist,Partner,5.0,Yes,Unbilled,0,560.00,0.00,A101,Plan and prepare for
+TE-500399,12/28/2025,Bluewater Logistics,M-1004,,Daniel Smith,Associate,1.7,Yes,Unbilled,0,395.00,0.00,A101,Plan and prepare for
+TE-500842,12/28/2025,Keystone Retail Partners,M-1010,,Michael Brennan,Partner,2.4,Yes,Unbilled,0,520.00,0.00,A101,Plan and prepare for
+TE-500993,12/28/2025,Meridian Software Ltd.,M-1012,,Laura Martinez,Associate,2.9,Yes,Unbilled,0,330.00,0.00,L110,Fact investigation / development
