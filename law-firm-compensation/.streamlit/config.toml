@@ -1,0 +1,12 @@
+# Streamlit settings for this program (read automatically at start-up).
+[server]
+# Do not prompt for an e-mail address or try to open a browser itself;
+# "Start Program.bat" opens the browser.
+headless = true
+# Only this computer can open the program (not other machines on the network).
+address = "127.0.0.1"
+port = 8501
+
+[browser]
+# Keep all use of the program on this computer: no usage statistics are sent.
+gatherUsageStats = false

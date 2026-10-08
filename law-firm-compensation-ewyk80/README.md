@@ -35,6 +35,19 @@ pip install -r requirements.txt
 
 ## 2. Running the application
 
+**Windows, the easy way:** double-click **`Start Program.bat`** in this folder.
+It finds Python, installs the program's parts the first time (and again only
+when an update needs it), starts the program and opens your browser. Keep its
+window open while you use the program; closing the window stops it. This
+version opens at **http://localhost:8502**, so both versions can run at the same
+time. The first time, Windows may show "Windows protected your PC": click
+**More info → Run anyway**.
+
+The program only accepts connections from this computer and sends no usage
+statistics (see `.streamlit/config.toml`).
+
+**Any platform, from a command window:**
+
 ```bash
 # Optional: set an administrator password. You need it to reopen a finalized year.
 export COMP_ADMIN_PASSWORD='choose-a-strong-password'    # Windows: set COMP_ADMIN_PASSWORD=...
