@@ -29,6 +29,11 @@ def load_inputs(db: Database, year: int) -> CompensationInputs:
         manual_shares=db.load_table("manual_shares", year),
         collections=db.load_data("collections", year),
         time_entries=db.load_data("time_entries", year),
+        expense_categories=db.load_table("expense_categories", year),
+        category_splits=db.load_table("category_splits", year),
+        expenses=db.load_table("expenses", year),
+        expense_overrides=db.load_table("expense_overrides", year),
+        carryforwards=db.load_table("carryforwards", year),
         lockstep_overrides=db.load_table("lockstep_overrides", year),
     )
 
@@ -61,6 +66,12 @@ def build_snapshot(db: Database, year: int, inputs: CompensationInputs,
         "entry_overrides": _frame_json(inputs.entry_overrides),
         "exclusions": _frame_json(inputs.exclusions),
         "manual_working_shares": _frame_json(inputs.manual_shares),
+        "expense_categories": _frame_json(inputs.expense_categories),
+        "expense_category_splits": _frame_json(inputs.category_splits),
+        "expenses": _frame_json(inputs.expenses),
+        "expense_overrides": _frame_json(inputs.expense_overrides),
+        "carryforwards_in": _frame_json(inputs.carryforwards),
+        "expense_allocation": _frame_json(result.expenses.detail.astype(str)),
         "results": {
             "pools": {k: str(v) for k, v in result.pools.items()},
             "partner_summary": _frame_json(result.partner_summary.astype(
@@ -127,6 +138,7 @@ def start_year_from_prior(db: Database, from_year: int, to_year: int, user: str,
     for name in ("timekeepers", "matters", "originators", "supervision", "manual_shares"):
         db.save_table(name, to_year, db.load_table(name, from_year), user,
                       f"{name} copied from {from_year}")
+    notes += copy_expense_setup(db, from_year, to_year, user)
     db.log(to_year, user, f"Year set up from {from_year}", notes)
     return notes
 
@@ -149,6 +161,8 @@ def rename_partner(db: Database, year: int, old: str, new: str, user: str) -> in
     targets = {
         "partners": ["name"], "originators": ["partner"], "supervision": ["partner"],
         "entry_overrides": ["partner"], "manual_shares": ["partner"],
+        "category_splits": ["partner"], "expense_overrides": ["partner"],
+        "carryforwards": ["partner"],
         "lockstep_overrides": ["partner"],
         "timekeepers": ["linked_partner", "default_supervisor"],
         "matters": ["comp_supervising_partner"],
@@ -193,3 +207,48 @@ def assign_responsible_as_originator(db: Database, year: int, user: str) -> list
         db.save_table("originators", year, pd.DataFrame(rows), user,
                       "Responsible Professional copied as originator (explicit user action)")
     return added
+
+
+def prior_year_shortfalls(db: Database, from_year: int) -> dict[str, float]:
+    """Amounts each partner carries forward out of ``from_year``.
+
+    Uses the finalized snapshot when one exists, otherwise the live calculation.
+    """
+    snap = db.latest_final_snapshot(from_year)
+    if snap:
+        rows = snap["results"]["partner_summary"]
+    else:
+        _, result = run(db, from_year)
+        rows = result.partner_summary.to_dict("records")
+    out = {}
+    for r in rows:
+        amt = float(r.get("Carry forward to next year") or 0)
+        if amt > 0:
+            out[r["Partner"]] = amt
+    return out
+
+
+def load_carryforwards(db: Database, from_year: int, to_year: int, user: str) -> list[str]:
+    """Replace ``to_year`` carry-forwards with the shortfalls carried out of ``from_year``."""
+    db.assert_writable(to_year)
+    shortfalls = prior_year_shortfalls(db, from_year)
+    finalized = db.is_finalized(from_year)
+    rows = [{"partner": p, "amount": round(a, 2), "source_year": str(from_year),
+             "notes": "From finalized snapshot" if finalized else "From draft (not finalized) results"}
+            for p, a in shortfalls.items()]
+    db.save_table("carryforwards", to_year, pd.DataFrame(
+        rows, columns=["partner", "amount", "source_year", "notes"]), user,
+        f"Carry-forwards loaded from {from_year}")
+    if not rows:
+        return [f"No partner carried a shortfall out of {from_year}."]
+    return [f"{len(rows)} carry-forward(s) loaded from {from_year}"
+            + ("" if finalized else " (prior year not finalized - reload after finalizing)") + "."]
+
+
+def copy_expense_setup(db: Database, from_year: int, to_year: int, user: str) -> list[str]:
+    """Copy expense categories and their splits, and load carry-forwards."""
+    for name in ("expense_categories", "category_splits"):
+        db.save_table(name, to_year, db.load_table(name, from_year), user,
+                      f"{name} copied from {from_year}")
+    return ["Expense categories and splits copied."] + load_carryforwards(
+        db, from_year, to_year, user)

@@ -68,7 +68,8 @@ credit_rows = pd.concat([
 ])
 
 tabs = st.tabs(["Clients", "Matters", "Collections", "Originating credits", "Own hours",
-                "Associate hours", "Supervisory assignments", "Working-credit calculation"])
+                "Associate hours", "Supervisory assignments", "Working-credit calculation",
+                "Expenses"])
 with tabs[0]:
     by_client = credit_rows.pivot_table(index="Client", columns="Type", values="Credit",
                                         aggfunc="sum", fill_value=0).reset_index()
@@ -123,3 +124,20 @@ with tabs[7]:
     fb = p_wd[p_wd["Method"] != "Invoice-level"]
     if not fb.empty:
         st.info(f"{fb['Collection'].nunique()} collection(s) used the matter-level fallback.")
+with tabs[8]:
+    c = st.columns(4)
+    c[0].metric("Gross compensation", fmt_money(row["Total compensation"]))
+    c[1].metric("Allocated expenses", fmt_money(row["Allocated expenses"]))
+    c[2].metric("Prior-year carry-forward", fmt_money(row["Prior-year carry-forward"]))
+    c[3].metric("Net compensation", fmt_money(row["Net compensation"]))
+    det = show(res.expenses.detail)
+    det = det[det["Partner"] == partner]
+    if det.empty:
+        st.info("No expenses allocated to this partner.")
+    else:
+        st.dataframe(det.groupby(["Category", "Rule"], as_index=False)["Allocated amount"].sum(),
+                     hide_index=True, width="stretch",
+                     column_config={"Allocated amount": st.column_config.NumberColumn(
+                         format="$%,.2f")})
+        with st.expander("Expense detail"):
+            st.dataframe(det, hide_index=True, width="stretch")

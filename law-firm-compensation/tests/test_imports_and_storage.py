@@ -106,7 +106,7 @@ def test_excel_export_is_generated(db):
         "Executive Summary", "Policy Inputs", "Partner Compensation", "EWYK Detail",
         "Origination Detail", "Working Credit Detail", "Associate-Matter Mappings",
         "TimeSolv Collections", "TimeSolv Time Entries", "Current Lockstep", "Proposed Lockstep",
-        "Exceptions", "Reconciliation", "Audit Log"]
+        "Partner Expenses", "Expense Allocation", "Exceptions", "Reconciliation", "Audit Log"]
     pc = wb["Partner Compensation"]
     assert str(pc["G5"].value).startswith("=IF(")  # formula cells present
     assert pc.freeze_panes == "B5"

@@ -180,6 +180,25 @@ DATASETS: dict[str, DatasetSpec] = {
             F("active", "Active status", "bool", synonyms=("active", "status", "is active")),
         ),
     ),
+    "expenses": DatasetSpec(
+        "expenses", "Partner expenses",
+        "Expense list from the accounting system (e.g. a general-ledger or bill-payment export). "
+        "Each row needs a category that matches a category defined on the Partner Expenses page.",
+        (
+            F("expense_id", "Expense / transaction ID",
+              synonyms=("transaction id", "expense id", "id", "entry no", "journal entry",
+                        "num", "ref no", "transaction #")),
+            F("expense_date", "Date", "date", True, ("date", "transaction date", "bill date",
+                                                     "payment date", "expense date")),
+            F("category", "Expense category", required=True,
+              synonyms=("category", "account", "expense category", "class", "gl account")),
+            F("description", "Description", synonyms=("description", "memo", "memo/description",
+                                                      "details")),
+            F("amount", "Amount", "num", True, ("amount", "total", "debit", "expense amount")),
+            F("vendor", "Vendor / payee", synonyms=("vendor", "payee", "name", "supplier")),
+            F("reference", "Reference", synonyms=("reference", "check #", "doc number")),
+        ),
+    ),
     "partners": DatasetSpec(
         "partners", "Partner roster",
         "Partner names, Managing Partner flag, current lockstep weight (percent) and active flag.",
@@ -190,6 +209,10 @@ DATASETS: dict[str, DatasetSpec] = {
             F("lockstep_weight", "Current lockstep weight (%)", "num", True,
               ("lockstep weight", "lockstep", "weight", "lockstep %", "points")),
             F("active", "Active (Yes/No)", "bool", synonyms=("active", "status", "is active")),
+            F("start_date", "Partner from (date)", "date",
+              synonyms=("partner since", "start date", "admitted", "partner from")),
+            F("end_date", "Partner until (date)", "date",
+              synonyms=("partner until", "end date", "departed", "withdrawal date")),
         ),
     ),
 }
@@ -545,6 +568,8 @@ def import_dataframe(db: Database, year: int, dataset: str, raw: pd.DataFrame,
         _import_matters(db, year, valid, user, result)
     elif dataset == "professionals":
         _import_professionals(db, year, valid, user, result)
+    elif dataset == "expenses":
+        _import_expenses(db, year, valid, user, result)
     elif dataset == "partners":
         _import_partners(db, year, valid, user, result, replace_roster)
     db.finish_batch(batch_id, result.rows_read, result.imported + result.updated,
@@ -691,6 +716,40 @@ def _import_professionals(db: Database, year: int, valid: pd.DataFrame, user: st
                            "Setup > Timekeepers.")
 
 
+def _import_expenses(db: Database, year: int, valid: pd.DataFrame, user: str,
+                     result: ImportResult) -> None:
+    current = db.load_table("expenses", year)
+
+    def key(r: dict[str, Any]) -> str:
+        if clean_str(r.get("expense_id")):
+            return "I|" + norm_name(r.get("expense_id"))
+        return "|".join(["K", str(parse_date(r.get("expense_date")) if r.get("expense_date") else ""),
+                         norm_name(r.get("category")), str(to_decimal(r.get("amount"), None)),
+                         norm_name(r.get("description"))])
+
+    seen = {key(r) for r in current.to_dict("records")}
+    rows = []
+    next_n = len(current) + 1
+    for _, rec in valid.iterrows():
+        r = {c: rec.get(c) for c in ("expense_id", "expense_date", "category", "description",
+                                     "amount", "vendor", "reference")}
+        k = key(r)
+        if k in seen:
+            result.duplicates += 1
+            continue
+        seen.add(k)
+        if not clean_str(r["expense_id"]):
+            r["expense_id"] = f"EXP-{year}-{next_n:05d}"
+            next_n += 1
+        rows.append(r)
+    if rows:
+        db.save_table("expenses", year, pd.concat([current, pd.DataFrame(rows)], ignore_index=True),
+                      user, "Expenses imported")
+    result.imported = len(rows)
+    if result.duplicates:
+        result.messages.append(f"{result.duplicates} expense(s) already imported were skipped.")
+
+
 def _import_partners(db: Database, year: int, valid: pd.DataFrame, user: str,
                      result: ImportResult, replace: bool) -> None:
     current = db.load_table("partners", year)
@@ -701,6 +760,7 @@ def _import_partners(db: Database, year: int, valid: pd.DataFrame, user: str,
         "name": rec["name"], "is_managing_partner": bool(rec.get("is_managing_partner") or False),
         "lockstep_weight": rec["lockstep_weight"],
         "active": True if rec.get("active") is None else bool(rec.get("active")), "notes": "",
+        "start_date": rec.get("start_date"), "end_date": rec.get("end_date"),
     } for _, rec in valid.iterrows()]
     db.save_table("partners", year, pd.DataFrame(rows), user, "Partner roster imported")
     result.imported = len(rows)

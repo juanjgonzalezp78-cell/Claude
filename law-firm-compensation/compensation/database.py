@@ -35,6 +35,7 @@ SETUP_TABLES: dict[str, dict[str, str]] = {
     "partners": {
         "name": "text", "is_managing_partner": "bool", "lockstep_weight": "num",
         "active": "bool", "notes": "text",
+        "start_date": "date", "end_date": "date",
     },
     "timekeepers": {
         "timekeeper_id": "text", "name": "text", "role": "text", "category": "text",
@@ -58,6 +59,23 @@ SETUP_TABLES: dict[str, dict[str, str]] = {
     },
     "exclusions": {
         "entry_id": "text", "reason": "text", "entered_by": "text", "entered_at": "text",
+    },
+    "expense_categories": {
+        "category": "text", "rule": "text", "associate": "text", "notes": "text",
+    },
+    "category_splits": {
+        "category": "text", "partner": "text", "share_pct": "num", "notes": "text",
+    },
+    "expenses": {
+        "expense_id": "text", "expense_date": "date", "category": "text", "description": "text",
+        "amount": "num", "vendor": "text", "reference": "text",
+    },
+    "expense_overrides": {
+        "expense_id": "text", "partner": "text", "share_pct": "num", "reason": "text",
+        "entered_by": "text", "entered_at": "text",
+    },
+    "carryforwards": {
+        "partner": "text", "amount": "num", "source_year": "text", "notes": "text",
     },
     "manual_shares": {
         "matter_id": "text", "partner": "text", "share_pct": "num", "notes": "text",
@@ -172,6 +190,12 @@ class Database:
                     f"year INTEGER NOT NULL, batch_id INTEGER, {col_sql})"
                 )
                 conn.execute(f"CREATE INDEX IF NOT EXISTS ix_{name}_key ON {name}(year, dedup_key)")
+            # Lightweight migration: add columns introduced after a database was created.
+            for name, cols in {**SETUP_TABLES, **DATA_TABLES}.items():
+                have = {r[1] for r in conn.execute(f"PRAGMA table_info({name})").fetchall()}
+                for c, k in cols.items():
+                    if c not in have:
+                        conn.execute(f"ALTER TABLE {name} ADD COLUMN {c} {_sql_type(k)}")
             conn.executescript(
                 """
                 CREATE TABLE IF NOT EXISTS settings (

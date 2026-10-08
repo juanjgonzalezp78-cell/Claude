@@ -72,8 +72,15 @@ if not blocking.empty:
     st.dataframe(blocking[["Category", "Description", "How to resolve"]], hide_index=True,
                  width="stretch")
 
+if float(m.get("total_expenses", 0)):
+    c = st.columns(3)
+    c[0].metric("Partner expenses", fmt_money(m["total_expenses"]))
+    c[1].metric("Net payable to partners", fmt_money(m["total_net_payable"]))
+    c[2].metric("Carried forward to next year", fmt_money(m["total_carry_forward_out"]))
+
 st.subheader("Compensation by partner")
 cols = ["Partner", "Active", "Total EWYK credit", "EWYK performance share %",
-        "Equal compensation", "EWYK compensation", "Lockstep compensation", "Total compensation"]
+        "Equal compensation", "EWYK compensation", "Lockstep compensation", "Total compensation",
+        "Allocated expenses", "Net compensation"]
 df = show(res.partner_summary[cols])
 st.dataframe(df, hide_index=True, width="stretch", column_config=money_config(df))

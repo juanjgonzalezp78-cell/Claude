@@ -168,7 +168,7 @@ def build_workbook(inputs: CompensationInputs, result: CompensationResult,
     sheets = ["Executive Summary", "Policy Inputs", "Partner Compensation", "EWYK Detail",
               "Origination Detail", "Working Credit Detail", "Associate-Matter Mappings",
               "TimeSolv Collections", "TimeSolv Time Entries", "Current Lockstep",
-              "Proposed Lockstep", "Exceptions", "Reconciliation", "Audit Log"]
+              "Proposed Lockstep", "Partner Expenses", "Expense Allocation", "Exceptions", "Reconciliation", "Audit Log"]
     ws = {name: wb.add_worksheet(name) for name in sheets}
     for w in ws.values():
         w.hide_gridlines(2)
@@ -570,6 +570,9 @@ def build_workbook(inputs: CompensationInputs, result: CompensationResult,
         for j, msg in enumerate(result.lockstep.messages + result.lockstep.problems):
             lpw.write(notes_row + j, 0, msg, fmt.subtitle)
 
+    # ------------------------------------------------------------ Partner Expenses
+    _expense_sheets(ws["Partner Expenses"], ws["Expense Allocation"], fmt, result, summary)
+
     # ------------------------------------------------------------ Exceptions
     ex = result.exceptions.copy()
     exw = ws["Exceptions"]
@@ -639,6 +642,79 @@ def build_workbook(inputs: CompensationInputs, result: CompensationResult,
     return buf.getvalue()
 
 
+def _expense_sheets(ws: Any, wd: Any, fmt: _Formats, result: CompensationResult,
+                    summary: pd.DataFrame) -> None:
+    """Partner Expenses (net compensation with formulas) and Expense Allocation (detail)."""
+    exp = result.expenses
+    cats = [c for c in exp.by_partner.columns if c not in ("Partner", "Total expenses")] \
+        if not exp.by_partner.empty else []
+    by_p = exp.by_partner.set_index("Partner") if not exp.by_partner.empty else pd.DataFrame()
+    rows = []
+    for rec in summary.to_dict("records"):
+        row = {"Partner": rec["Partner"], "Active": rec["Active"],
+               "Gross compensation": rec["Total compensation"]}
+        for c in cats:
+            row[c] = float(by_p.loc[rec["Partner"], c]) if rec["Partner"] in by_p.index else 0.0
+        row.update({"Total expenses": rec["Allocated expenses"],
+                    "Prior-year carry-forward": rec["Prior-year carry-forward"],
+                    "Net compensation": rec["Net compensation"],
+                    "Net payable": rec["Net payable"],
+                    "Shortfall (carried forward or owed)": rec["Carry forward to next year"]
+                    + rec["Owed to the firm"]})
+        rows.append(row)
+    df = pd.DataFrame(rows)
+    kinds = {c: "money" for c in df.columns}
+    kinds.update({"Partner": "text", "Active": "bool"})
+    first, last, cols = _table(ws, fmt, f"Partner Expenses and Net Compensation - {result.policy.year}",
+                               f"Net = gross - expenses - prior-year carry-forward. Negative net: "
+                               f"{result.policy.negative_net_treatment}.", df, kinds,
+                               inputs={"Prior-year carry-forward"})
+    if df.empty:
+        return
+    f_ = {k: xl_col_to_name(v) for k, v in cols.items()}
+    for i, rec in enumerate(rows):
+        r = first + i
+        n = r + 1
+        if cats:
+            ws.write_formula(r, cols["Total expenses"],
+                             f"=SUM({f_[cats[0]]}{n}:{f_[cats[-1]]}{n})", fmt.formula["money"],
+                             rec["Total expenses"])
+        ws.write_formula(r, cols["Net compensation"],
+                         f"={f_['Gross compensation']}{n}-{f_['Total expenses']}{n}"
+                         f"-{f_['Prior-year carry-forward']}{n}", fmt.formula["money"],
+                         rec["Net compensation"])
+        ws.write_formula(r, cols["Net payable"], f"=MAX({f_['Net compensation']}{n},0)",
+                         fmt.formula["money"], rec["Net payable"])
+        ws.write_formula(r, cols["Shortfall (carried forward or owed)"],
+                         f"=MAX(-{f_['Net compensation']}{n},0)", fmt.formula["money"],
+                         rec["Shortfall (carried forward or owed)"])
+    tr = last + 1
+    ws.write(tr, 0, "TOTAL", fmt.total["text"])
+    for name in df.columns[2:]:
+        ws.write_formula(tr, cols[name], f"=SUM({f_[name]}{first + 1}:{f_[name]}{last + 1})",
+                         fmt.total["money"])
+    ws.write(tr + 2, 0, "Check: expenses allocated = expenses entered", fmt.bold)
+    ws.write_formula(tr + 2, 1, f'=IF(ROUND({f_["Total expenses"]}{tr + 1}-'
+                                f'{float(exp.total_expenses)},2)=0,"OK","DIFFERENCE")',
+                     fmt.formula["text"], "OK" if exp.total_expenses == exp.total_allocated
+                     else "DIFFERENCE")
+    ws.conditional_format(tr + 2, 1, tr + 2, 1, {"type": "cell", "criteria": "!=",
+                                                   "value": '"OK"', "format": fmt.bad})
+    ws.conditional_format(first, cols["Net compensation"], last, cols["Net compensation"],
+                          {"type": "cell", "criteria": "<", "value": 0, "format": fmt.bad})
+    det = _decimals_to_float(exp.detail)
+    det["Share %"] = _frac(det["Share %"]) if not det.empty else []
+    d_first, d_last, d_cols = _table(wd, fmt, "Expense Allocation",
+                                     "Every expense and the partner(s) it was charged to.", det,
+                                     {"Date": "date", "Expense amount": "money", "Basis": "num",
+                                      "Share %": "pct", "Allocated amount": "money"})
+    if not det.empty:
+        _total_row(wd, fmt, d_first, d_last, d_cols, ["Allocated amount"])
+        wd.conditional_format(d_first, d_cols["Partner"], d_last, d_cols["Partner"],
+                              {"type": "cell", "criteria": "==", "value": '"(unallocated)"',
+                               "format": fmt.bad})
+
+
 def _total_row(ws: Any, fmt: _Formats, first: int, last: int, cols: dict[str, int],
                names: list[str]) -> None:
     tr = last + 1
@@ -688,6 +764,12 @@ def _executive_summary(ws: Any, fmt: _Formats, result: CompensationResult, statu
          "See Working Credit Detail (Method column).", False),
         ("Blocking exceptions", f'=COUNTIF(Exceptions!A{HEADER_ROW + 2}:A{HEADER_ROW + 1 + max(n_ex, 1)},'
                                 f'"{Severity.BLOCKING}")', "int", "", True),
+        ("Partner expenses allocated", float(m.get("total_expenses", 0)), "money",
+         "See Partner Expenses sheet.", False),
+        ("Net payable to partners (after expenses)", float(m.get("total_net_payable", 0)),
+         "money", "Gross compensation less expenses and prior-year carry-forwards.", False),
+        ("Shortfalls carried forward to next year", float(m.get("total_carry_forward_out", 0)),
+         "money", f"Policy: {policy.negative_net_treatment}.", False),
         ("Reconciliation status", "OK" if result.reconciled else "DIFFERENCE", "text",
          "See Reconciliation sheet.", False),
     ]

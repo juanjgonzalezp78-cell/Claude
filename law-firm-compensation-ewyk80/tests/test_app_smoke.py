@@ -9,7 +9,7 @@ from compensation.database import Database
 from compensation.demo import load_demo
 from conftest import ROOT
 
-PAGES = ["dashboard", "setup", "imports", "mappings", "results", "audit",
+PAGES = ["dashboard", "setup", "imports", "mappings", "expenses", "results", "audit",
          "history"]
 
 

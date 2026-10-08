@@ -9,8 +9,8 @@ from compensation.database import Database
 from compensation.demo import load_demo
 from conftest import ROOT
 
-PAGES = ["dashboard", "setup", "imports", "mappings", "results", "lockstep_update", "audit",
-         "history"]
+PAGES = ["dashboard", "setup", "imports", "mappings", "expenses", "results", "lockstep_update",
+         "audit", "history"]
 
 
 @pytest.fixture(scope="module")

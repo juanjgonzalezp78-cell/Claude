@@ -91,6 +91,8 @@ class Policy:
     include_written_off: bool = False
     include_staff_hours: bool = False
     working_method: str = WorkingMethod.BILLED_HOURS
+    prorate_equal_expenses: bool = True
+    negative_net_treatment: str = "Carry forward to next year"
     period_start: date | None = None
     period_end: date | None = None
 
@@ -135,9 +137,10 @@ class Policy:
             elif key == "year":
                 kwargs[key] = int(value)
             elif key in ("originator_working_eligible", "include_nonbillable",
-                         "include_written_off", "include_staff_hours"):
+                         "include_written_off", "include_staff_hours",
+                         "prorate_equal_expenses"):
                 kwargs[key] = bool(value)
-            elif key == "working_method":
+            elif key in ("working_method", "negative_net_treatment"):
                 kwargs[key] = str(value)
             else:
                 kwargs[key] = to_decimal(value)
@@ -158,6 +161,8 @@ class Policy:
             ("Include written-off hours", yes_no(self.include_written_off)),
             ("Include paralegal / other staff hours", yes_no(self.include_staff_hours)),
             ("Working-share methodology", self.working_method),
+            ("Prorate equal expense splits by time as partner", yes_no(self.prorate_equal_expenses)),
+            ("Negative net compensation", self.negative_net_treatment),
         ]
 
 

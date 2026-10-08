@@ -7,6 +7,7 @@ from datetime import date
 import pandas as pd
 import streamlit as st
 
+from compensation.expenses import NegativeNet
 from compensation.models import Policy, TimekeeperCategory, WorkingMethod, to_decimal
 from compensation.service import (assign_responsible_as_originator, rename_partner,
                                   start_year_from_prior)
@@ -54,13 +55,22 @@ with tabs[0]:
                       index=1 if p.include_written_off else 0, horizontal=True)
         staff = c3.radio("Include paralegal / other staff hours", ["No", "Yes"],
                          index=1 if p.include_staff_hours else 0, horizontal=True)
+        st.markdown("**Partner expenses**")
+        c1, c2 = st.columns(2)
+        prorate = c1.radio("Prorate equal expense splits by time as partner", ["Yes", "No"],
+                           index=0 if p.prorate_equal_expenses else 1, horizontal=True,
+                           help="Uses the start/end dates on the partner roster.")
+        negative = c2.selectbox("If expenses exceed a partner's compensation",
+                                NegativeNet.ALL, index=NegativeNet.ALL.index(p.negative_net_treatment)
+                                if p.negative_net_treatment in NegativeNet.ALL else 0)
         submitted = st.form_submit_button("Save policy", type="primary", disabled=not can_edit)
     new = Policy(year=Y, distributable_pool=to_decimal(f"{pool:.2f}"), equal_pct=to_decimal(eq),
                  ewyk_pct=to_decimal(ew), origination_pct=to_decimal(og),
                  working_pct=to_decimal(wk),
                  originator_working_eligible=orig_ok == "Yes", include_nonbillable=nonbill == "Yes",
                  include_written_off=wo == "Yes", include_staff_hours=staff == "Yes",
-                 working_method=method, period_start=start, period_end=end)
+                 working_method=method, period_start=start, period_end=end,
+                 prorate_equal_expenses=prorate == "Yes", negative_net_treatment=negative)
     problems = validate_policy(new)
     for prob in problems:
         st.error(prob)
@@ -90,6 +100,11 @@ with tabs[1]:
             "is_managing_partner": st.column_config.CheckboxColumn("Managing Partner"),
             "active": st.column_config.CheckboxColumn("Active"),
             "notes": st.column_config.TextColumn("Notes"),
+            "start_date": st.column_config.TextColumn(
+                "Partner from (YYYY-MM-DD)", help="Blank = whole period. Used to prorate equal "
+                "expense splits."),
+            "end_date": st.column_config.TextColumn("Partner until (YYYY-MM-DD)",
+                                                    help="Blank = whole period."),
         })
     st.metric("Active partners", int(edited["active"].fillna(False).astype(bool).sum()))
     problems = validate_roster(edited, db.load_policy(Y))

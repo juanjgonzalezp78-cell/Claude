@@ -17,7 +17,7 @@ its own folder), so the two can be run side by side for comparison.
 
 The app imports TimeSolv files, credits origination and working time, attributes
 associate hours to supervising partners matter by matter, calculates
-compensation to the cent, lists every exception, exports a 12-sheet Excel report,
+compensation to the cent, lists every exception, exports a 14-sheet Excel report,
 and stores finalized years in SQLite.
 
 ---
@@ -75,12 +75,13 @@ law-firm-compensation-ewyk80/
 │   ├── attribution.py         Hours qualification + 6-level supervising-partner hierarchy
 │   ├── calculations.py        Origination/working credits, EWYK, equal share, reconciliation
 │   ├── validation.py          Policy/roster/mapping validation, finalization blockers
-│   ├── exports.py             12-sheet formatted Excel report
+│   ├── expenses.py            Partner-expense allocation rules, net compensation, carry-forwards
+│   ├── exports.py             14-sheet formatted Excel report
 │   ├── database.py            SQLite storage, audit log, snapshots, read-only years
 │   ├── service.py             DB ↔ engine glue, finalize, copy year, rename partner
 │   └── demo.py                "Load Demo Data"
 ├── ui/common.py               Shared Streamlit helpers
-├── pages/                     dashboard, setup, imports, mappings, results,
+├── pages/                     dashboard, setup, imports, mappings, expenses, results,
 │                              audit, history
 ├── sample_data/               Demo TimeSolv-style CSVs + generator script
 ├── data/                      SQLite database (created at first run)
@@ -95,6 +96,7 @@ law-firm-compensation-ewyk80/
 | Professionals / timekeepers | Professionals list | Name |
 | Matters / projects | Projects list (add an "Originating Attorney" custom field if you track one) | Matter/Project ID |
 | Time entries | Time-entry or timeslip export, including **Invoice Number**, **Billed Hours** and **Billed Amount** | Work date, Matter ID, Timekeeper, Hours |
+| Partner expenses (optional) | General-ledger or bill-payment export from your accounting system | Date, Expense category, Amount |
 | Payment & collection allocations | **Invoice Summary with Payment Allocations**, with payment allocations turned on | Collection date, Matter ID, Amount allocated to professional fees |
 
 Import them in this order: roster → professionals → matters → time entries → payments.
@@ -108,7 +110,7 @@ collections*:
 - write-offs, discounts, credit memos and adjustments;
 - void, pending, reversed, NSF or outstanding payments (status or type text);
 - payments dated outside the compensation period;
-- rows with a zero fee allocation, or a negative one (negatives need a policy decision, see §10);
+- rows with a zero fee allocation, or a negative one (negatives need a policy decision, see §11);
 - rows you excluded yourself, such as confirmed duplicates.
 
 ## 5. Mapping TimeSolv columns
@@ -239,7 +241,73 @@ the pool to the cent, and the *Reconciliation* table proves it. Inactive partner
 receive $0. Any credit attributed to them is shown, but it is excluded from the
 EWYK denominator.
 
-## 8. Resolving exceptions
+## 8. Partner expenses and net compensation
+
+Partners bear certain firm expenses, such as associate salaries, support staff,
+rent, internet and utilities. These are deducted from each partner's compensation.
+The distributable pool is calculated **before** these expenses, so nothing is
+deducted twice.
+
+**Setting up (Partner Expenses page):**
+
+1. **Categories.** Create one per type of expense, for example "Associate salary –
+   Daniel Smith", "Support staff salaries" or "Rent". Each category gets a default
+   allocation rule:
+
+| Rule | How the expense is split | Typical use |
+|---|---|---|
+| Direct (one partner) | 100% to one named partner | An associate paid by one partner; a partner's own dues |
+| Fixed split | Fixed percentages among named partners (must total 100%) | An associate shared by two partners |
+| Equal (active partners) | Equally among active partners, prorated by time as partner | Staff, rent, internet, utilities |
+| Proportional to EWYK credit | By each active partner's EWYK credit | Costs the firm wants to follow performance |
+| Proportional to gross compensation | By each active partner's gross compensation | Insurance |
+| By associate hours | By the hours of a named associate credited to each partner (uses the supervisory mappings) | Associate salary that follows the actual work |
+
+2. **Expenses.** Type them in, or import the accounting system's export on the
+   Imports page (dataset "Partner expenses"). The import uses the same column
+   mapping and duplicate protection as the TimeSolv imports. Each expense needs a
+   date, a category and an amount.
+3. **Entry overrides.** A single expense can be split differently from its
+   category, for example one partner's bar dues. A written reason is required.
+
+**Proration.** On the partner roster, "Partner from" and "Partner until" record
+mid-year arrivals and departures. Equal splits are weighted by the days each
+partner was a partner during the compensation period. You can turn this off in
+Firm Setup → Policy.
+
+**Net compensation.** For each partner:
+
+```
+Net compensation = Gross compensation − Allocated expenses − Prior-year carry-forward
+Net payable      = Net compensation, if positive (otherwise 0)
+```
+
+**When expenses exceed compensation.** The policy setting decides what happens:
+
+- **Carry forward to next year** (the default). The shortfall is deducted from
+  next year's compensation. Firm Setup → Start from prior year loads it
+  automatically, and so does Partner Expenses → Carry-forwards → Load from prior
+  year. Loading uses the finalized snapshot when one exists.
+- **Amount owed to the firm now.** The shortfall is reported as owed and nothing
+  is carried forward.
+
+If a departed partner carries a shortfall forward, it is flagged, because no
+future compensation will absorb it.
+
+**Controls:**
+
+- Every expense must be fully allocated. An undefined category, a split that
+  doesn't total 100%, or an associate with no credited hours is a *blocking*
+  exception.
+- Reconciliation confirms that allocated expenses equal expenses entered, and that
+  gross − expenses − carry-forward equals net for every partner.
+- All changes are audited, and expenses are frozen when the year is finalized.
+
+The demo data includes a full year of sample expenses. They show each rule in
+use, including a partner (Catherine Doyle) who joined on April 1 and pays a
+prorated share of the equal splits.
+
+## 9. Resolving exceptions
 
 *Audit & Exceptions* lists every item with its severity and a "How to resolve"
 column. **Blocking** items prevent finalization.
@@ -262,10 +330,10 @@ That matter has no supervising partner, its Responsible Professional is an
 associate, and Fletcher has no default supervisor. Resolve it on *Supervisory
 Mappings* to see finalization become available.
 
-## 9. Finalizing a year and exporting
+## 10. Finalizing a year and exporting
 
 **Excel report.** Use *Compensation Results → Download Excel report*. The workbook
-has 12 sheets:
+has 14 sheets:
 
 1. Executive Summary
 2. Policy Inputs
@@ -276,9 +344,11 @@ has 12 sheets:
 7. Associate-Matter Mappings
 8. TimeSolv Collections
 9. TimeSolv Time Entries
-10. Exceptions
-11. Reconciliation
-12. Audit Log
+10. Partner Expenses
+11. Expense Allocation
+12. Exceptions
+13. Reconciliation
+14. Audit Log
 
 How the workbook is built:
 
@@ -310,7 +380,7 @@ data layer refuses every write, not just the UI. To reopen it, you need
 `COMP_ADMIN_PASSWORD` and a written reason, and the reopen is audited. You can
 download snapshots as JSON and compare them year over year.
 
-## 10. Policy decisions the firm must formally approve
+## 11. Policy decisions the firm must formally approve
 
 The app makes every one of these visible and editable, but the firm should adopt
 each one in writing:
@@ -348,8 +418,12 @@ each one in writing:
 13. **Partners who join or leave mid-year.** The equal share is not prorated;
     each active partner receives a full equal share.
 14. **Who holds the administrator password** to reopen finalized years.
+15. **Partner expenses:** which costs partners bear, the allocation rule for each category, and
+    whether equal splits are prorated for partial-year partners.
+16. **Negative net compensation:** carry forward to next year (default) or collect now, and how
+    to treat a departing partner's unrecovered shortfall.
 
-## 11. Limitations of this local version
+## 12. Limitations of this local version
 
 - One shared SQLite file. User names are typed in, not authenticated, so this is
   meant for use by trusted staff on one machine.

@@ -31,6 +31,7 @@ def load_demo(db: Database, year: int = DEMO_YEAR, user: str = "demo") -> list[s
         ("matters", "timesolv_projects.csv"),
         ("time_entries", "timesolv_time_entries.csv"),
         ("collections", "timesolv_payment_allocations.csv"),
+        ("expenses", "partner_expenses.csv"),
     ]
     for dataset, filename in steps:
         res = import_file(db, year, dataset, str(SAMPLE_DIR / filename), user, replace_roster=True)
@@ -44,6 +45,14 @@ def load_demo(db: Database, year: int = DEMO_YEAR, user: str = "demo") -> list[s
                   "Demo: split origination loaded")
     mappings = pd.read_csv(SAMPLE_DIR / "associate_matter_mappings.csv", dtype=str).fillna("")
     db.save_table("supervision", year, mappings, user, "Demo: associate-matter mappings loaded")
-    messages.append("Split origination for M-1003 and associate-matter mappings loaded.")
+    for table, filename in (("expense_categories", "expense_categories.csv"),
+                            ("category_splits", "expense_category_splits.csv"),
+                            ("expense_overrides", "expense_overrides.csv")):
+        df = pd.read_csv(SAMPLE_DIR / filename, dtype=str).fillna("")
+        if table == "expense_overrides":
+            df = df.assign(entered_by=user, entered_at="")
+        db.save_table(table, year, df, user, f"Demo: {table} loaded")
+    messages.append("Split origination for M-1003, associate-matter mappings and expense "
+                    "categories loaded.")
     db.log(year, user, "Demo data loaded", messages)
     return messages

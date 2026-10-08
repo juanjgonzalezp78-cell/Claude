@@ -24,6 +24,7 @@ PAGES = {
         st.Page("pages/setup.py", title="Firm Setup", icon="🏛️"),
         st.Page("pages/imports.py", title="Imports", icon="📥"),
         st.Page("pages/mappings.py", title="Supervisory Mappings", icon="🧭"),
+        st.Page("pages/expenses.py", title="Partner Expenses", icon="🧾"),
     ],
     "Results": [
         st.Page("pages/results.py", title="Compensation Results", icon="💼"),

@@ -224,7 +224,8 @@ def main() -> None:
             w.writerows(rows)
 
     write("partners.csv", [{"Partner Name": n, "Managing Partner": "Yes" if mp else "No",
-                            "Lockstep Weight": "18.0" if mp else "8.2", "Active": "Yes"}
+                            "Lockstep Weight": "18.0" if mp else "8.2", "Active": "Yes",
+                            "Partner Since": f"{YEAR}-04-01" if n == "Catherine Doyle" else ""}
                            for _, n, _, mp in PARTNERS])
     write("timesolv_professionals.csv",
           [{"Professional ID": pid_, "Name": n, "Title": "Managing Partner" if mp else "Partner",
@@ -268,7 +269,79 @@ def main() -> None:
          "start_date": "", "end_date": "", "allocation_pct": "100",
          "notes": "", "source": "Staffing memo"},
     ])
+    write_expenses(write)
     print(f"Wrote {len(entries)} time entries and {len(pays)} payment rows to {OUT}")
+
+
+def write_expenses(write) -> None:
+    """Expense categories, partner splits and a year of expenses (accounting-style export)."""
+    cats = [
+        ("Associate salary - Daniel Smith", "Direct (one partner)", "", "Paid by Okafor"),
+        ("Associate salary - Rachel Jones", "Fixed split", "", "Shared by Lindqvist and Brennan"),
+        ("Associate salary - Kevin Park", "By associate hours", "Kevin Park",
+         "Follows the partners Park actually worked for"),
+        ("Associate salary - Laura Martinez", "Fixed split", "", "Raman 60 / Nakamura 40"),
+        ("Associate salary - Owen Fletcher", "Direct (one partner)", "", "Paid by Petrova"),
+        ("Support staff salaries", "Equal (active partners)", "", "Paralegals, reception, clerk"),
+        ("Rent", "Equal (active partners)", "", ""),
+        ("Internet & telephone", "Equal (active partners)", "", ""),
+        ("Utilities", "Equal (active partners)", "", ""),
+        ("Malpractice insurance", "Proportional to gross compensation", "", ""),
+        ("Bar dues & CLE", "Fixed split", "", "Overridden per entry"),
+    ]
+    write("expense_categories.csv", [{"category": c, "rule": r, "associate": a, "notes": n}
+                                     for c, r, a, n in cats])
+    write("expense_category_splits.csv", [
+        {"category": "Associate salary - Daniel Smith", "partner": "David Okafor",
+         "share_pct": "100", "notes": ""},
+        {"category": "Associate salary - Rachel Jones", "partner": "Sarah Lindqvist",
+         "share_pct": "50", "notes": ""},
+        {"category": "Associate salary - Rachel Jones", "partner": "Michael Brennan",
+         "share_pct": "50", "notes": ""},
+        {"category": "Associate salary - Laura Martinez", "partner": "Priya Raman",
+         "share_pct": "60", "notes": ""},
+        {"category": "Associate salary - Laura Martinez", "partner": "Thomas Nakamura",
+         "share_pct": "40", "notes": ""},
+        {"category": "Associate salary - Owen Fletcher", "partner": "Elena Petrova",
+         "share_pct": "100", "notes": ""},
+        {"category": "Bar dues & CLE", "partner": "Margaret Chen", "share_pct": "100",
+         "notes": "Default; each entry is overridden to the partner concerned"},
+    ])
+    monthly = [
+        ("Associate salary - Daniel Smith", "Payroll", 15416.67),
+        ("Associate salary - Rachel Jones", "Payroll", 12500.00),
+        ("Associate salary - Kevin Park", "Payroll", 11666.67),
+        ("Associate salary - Laura Martinez", "Payroll", 11250.00),
+        ("Associate salary - Owen Fletcher", "Payroll", 9166.67),
+        ("Support staff salaries", "Payroll", 21250.00),
+        ("Rent", "Harbor Plaza Realty", 38500.00),
+        ("Internet & telephone", "MetroNet Business", 1480.00),
+        ("Utilities", "City Power & Water", 2650.00),
+    ]
+    rows = []
+    n = 0
+    for month in range(1, 13):
+        for cat, payee, amt in monthly:
+            n += 1
+            rows.append({"Transaction ID": f"GL-{YEAR}-{n:05d}", "Date": f"{month:02d}/28/{YEAR}",
+                         "Account": cat, "Memo": f"{cat} - {month:02d}/{YEAR}",
+                         "Amount": f"{amt:.2f}", "Payee": payee})
+    for q, month in enumerate((1, 4, 7, 10), start=1):
+        n += 1
+        rows.append({"Transaction ID": f"GL-{YEAR}-{n:05d}", "Date": f"{month:02d}/15/{YEAR}",
+                     "Account": "Malpractice insurance", "Memo": f"Professional liability Q{q}",
+                     "Amount": "41250.00", "Payee": "Lawyers Mutual"})
+    dues = [("Margaret Chen", 1850.00), ("David Okafor", 1450.00), ("Sarah Lindqvist", 1625.00)]
+    for partner, amt in dues:
+        n += 1
+        rows.append({"Transaction ID": f"GL-{YEAR}-{n:05d}", "Date": f"02/10/{YEAR}",
+                     "Account": "Bar dues & CLE", "Memo": f"Bar dues and CLE - {partner}",
+                     "Amount": f"{amt:.2f}", "Payee": "State Bar"})
+    write("partner_expenses.csv", rows)
+    write("expense_overrides.csv", [
+        {"expense_id": r["Transaction ID"], "partner": r["Memo"].split(" - ")[-1],
+         "share_pct": "100", "reason": "Personal bar dues are borne by the partner concerned"}
+        for r in rows if r["Account"] == "Bar dues & CLE"])
 
 
 if __name__ == "__main__":

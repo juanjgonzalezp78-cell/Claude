@@ -21,6 +21,7 @@ from typing import Any
 import pandas as pd
 
 from .attribution import AttributedEntry, Attributor, Roster
+from .expenses import ExpenseResult, allocate_expenses, apply_net
 from .models import (CENT, HUNDRED, ZERO, AttributionSource, ExceptionItem, Policy, Severity,
                      WorkingBucket, WorkingMethod, allocate_cents, clean_str, money, norm_name,
                      parse_date, to_decimal)
@@ -62,6 +63,11 @@ class CompensationInputs:
     manual_shares: pd.DataFrame = field(default_factory=pd.DataFrame)
     collections: pd.DataFrame = field(default_factory=pd.DataFrame)
     time_entries: pd.DataFrame = field(default_factory=pd.DataFrame)
+    expense_categories: pd.DataFrame = field(default_factory=pd.DataFrame)
+    category_splits: pd.DataFrame = field(default_factory=pd.DataFrame)
+    expenses: pd.DataFrame = field(default_factory=pd.DataFrame)
+    expense_overrides: pd.DataFrame = field(default_factory=pd.DataFrame)
+    carryforwards: pd.DataFrame = field(default_factory=pd.DataFrame)
 
 
 @dataclass
@@ -78,6 +84,7 @@ class CompensationResult:
     exceptions: pd.DataFrame
     reconciliation: pd.DataFrame
     metrics: dict[str, Any]
+    expenses: ExpenseResult
 
     @property
     def blocking_count(self) -> int:
@@ -347,6 +354,15 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
     pools = _pools(policy)
     summary, ewyk_total_active = _partner_summary(partners, active, credits, pools, policy, exc)
 
+    # ---------------------------------------------------------------- partner expenses & net
+    attribution_df = _attribution_frame(entries)
+    exp_result = allocate_expenses(policy, inputs.partners, inputs.expense_categories,
+                                   inputs.category_splits, inputs.expenses,
+                                   inputs.expense_overrides, inputs.carryforwards,
+                                   pd.DataFrame(summary), attribution_df)
+    exc.extend(exp_result.exceptions)
+    apply_net(summary, exp_result, policy, exc)
+
     for r in summary:
         r.pop("_share_exact", None)
     summary_df = pd.DataFrame(summary)
@@ -356,7 +372,7 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
     total_orig = sum((to_decimal(r["Origination credit"]) for r in orig_detail), ZERO)
     total_work = sum((to_decimal(r["Working credit"]) for r in work_detail), ZERO)
     recon = _reconciliation(policy, pools, summary_df, coll_rows, included, total_fees_included,
-                            total_orig, total_work, unallocated_total)
+                            total_orig, total_work, unallocated_total, exp_result)
     for r in recon:
         if r["Status"] == "DIFFERENCE":
             exc.append(ExceptionItem(Severity.BLOCKING, "Compensation reconciliation differences",
@@ -365,7 +381,6 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
                                      resolution="Resolve the related blocking exceptions; the "
                                                 "check passes when inputs are complete."))
 
-    attribution_df = _attribution_frame(entries)
     exceptions_df = pd.DataFrame([e.as_row() for e in exc], columns=list(
         ExceptionItem("", "", "").as_row().keys()))
     if not exceptions_df.empty:
@@ -396,6 +411,11 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
         if not exceptions_df.empty else 0,
         "reconciled": all(r["Status"] != "DIFFERENCE" for r in recon),
         "time_entries": len(entries),
+        "total_expenses": exp_result.total_expenses,
+        "total_net_payable": sum((to_decimal(v) for v in summary_df["Net payable"]), ZERO)
+        if not summary_df.empty else ZERO,
+        "total_carry_forward_out": sum((to_decimal(v) for v in summary_df[
+            "Carry forward to next year"]), ZERO) if not summary_df.empty else ZERO,
         "collections_included": len(included),
         "collections_excluded": len(coll_rows) - len(included),
     }
@@ -414,6 +434,7 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
         exceptions=exceptions_df,
         reconciliation=pd.DataFrame(recon),
         metrics=metrics,
+        expenses=exp_result,
     )
 
 
@@ -674,7 +695,7 @@ def _partner_summary(partners: list[dict[str, Any]], active: list[str],
 def _reconciliation(policy: Policy, pools: dict[str, Decimal], summary: pd.DataFrame,
                     coll_rows: list[dict[str, Any]], included: list[dict[str, Any]],
                     fees: Decimal, orig: Decimal, work: Decimal,
-                    unallocated: Decimal) -> list[dict[str, Any]]:
+                    unallocated: Decimal, exp: ExpenseResult | None = None) -> list[dict[str, Any]]:
     def row(check: str, expected: Decimal, actual: Decimal, tolerance: Decimal = ZERO,
             failure: str = "DIFFERENCE") -> dict[str, Any]:
         diff = actual - expected
@@ -705,6 +726,16 @@ def _reconciliation(policy: Policy, pools: dict[str, Decimal], summary: pd.DataF
         row("Partner EWYK credits = origination + working credit", orig + work,
             col("Total EWYK credit")),
     ]
+    if exp is not None:
+        out += [
+            row("Expenses allocated to partners = expenses entered", exp.total_expenses,
+                exp.total_allocated),
+            row("Gross - expenses - prior carry-forward = net compensation",
+                col("Total compensation") - col("Allocated expenses")
+                - col("Prior-year carry-forward"), col("Net compensation")),
+            row("Net payable - shortfalls = net compensation", col("Net compensation"),
+                col("Net payable") - col("Carry forward to next year") - col("Owed to the firm")),
+        ]
     return out
 
 
