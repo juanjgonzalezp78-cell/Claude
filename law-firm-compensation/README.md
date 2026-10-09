@@ -98,24 +98,72 @@ law-firm-compensation/
 
 ## 4. Required TimeSolv exports
 
-| Dataset (Imports page) | Recommended TimeSolv source | Required logical fields |
+Use TimeSolv's **Import/Export → Export Excel** screen. Its exports are plain
+tables with one row per record. The formatted reports on the Report Dashboard
+are grouped by client, with headings and subtotals, so they are not suitable.
+The column names below are TimeSolv's own, and the import wizard recognises
+them automatically.
+
+| Dataset (Imports page) | TimeSolv Export Excel entity | Key TimeSolv columns used |
 |---|---|---|
 | Partner roster | Your own CSV (`sample_data/partners.csv` shows the format) | Partner name, lockstep weight |
-| Professionals / timekeepers | Professionals list | Name |
-| Matters / projects | Projects list (add an "Originating Attorney" custom field if you track one) | Matter/Project ID |
-| Time entries | Time-entry or timeslip export, including **Invoice Number**, **Billed Hours** and **Billed Amount** | Work date, Matter ID, Timekeeper, Hours |
-| Partner expenses (optional) | General-ledger or bill-payment export from your accounting system | Date, Expense category, Amount |
-| Payment & collection allocations | **Invoice Summary with Payment Allocations**, with payment allocations turned on | Collection date, Matter ID, Amount allocated to professional fees |
+| Professionals / timekeepers | Your own list, or *Professionals and Rates* (`sample_data/timesolv_professionals.csv` shows the format) | Name, type (Partner / Associate / Paralegal / Other), default supervisor |
+| Matters / projects | **Matter** | Project Id, Client Name, Project Name, Responsible Time Keeper, Active?, Start Date, Inactive Date |
+| Matter originating professionals | **Matter Originating Professional** | Client Name + Project Name (matched to the Matter export), Originating Time Keeper, Originating Credit Percent |
+| Time entries | **Time** | Date, Firm User, Project Id, Hours, Rate, Amount, Invoice Number, Time Entry Status, Billable Type, Notes |
+| Invoices | **Invoice** | Invoice Number, Project Id, Invoice Amount, Total Amount Time, Total Amount Expense |
+| Payment & collection allocations | **Payment & Allocation** | Transaction Type, Transaction Date, Project Id, Invoice Number, Allocated Amount, Payment Amount, Credit Type, Payment Account Group |
+| Partner expenses (optional) | Your accounting system's general-ledger or bill-payment export | Date, Expense category, Amount |
 
-Import them in this order: roster → professionals → matters → time entries → payments.
+Import them in this order: roster → professionals → matters → originating
+professionals → time → invoices → payments → expenses.
+
+**How TimeSolv's layouts are handled:**
+
+- **Fee portion of each payment.** The Payment & Allocation export shows how much
+  of a payment went to each invoice, but not how much of that paid fees rather
+  than expenses. The program works it out from the Invoice export:
+  - **TimeSolv order** (the default): TimeSolv applies a payment to an invoice's
+    tax, expenses and interest before fees. Allocations to each invoice are
+    replayed in date order, so earlier payments clear the non-fee charges first.
+    Any excess of the Invoice Amount over time + expenses counts as tax or other
+    charges; a shortfall (a discount) reduces the fees.
+  - **Pro rata** (optional): each allocation counts as fees in proportion to the
+    invoice's fees.
+  - Choose the method in Firm Setup → Policy. If the firm changed TimeSolv's
+    line-item allocation order, use pro rata or confirm the setting with
+    TimeSolv.
+  - Include payments made *before* the compensation period on the same invoices.
+    They are applied first but earn no credit.
+  - A payment on an invoice that is missing from the Invoice export is a
+    *blocking* exception. It is never treated as all fees.
+- **"Payment Amount" repeats** on every row when one payment covers several
+  invoices. The program uses "Allocated Amount", so nothing is double-counted.
+- **No payment or time-entry IDs** in these exports. Duplicates are detected from
+  the date, matter, invoice and amounts (payments), or the date, user, matter,
+  hours and notes (time). Identical time rows within one file, such as two 0.1-hour
+  e-mails, are kept as separate entries, and re-importing a file still skips
+  everything already imported.
+- **Billed time** is any entry with an invoice number or a "billed" status. The
+  Time export has no separate "hours billed", so recorded hours are used.
+  "Non-Billable" and "No Charge" entries count as nonbillable.
+- **Originating Credit Percent** is often left at 0 in TimeSolv. 0 or blank means
+  "not entered": a sole originator gets 100%. Several originators with no
+  percentages are split equally, and a warning asks you to confirm the split.
+  Percentages that are filled in are used as entered and must total 100%.
+- **Project IDs** must identify a single matter. The import warns if the same
+  Project Id appears under two different clients.
+- **Unapplied funds** (Allocated Amount 0), voids and non-cash credits such as
+  write-offs earn no credit. A write-off credit still counts toward the invoice
+  balance when the fee portion of later payments is worked out.
 
 Only the **professional-fee allocation** of a payment earns credit. The engine
 leaves out the following and lists each one under *Audit & Exceptions → Excluded
 collections*:
 
 - expense allocations and taxes (they are never credited);
-- unapplied trust or retainer deposits (type contains trust/retainer/unapplied and no invoice);
-- write-offs, discounts, credit memos and adjustments;
+- unapplied funds and trust deposits not allocated to an invoice;
+- write-offs, discounts, credits, credit memos and adjustments;
 - void, pending, reversed, NSF or outstanding payments (status or type text);
 - payments dated outside the compensation period;
 - rows with a zero fee allocation, or a negative one (negatives need a policy decision, see §12);
@@ -470,6 +518,11 @@ each one in writing:
     whether equal splits are prorated for partial-year partners.
 17. **Negative net compensation:** carry forward to next year (default) or collect now, and how
     to treat a departing partner's unrecovered shortfall.
+18. **Fee portion of payments:** the TimeSolv-order method (taxes, expenses and interest
+    first) or pro rata. This should match the line-item allocation order configured in
+    TimeSolv.
+19. **Payments applied from trust:** these are currently counted as collected when they
+    are allocated to an invoice, not when the funds were first deposited.
 
 ## 13. Limitations of this local version
 

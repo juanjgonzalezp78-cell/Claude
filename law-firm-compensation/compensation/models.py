@@ -48,6 +48,16 @@ class TimekeeperCategory:
     ALL = (PARTNER, ASSOCIATE, PARALEGAL, OTHER)
 
 
+class FeeSplit:
+    """How the professional-fee portion of a payment allocation is determined when the
+    export only gives the amount allocated to an invoice (TimeSolv 'Payment & Allocation')."""
+
+    TIMESOLV_ORDER = "TimeSolv order (taxes, expenses and interest first, then fees)"
+    PRO_RATA = "Pro rata to the invoice's fees"
+
+    ALL = (TIMESOLV_ORDER, PRO_RATA)
+
+
 class Severity:
     """Exception severities. Blocking items prevent finalization."""
 
@@ -98,6 +108,7 @@ class Policy:
     include_written_off: bool = False
     include_staff_hours: bool = False
     working_method: str = WorkingMethod.BILLED_HOURS
+    fee_split_method: str = "TimeSolv order (taxes, expenses and interest first, then fees)"
     prorate_equal_expenses: bool = True
     negative_net_treatment: str = "Carry forward to next year"
     period_start: date | None = None
@@ -147,7 +158,7 @@ class Policy:
                          "include_written_off", "include_staff_hours",
                          "prorate_equal_expenses"):
                 kwargs[key] = bool(value)
-            elif key in ("working_method", "negative_net_treatment"):
+            elif key in ("working_method", "negative_net_treatment", "fee_split_method"):
                 kwargs[key] = str(value)
             else:
                 kwargs[key] = to_decimal(value)
@@ -171,6 +182,7 @@ class Policy:
             ("Include written-off hours", yes_no(self.include_written_off)),
             ("Include paralegal / other staff hours", yes_no(self.include_staff_hours)),
             ("Working-share methodology", self.working_method),
+            ("Fee portion of payment allocations", self.fee_split_method),
             ("Prorate equal expense splits by time as partner", yes_no(self.prorate_equal_expenses)),
             ("Negative net compensation", self.negative_net_treatment),
         ]
@@ -246,9 +258,11 @@ def parse_date(value: Any) -> date | None:
     raise ValueError(f"'{value}' is not a recognizable date")
 
 
-TRUE_WORDS = {"y", "yes", "true", "t", "1", "billable", "billed", "active", "x", "on"}
+TRUE_WORDS = {"y", "yes", "true", "t", "1", "billable", "billed", "active", "x", "on",
+              "chargeable"}
 FALSE_WORDS = {"n", "no", "false", "f", "0", "non-billable", "nonbillable", "non billable",
-               "unbilled", "inactive", "off", "not billable", ""}
+               "unbilled", "inactive", "off", "not billable", "no charge", "no-charge", "nc",
+               "n/c", "non-chargeable", ""}
 
 
 def parse_bool(value: Any, default: bool | None = None) -> bool | None:

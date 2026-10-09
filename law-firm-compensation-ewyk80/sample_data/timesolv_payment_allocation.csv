@@ -1,0 +1,65 @@
+Transaction Type,Transaction Date,Client Name,Client Id,Project Name,Project Id,Credit Type,Payment Method,Invoice Number,Payment Amount,Available Funds,Allocated Amount,Payment Account Group,Client Type
+Payment,02/14/2025,Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,,Wire,,25000.00,25000.00,0.00,Trust,Business
+Payment,04/29/2025,Greenfield Energy Partners,C1004,Solar project finance,M-1005,,ACH,INV-1005-1,16860.15,0.00,16860.15,Operating,Business
+Payment,04/30/2025,Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,,ACH,INV-1011-1,8779.05,0.00,8779.05,Operating,Business
+Payment,05/01/2025,Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,,ACH,INV-1003-1,17137.05,0.00,17137.05,Operating,Business
+Payment,05/05/2025,Northgate School District,C1005,Construction defect claim,M-1006,,ACH,INV-1006-1,22966.39,0.00,22966.39,Operating,Business
+Payment,05/05/2025,Summit Biotech Corp.,C1006,Patent licensing program,M-1007,,ACH,INV-1007-1,25406.67,0.00,25406.67,Operating,Business
+Payment,05/08/2025,Estate of Harold Vance,C1008,Estate administration,M-1009,,ACH,INV-1009-1,15229.07,0.00,15229.07,Operating,Individual
+Payment,05/09/2025,Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,,Credit Card,INV-1002-1,40811.22,0.00,40811.22,Operating,Business
+Payment,05/09/2025,Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,,Credit Card,INV-1002-1,40811.22,0.00,40811.22,Operating,Business
+Payment,05/14/2025,Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,,Check,INV-1012-1,30498.83,0.00,30498.83,Operating,Business
+Payment,05/15/2025,Bluewater Logistics,C1003,Employment class action defense,M-1004,,ACH,INV-1004-1,24985.80,0.00,24985.80,Operating,Business
+Payment,05/16/2025,Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,,ACH,INV-1010-1,25281.95,0.00,25281.95,Operating,Business
+Payment,05/18/2025,Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,,Check,INV-1001-1,31627.53,0.00,31627.53,Operating,Business
+Payment,05/18/2025,Riverside Credit Union,C1007,Commercial loan workout,M-1008,,ACH,INV-1008-1,16431.66,0.00,16431.66,Operating,Business
+Void,06/02/2025,Northgate School District,C1005,Construction defect claim,M-1006,,Check,INV-1006-1,4800.00,0.00,4800.00,Operating,Business
+Payment,07/28/2025,Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,,Check,INV-1001-2,14513.63,0.00,14513.63,Operating,Business
+Payment,07/28/2025,Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,,Wire,INV-1002-2,15380.17,0.00,15380.17,Operating,Business
+Payment,07/28/2025,Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,,ACH,INV-1003-2,18932.45,0.00,18932.45,Operating,Business
+Payment,07/28/2025,Bluewater Logistics,C1003,Employment class action defense,M-1004,,ACH,INV-1004-2,14750.65,0.00,14750.65,Operating,Business
+Payment,07/28/2025,Greenfield Energy Partners,C1004,Solar project finance,M-1005,,ACH,INV-1005-2,18758.57,0.00,18758.57,Operating,Business
+Payment,07/28/2025,Northgate School District,C1005,Construction defect claim,M-1006,,Check,INV-1006-2,13715.10,0.00,13715.10,Operating,Business
+Payment,07/28/2025,Summit Biotech Corp.,C1006,Patent licensing program,M-1007,,Wire,INV-1007-2,14066.78,0.00,14066.78,Operating,Business
+Payment,07/28/2025,Riverside Credit Union,C1007,Commercial loan workout,M-1008,,Credit Card,INV-1008-2,12791.41,0.00,12791.41,Operating,Business
+Payment,07/28/2025,Estate of Harold Vance,C1008,Estate administration,M-1009,,Check,INV-1009-2,7048.15,0.00,7048.15,Operating,Individual
+Payment,07/28/2025,Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,,Credit Card,INV-1010-2,7230.79,0.00,7230.79,Operating,Business
+Payment,07/28/2025,Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,,Check,INV-1011-2,7171.00,0.00,7171.00,Operating,Business
+Payment,07/28/2025,Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,,Credit Card,INV-1012-2,14167.98,0.00,14167.98,Operating,Business
+Payment,09/01/2025,Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,,Check,INV-1001-2,9675.75,0.00,9675.75,Operating,Business
+Payment,09/01/2025,Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,,Wire,INV-1002-2,10253.45,0.00,10253.45,Operating,Business
+Payment,09/01/2025,Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,,ACH,INV-1003-2,12621.63,0.00,12621.63,Operating,Business
+Payment,09/01/2025,Bluewater Logistics,C1003,Employment class action defense,M-1004,,ACH,INV-1004-2,9833.76,0.00,9833.76,Operating,Business
+Payment,09/01/2025,Northgate School District,C1005,Construction defect claim,M-1006,,Check,INV-1006-2,9143.40,0.00,9143.40,Operating,Business
+Payment,09/01/2025,Summit Biotech Corp.,C1006,Patent licensing program,M-1007,,Wire,INV-1007-2,9377.85,0.00,9377.85,Operating,Business
+Payment,09/01/2025,Riverside Credit Union,C1007,Commercial loan workout,M-1008,,Credit Card,INV-1008-2,8527.61,0.00,8527.61,Operating,Business
+Payment,09/01/2025,Estate of Harold Vance,C1008,Estate administration,M-1009,,Check,INV-1009-2,4698.77,0.00,4698.77,Operating,Individual
+Payment,09/01/2025,Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,,Credit Card,INV-1010-2,4820.53,0.00,4820.53,Operating,Business
+Payment,09/01/2025,Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,,Check,INV-1011-2,4780.66,0.00,4780.66,Operating,Business
+Payment,09/01/2025,Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,,Credit Card,INV-1012-2,9445.32,0.00,9445.32,Operating,Business
+Payment,11/02/2025,Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,,Check,INV-1003-3,40130.33,0.00,40130.33,Operating,Business
+Payment,11/03/2025,Bluewater Logistics,C1003,Employment class action defense,M-1004,,Check,INV-1004-3,18811.01,0.00,18811.01,Operating,Business
+Credit,11/05/2025,Riverside Credit Union,C1007,Commercial loan workout,M-1008,Write Off,,INV-1008-3,1500.00,0.00,1500.00,Operating,Business
+Payment,11/10/2025,Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,,Check,INV-1010-3,13751.15,0.00,13751.15,Operating,Business
+Payment,11/11/2025,Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,,ACH,INV-1001-3,14643.63,0.00,14643.63,Operating,Business
+Payment,11/11/2025,Estate of Harold Vance,C1008,Estate administration,M-1009,,Credit Card,INV-1009-3,4580.50,0.00,4580.50,Operating,Individual
+Payment,11/15/2025,Greenfield Energy Partners,C1004,Solar project finance,M-1005,,Wire,INV-1005-2,21240.08,0.00,12505.71,Operating,Business
+Payment,11/15/2025,Greenfield Energy Partners,C1004,Solar project finance,M-1005,,Wire,INV-1005-3,21240.08,0.00,8734.37,Operating,Business
+Payment,11/15/2025,Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,,Wire,INV-1011-3,17545.02,0.00,17545.02,Operating,Business
+Payment,11/17/2025,Riverside Credit Union,C1007,Commercial loan workout,M-1008,,Wire,INV-1008-3,13941.11,0.00,13941.11,Operating,Business
+Payment,11/18/2025,Northgate School District,C1005,Construction defect claim,M-1006,,Wire,INV-1006-3,20381.90,0.00,20381.90,Operating,Business
+Payment,11/19/2025,Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,,Wire,INV-1012-3,30138.96,0.00,30138.96,Operating,Business
+Payment,11/20/2025,Summit Biotech Corp.,C1006,Patent licensing program,M-1007,,Check,INV-1007-3,26878.95,0.00,26878.95,Operating,Business
+Payment,11/21/2025,Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,,ACH,INV-1002-3,14414.40,0.00,14414.40,Operating,Business
+Payment,01/20/2026,Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,,Check,INV-1001-4,4806.28,0.00,4806.28,Operating,Business
+Payment,01/20/2026,Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,,ACH,INV-1002-4,2123.63,0.00,2123.63,Operating,Business
+Payment,01/20/2026,Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,,Wire,INV-1003-4,8119.97,0.00,8119.97,Operating,Business
+Payment,01/20/2026,Bluewater Logistics,C1003,Employment class action defense,M-1004,,Wire,INV-1004-4,4777.24,0.00,4777.24,Operating,Business
+Payment,01/20/2026,Greenfield Energy Partners,C1004,Solar project finance,M-1005,,Credit Card,INV-1005-4,4081.02,0.00,4081.02,Operating,Business
+Payment,01/20/2026,Northgate School District,C1005,Construction defect claim,M-1006,,ACH,INV-1006-4,5100.00,0.00,5100.00,Operating,Business
+Payment,01/20/2026,Summit Biotech Corp.,C1006,Patent licensing program,M-1007,,ACH,INV-1007-4,2307.24,0.00,2307.24,Operating,Business
+Payment,01/20/2026,Riverside Credit Union,C1007,Commercial loan workout,M-1008,,ACH,INV-1008-4,1420.54,0.00,1420.54,Operating,Business
+Payment,01/20/2026,Estate of Harold Vance,C1008,Estate administration,M-1009,,Check,INV-1009-4,3113.32,0.00,3113.32,Operating,Individual
+Payment,01/20/2026,Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,,ACH,INV-1010-4,3669.33,0.00,3669.33,Operating,Business
+Payment,01/20/2026,Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,,Wire,INV-1011-4,3698.12,0.00,3698.12,Operating,Business
+Payment,01/20/2026,Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,,Wire,INV-1012-4,3550.58,0.00,3550.58,Operating,Business

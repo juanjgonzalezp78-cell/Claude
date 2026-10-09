@@ -28,21 +28,17 @@ def load_demo(db: Database, year: int = DEMO_YEAR, user: str = "demo") -> list[s
     steps = [
         ("partners", "partners.csv"),
         ("professionals", "timesolv_professionals.csv"),
-        ("matters", "timesolv_projects.csv"),
-        ("time_entries", "timesolv_time_entries.csv"),
-        ("collections", "timesolv_payment_allocations.csv"),
+        ("matters", "timesolv_matters.csv"),
+        ("originators", "timesolv_matter_originating_professional.csv"),
+        ("time_entries", "timesolv_time.csv"),
+        ("invoices", "timesolv_invoices.csv"),
+        ("collections", "timesolv_payment_allocation.csv"),
         ("expenses", "partner_expenses.csv"),
     ]
     for dataset, filename in steps:
         res = import_file(db, year, dataset, str(SAMPLE_DIR / filename), user, replace_roster=True)
         messages.append(f"{filename}: {res.imported} imported, {res.updated} updated, "
                         f"{res.duplicates} duplicates skipped, {res.flagged_duplicates} flagged.")
-    # Committee-approved split origination replaces the single imported originator.
-    overrides = pd.read_csv(SAMPLE_DIR / "matter_originator_overrides.csv", dtype=str).fillna("")
-    origs = db.load_table("originators", year)
-    origs = origs[~origs["matter_id"].isin(set(overrides["matter_id"]))]
-    db.save_table("originators", year, pd.concat([origs, overrides], ignore_index=True), user,
-                  "Demo: split origination loaded")
     mappings = pd.read_csv(SAMPLE_DIR / "associate_matter_mappings.csv", dtype=str).fillna("")
     db.save_table("supervision", year, mappings, user, "Demo: associate-matter mappings loaded")
     for table, filename in (("expense_categories", "expense_categories.csv"),
@@ -52,7 +48,6 @@ def load_demo(db: Database, year: int = DEMO_YEAR, user: str = "demo") -> list[s
         if table == "expense_overrides":
             df = df.assign(entered_by=user, entered_at="")
         db.save_table(table, year, df, user, f"Demo: {table} loaded")
-    messages.append("Split origination for M-1003, associate-matter mappings and expense "
-                    "categories loaded.")
+    messages.append("Associate-matter mappings and expense categories loaded.")
     db.log(year, user, "Demo data loaded", messages)
     return messages

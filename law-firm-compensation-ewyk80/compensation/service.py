@@ -29,6 +29,7 @@ def load_inputs(db: Database, year: int) -> CompensationInputs:
         manual_shares=db.load_table("manual_shares", year),
         collections=db.load_data("collections", year),
         time_entries=db.load_data("time_entries", year),
+        invoices=db.load_data("invoices", year),
         expense_categories=db.load_table("expense_categories", year),
         category_splits=db.load_table("category_splits", year),
         expenses=db.load_table("expenses", year),

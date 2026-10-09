@@ -55,12 +55,15 @@ F = FieldSpec
 DATASETS: dict[str, DatasetSpec] = {
     "collections": DatasetSpec(
         "collections", "Payment & collection allocations",
-        "Preferred source: TimeSolv 'Invoice Summary with Payment Allocations' with payment "
-        "allocations enabled. Only the portion allocated to professional fees earns credit.",
+        "Preferred source: TimeSolv Import/Export > Export Excel > 'Payment & Allocation' (one row "
+        "per payment allocated to an invoice). Only the professional-fee portion earns credit; "
+        "because that export has no fee/expense split, the fee portion is worked out from the "
+        "Invoice export. Include payments made before the period on the same invoices so "
+        "earlier payments are applied first.",
         (
             F("collection_date", "Collection date", "date", True,
               ("payment date", "date paid", "collection date", "received date", "receipt date",
-               "deposit date", "pmt date")),
+               "deposit date", "pmt date", "transaction date")),
             F("client", "Client name", synonyms=("client", "client name", "customer")),
             F("matter_id", "Matter / Project ID", required=True,
               synonyms=("project id", "matter id", "project", "matter", "project number",
@@ -75,7 +78,18 @@ DATASETS: dict[str, DatasetSpec] = {
             F("amount_collected", "Amount collected", "num",
               synonyms=("payment amount", "amount paid", "amount collected", "total payment",
                         "receipt amount", "amount received", "payment total")),
-            F("fee_amount", "Amount allocated to professional fees", "num", True,
+            F("allocated_amount", "Amount allocated to the invoice", "num",
+              synonyms=("allocated amount", "amount allocated", "applied amount",
+                        "allocation amount", "amount applied")),
+            F("available_funds", "Available (unapplied) funds", "num",
+              synonyms=("available funds", "unapplied amount", "unallocated amount",
+                        "remaining funds")),
+            F("transaction_type", "Transaction type", synonyms=("transaction type",)),
+            F("credit_type", "Credit type", synonyms=("credit type",)),
+            F("payment_method", "Payment method", synonyms=("payment method", "method")),
+            F("account_group", "Payment account group (operating / trust)",
+              synonyms=("payment account group", "account group", "bank account", "account")),
+            F("fee_amount", "Amount allocated to professional fees (if exported)", "num", False,
               ("applied to fees", "fees paid", "fee allocation", "fees applied", "fees collected",
                "professional fees", "fee payment", "payment applied to fees", "fees")),
             F("expense_amount", "Amount allocated to expenses", "num",
@@ -83,8 +97,7 @@ DATASETS: dict[str, DatasetSpec] = {
                         "expenses applied", "costs paid", "expenses")),
             F("tax_amount", "Amount allocated to taxes", "num",
               synonyms=("applied to tax", "tax paid", "taxes", "sales tax", "tax")),
-            F("payment_type", "Payment / transaction type",
-              synonyms=("payment type", "transaction type", "payment method", "type", "source")),
+            F("payment_type", "Payment type", synonyms=("payment type", "payment source")),
             F("payment_status", "Payment status",
               synonyms=("payment status", "status", "cleared", "deposit status")),
             F("originator_hint", "Originating professional (if exported)",
@@ -111,7 +124,8 @@ DATASETS: dict[str, DatasetSpec] = {
             F("invoice_id", "Invoice ID", synonyms=("invoice number", "invoice #", "invoice id",
                                                     "invoice no", "invoice")),
             F("timekeeper", "Timekeeper", required=True,
-              synonyms=("timekeeper", "professional", "timekeeper name", "user", "attorney",
+              synonyms=("timekeeper", "firm user", "professional", "timekeeper name", "user",
+                        "attorney",
                         "staff", "employee", "professional name")),
             F("timekeeper_id", "Timekeeper ID", synonyms=("timekeeper id", "professional id",
                                                           "user id", "employee id")),
@@ -120,9 +134,11 @@ DATASETS: dict[str, DatasetSpec] = {
                                                               "timekeeper type")),
             F("hours", "Hours (recorded)", "num", True,
               ("hours", "time", "duration", "hours worked", "recorded hours", "actual hours")),
-            F("billable", "Billable status", "bool", synonyms=("billable", "is billable",
-                                                               "billable status", "billable?")),
-            F("billed_status", "Billed status", synonyms=("billed status", "status", "billed",
+            F("billable", "Billable status", "bool", synonyms=("billable type", "billable",
+                                                               "is billable", "billable status",
+                                                               "billable?")),
+            F("billed_status", "Billed status", synonyms=("time entry status", "billed status",
+                                                          "entry status", "status", "billed",
                                                           "invoice status", "billing status")),
             F("hours_billed", "Hours billed", "num", synonyms=("billed hours", "hours billed",
                                                                "invoiced hours", "bill hours")),
@@ -151,14 +167,15 @@ DATASETS: dict[str, DatasetSpec] = {
               synonyms=("originating attorney", "originating partner", "originator",
                         "origination", "originating timekeeper", "originating professional")),
             F("responsible_professional", "Responsible Professional",
-              synonyms=("responsible professional", "responsible attorney", "billing attorney",
-                        "responsible timekeeper")),
+              synonyms=("responsible time keeper", "responsible professional",
+                        "responsible attorney", "billing attorney", "responsible timekeeper")),
             F("comp_supervising_partner", "Compensation supervising partner",
               synonyms=("supervising partner", "compensation supervisor", "supervising attorney")),
-            F("status", "Status", synonyms=("status", "project status", "matter status")),
+            F("status", "Status", synonyms=("status", "project status", "matter status",
+                                            "active")),
             F("open_date", "Open date", "date", synonyms=("open date", "opened", "date opened",
                                                           "start date", "created")),
-            F("close_date", "Close date", "date", synonyms=("close date", "closed",
+            F("close_date", "Close date", "date", synonyms=("close date", "closed", "inactive date",
                                                             "date closed", "end date")),
         ),
     ),
@@ -178,6 +195,55 @@ DATASETS: dict[str, DatasetSpec] = {
               synonyms=("supervisor", "default supervisor", "supervising partner", "reports to",
                         "manager")),
             F("active", "Active status", "bool", synonyms=("active", "status", "is active")),
+        ),
+    ),
+    "invoices": DatasetSpec(
+        "invoices", "Invoices (fee / expense breakdown)",
+        "TimeSolv Import/Export > Export Excel > 'Invoice'. Used to work out how much of each "
+        "payment allocation was for professional fees. Include every invoice that received a "
+        "payment in the period.",
+        (
+            F("invoice_id", "Invoice number", required=True,
+              synonyms=("invoice number", "invoice #", "invoice id", "invoice no", "invoice")),
+            F("invoice_date", "Invoice date", "date", synonyms=("invoice date", "date",
+                                                                "bill date")),
+            F("client", "Client", synonyms=("client name", "client")),
+            F("matter_id", "Matter / Project ID", synonyms=("project id", "matter id",
+                                                            "project number", "matter number")),
+            F("matter_name", "Matter name", synonyms=("project name", "matter name")),
+            F("fees", "Fees billed", "num", True,
+              synonyms=("total amount time", "fees", "fee amount", "time amount", "total fees",
+                        "fees billed",
+                        "professional fees", "time charges", "fee total", "time")),
+            F("expenses", "Expenses billed", "num",
+              synonyms=("total amount expense", "expenses", "expense amount", "total expenses",
+                        "costs",
+                        "expense charges", "expense total")),
+            F("taxes", "Tax", "num", synonyms=("tax", "taxes", "tax amount", "sales tax",
+                                               "tax 1")),
+            F("taxes2", "Tax 2", "num", synonyms=("tax 2", "tax2", "second tax")),
+            F("interest", "Interest / late charges", "num",
+              synonyms=("interest", "late fee", "finance charge", "interest amount")),
+            F("total", "Invoice total", "num", synonyms=("invoice total", "total",
+                                                         "invoice amount", "total amount")),
+            F("status", "Status", synonyms=("status", "invoice status")),
+        ),
+    ),
+    "originators": DatasetSpec(
+        "originators", "Matter originating professionals",
+        "TimeSolv Import/Export > Export Excel > 'Matter Originating Professional'. Rows are "
+        "matched to matters by Project ID, or by Client Name + Project Name when there is no ID. "
+        "Imported originators replace those of the same matters.",
+        (
+            F("matter_id", "Matter / Project ID", synonyms=("project id", "matter id")),
+            F("client", "Client name", synonyms=("client name", "client")),
+            F("matter_name", "Matter name", synonyms=("project name", "matter name")),
+            F("partner", "Originating partner", required=True,
+              synonyms=("originating time keeper", "originating timekeeper",
+                        "originating professional", "originator", "professional")),
+            F("share_pct", "Origination credit %", "num",
+              synonyms=("originating credit percent", "credit percent", "origination percent",
+                        "originating percent", "percent", "share")),
         ),
     ),
     "expenses": DatasetSpec(
@@ -339,6 +405,12 @@ def mapping_problems(dataset: str, mapping: dict[str, str]) -> list[str]:
                 f"'{spec.field(key).label}'."
             )
         used[col] = key
+    if dataset == "collections" and not (mapping.get("fee_amount") or mapping.get("allocated_amount")):
+        problems.append("Map either 'Amount allocated to the invoice' or 'Amount allocated to "
+                        "professional fees'.")
+    if dataset == "originators" and not (mapping.get("matter_id") or (
+            mapping.get("client") and mapping.get("matter_name"))):
+        problems.append("Map the Project ID, or both Client name and Matter name.")
     return problems
 
 
@@ -384,6 +456,7 @@ def normalize(dataset: str, raw: pd.DataFrame, mapping: dict[str, str]) -> Norma
         raise ValueError(" ".join(problems))
     errors: list[dict[str, Any]] = []
     records: list[dict[str, Any]] = []
+    unknown_bool: dict[str, set[str]] = {}
     mapped_cols = {c for c in mapping.values() if c}
     for idx, row in raw.iterrows():
         rec: dict[str, Any] = {}
@@ -398,7 +471,7 @@ def normalize(dataset: str, raw: pd.DataFrame, mapping: dict[str, str]) -> Norma
                 elif f.kind == "bool":
                     parsed = parse_bool(value, default=None)
                     if col and clean_str(value) and parsed is None:
-                        raise ValueError(f"'{value}' is not a recognizable yes/no value")
+                        unknown_bool.setdefault(f.label, set()).add(clean_str(value))
                     rec[f.key] = parsed
                 else:
                     rec[f.key] = clean_str(value)
@@ -419,6 +492,10 @@ def normalize(dataset: str, raw: pd.DataFrame, mapping: dict[str, str]) -> Norma
         records.append(rec)
     frame = pd.DataFrame(records, index=raw.index)
     result = NormalizedData(frame=frame, errors=errors)
+    for label, values in unknown_bool.items():
+        result.warnings.append(
+            f"'{label}': value(s) {', '.join(sorted(values)[:5])} were not recognised as yes/no "
+            "and were left blank (treated as unknown). Check them in the normalized preview.")
     _dataset_checks(dataset, result)
     return result
 
@@ -445,11 +522,24 @@ def _dataset_checks(dataset: str, data: NormalizedData) -> None:
                 "No payment/receipt ID is mapped; duplicates will be detected using date, matter, "
                 "invoice and amounts instead."
             )
+        for idx, rec in df.iterrows():
+            if all(to_decimal(rec.get(k), default=None) is None for k in
+                   ("fee_amount", "allocated_amount", "amount_collected", "available_funds")):
+                data.errors.append({"_index": idx, "Row": int(idx) + 2, "Field": "Amount",
+                                    "Value": "", "Problem": "No amount on this row"})
+        if "fee_amount" in df and df["fee_amount"].isna().all():
+            data.warnings.append(
+                "No fee/expense split in this file: the fee portion of each allocation will be "
+                "worked out from the Invoice export (Firm Setup > Policy sets the method). Import "
+                "the Invoice export too.")
+        _project_id_check(df, data)
         if "invoice_id" in df and (df["invoice_id"].fillna("") == "").all():
             data.warnings.append(
                 "No invoice IDs found; every collection will use the matter-level fallback for "
                 "working credit."
             )
+    if dataset in ("time_entries", "matters", "invoices"):
+        _project_id_check(df, data)
     if dataset == "time_entries":
         for idx, rec in df.iterrows():
             hours = to_decimal(rec.get("hours"), default=None)
@@ -463,8 +553,8 @@ def _dataset_checks(dataset: str, data: NormalizedData) -> None:
             )
         if "hours_billed" in df and df["hours_billed"].isna().all():
             data.warnings.append(
-                "Hours billed is not mapped. Under the 'Billed hours' method, billed entries will "
-                "use recorded hours and be flagged in the exceptions report."
+                "There is no separate 'hours billed' column, so the recorded hours of billed "
+                "entries (those with an invoice number or a billed status) will be used."
             )
     if dataset == "partners":
         if "is_managing_partner" in df:
@@ -474,6 +564,21 @@ def _dataset_checks(dataset: str, data: NormalizedData) -> None:
                                      "is required.")
 
 
+def _project_id_check(df: pd.DataFrame, data: NormalizedData) -> None:
+    """Warn when one Project ID is used by more than one client (IDs must be unique)."""
+    if "matter_id" not in df or "client" not in df:
+        return
+    sub = df[(df["matter_id"].fillna("") != "") & (df["client"].fillna("") != "")]
+    clients = sub.groupby(sub["matter_id"].map(norm_name))["client"].agg(
+        lambda c: {norm_name(x) for x in c})
+    shared = [mid for mid, cl in clients.items() if len(cl) > 1]
+    if shared:
+        data.warnings.append(
+            f"{len(shared)} Project ID(s) appear under more than one client (e.g. "
+            f"{', '.join(shared[:5])}). The program treats a Project ID as one matter; if your "
+            "Project IDs repeat across clients, results for those matters would be combined.")
+
+
 def collection_key(rec: dict[str, Any]) -> str:
     """Deduplication key for a collection row."""
     def s(v: Any) -> str:
@@ -481,13 +586,17 @@ def collection_key(rec: dict[str, Any]) -> str:
 
     fee = to_decimal(rec.get("fee_amount"), default=None)
     exp = to_decimal(rec.get("expense_amount"), default=None)
+    alloc = to_decimal(rec.get("allocated_amount"), default=None)
     if s(rec.get("payment_id")):
         parts = ["P", s(rec.get("payment_id")), s(rec.get("invoice_id")), s(rec.get("matter_id")),
-                 str(fee), str(exp)]
+                 str(fee), str(exp)] + ([str(alloc)] if alloc is not None else [])
     else:
         parts = ["D", str(rec.get("collection_date")), s(rec.get("matter_id")),
                  s(rec.get("invoice_id")), str(to_decimal(rec.get("amount_collected"), None)),
                  str(fee), str(exp)]
+        if alloc is not None or s(rec.get("transaction_type")) or s(rec.get("credit_type")):
+            parts += [str(alloc), s(rec.get("transaction_type")), s(rec.get("credit_type")),
+                      str(to_decimal(rec.get("available_funds"), None))]
     return "|".join(parts)
 
 
@@ -570,6 +679,10 @@ def import_dataframe(db: Database, year: int, dataset: str, raw: pd.DataFrame,
         _import_professionals(db, year, valid, user, result)
     elif dataset == "expenses":
         _import_expenses(db, year, valid, user, result)
+    elif dataset == "invoices":
+        _import_invoices(db, year, valid, batch_id, result)
+    elif dataset == "originators":
+        _import_originators(db, year, valid, user, result)
     elif dataset == "partners":
         _import_partners(db, year, valid, user, result, replace_roster)
     db.finish_batch(batch_id, result.rows_read, result.imported + result.updated,
@@ -603,12 +716,21 @@ def _import_data_rows(db: Database, year: int, dataset: str, valid: pd.DataFrame
                 rec["dedup_key"] = f"{key}#dup{n}"
                 rec["excluded"] = True
                 rec["duplicate_of"] = key
-                rec["exclusion_reason"] = ("Possible duplicate payment: same payment ID, invoice, "
-                                           "matter and allocation as another row in this file.")
+                rec["exclusion_reason"] = ("Possible duplicate payment: same date, invoice, matter "
+                                           "and amounts as another row in this file.")
                 result.flagged_duplicates += 1
-            else:
+            elif norm_name(rec.get("entry_id")):
                 result.duplicates += 1
                 continue
+            else:
+                # No entry ID: identical rows in one file are separate entries (e.g. two 0.1h
+                # e-mails). Number the repeats so re-importing the same file still dedups.
+                n = seen[key] + 1
+                seen[key] = n
+                rec["dedup_key"] = f"{key}#{n}"
+                if rec["dedup_key"] in existing:
+                    result.duplicates += 1
+                    continue
         else:
             seen[key] = 0
             if dataset == "collections":
@@ -714,6 +836,77 @@ def _import_professionals(db: Database, year: int, valid: pd.DataFrame, user: st
     db.save_table("timekeepers", year, tks, user, "Timekeepers imported/updated")
     result.messages.append("Categories were inferred from type/title text - review them in Firm "
                            "Setup > Timekeepers.")
+
+
+def _import_invoices(db: Database, year: int, valid: pd.DataFrame, batch_id: int,
+                     result: ImportResult) -> None:
+    """Insert or update invoices (an invoice re-exported later replaces the earlier copy)."""
+    rows = []
+    seen: set[str] = set()
+    for _, row in valid.iterrows():
+        rec = row.to_dict()
+        rec["dedup_key"] = "I|" + norm_name(rec.get("invoice_id"))
+        if rec["dedup_key"] in seen:
+            continue
+        seen.add(rec["dedup_key"])
+        rows.append(rec)
+    existing = db.existing_keys("invoices", year)
+    replaced = [r["dedup_key"] for r in rows if r["dedup_key"] in existing]
+    db.delete_keys("invoices", year, replaced)
+    if rows:
+        db.insert_data("invoices", year, batch_id, pd.DataFrame(rows))
+    result.updated = len(replaced)
+    result.imported = len(rows) - len(replaced)
+    if replaced:
+        result.messages.append(f"{len(replaced)} invoice(s) already imported were updated.")
+
+
+def _import_originators(db: Database, year: int, valid: pd.DataFrame, user: str,
+                        result: ImportResult) -> None:
+    """Replace the originators of every matter that appears in the file."""
+    matters = db.load_table("matters", year)
+    by_id = {norm_name(m): m for m in matters["matter_id"]}
+    by_name: dict[tuple[str, str], list[str]] = {}
+    for m in matters.to_dict("records"):
+        by_name.setdefault((norm_name(m["client"]), norm_name(m["matter_name"])), []).append(
+            m["matter_id"])
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    unmatched: list[str] = []
+    for _, rec in valid.iterrows():
+        mid = by_id.get(norm_name(rec.get("matter_id"))) if clean_str(rec.get("matter_id")) else None
+        if mid is None:
+            hits = by_name.get((norm_name(rec.get("client")), norm_name(rec.get("matter_name"))), [])
+            mid = hits[0] if len(hits) == 1 else None
+        if mid is None:
+            unmatched.append(f"{clean_str(rec.get('client'))} / {clean_str(rec.get('matter_name'))}"
+                             if not clean_str(rec.get("matter_id")) else clean_str(rec.get("matter_id")))
+            continue
+        grouped.setdefault(mid, []).append(rec.to_dict())
+    current = db.load_table("originators", year)
+    keep = current[~current["matter_id"].map(norm_name).isin({norm_name(m) for m in grouped})]
+    rows = []
+    for mid, recs in grouped.items():
+        pcts = [to_decimal(r.get("share_pct"), default=None) for r in recs]
+        # TimeSolv users often leave the percentage at 0: 0 or blank means "not entered".
+        if all(p is None or p == 0 for p in pcts):
+            from .models import allocate_cents
+
+            pcts = allocate_cents(to_decimal(100), [to_decimal(1)] * len(recs))
+            note = ("Imported - sole originator, 100%" if len(recs) == 1 else
+                    "Imported - no percentages in TimeSolv; EQUAL SPLIT ASSUMED, confirm")
+        else:
+            pcts = [p or to_decimal(0) for p in pcts]
+            note = "Imported from TimeSolv"
+        for r, pct in zip(recs, pcts):
+            rows.append({"matter_id": mid, "partner": clean_str(r.get("partner")),
+                         "share_pct": pct, "notes": note})
+    db.save_table("originators", year, pd.concat([keep, pd.DataFrame(rows)], ignore_index=True),
+                  user, "Matter originators imported")
+    result.imported = len(rows)
+    if unmatched:
+        result.messages.append(
+            f"{len(unmatched)} row(s) did not match a matter and were not imported (import the "
+            f"Matters export first): {', '.join(unmatched[:8])}")
 
 
 def _import_expenses(db: Database, year: int, valid: pd.DataFrame, user: str,

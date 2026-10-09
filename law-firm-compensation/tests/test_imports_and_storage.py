@@ -40,7 +40,7 @@ def test_validation_reports_bad_rows():
     norm = normalize("collections", raw, suggest_mapping("collections", list(raw.columns)))
     problems = {(e["Row"], e["Field"]) for e in norm.errors}
     assert (5, "Collection date") in problems
-    assert (5, "Amount allocated to professional fees") in problems
+    assert (5, "Amount allocated to professional fees (if exported)") in problems
 
 
 # 7 ------------------------------------------------------------------------------

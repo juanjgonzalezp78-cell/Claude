@@ -1,9 +1,11 @@
-"""Generate the realistic demo TimeSolv-style exports in this folder.
+"""Generate the demo data in this folder.
 
 Run ``python sample_data/generate_sample_data.py`` to regenerate.  Output is
-deterministic (fixed random seed).  Column headings intentionally mimic
-TimeSolv exports rather than the application's logical field names so the
-import wizard's automatic mapping is exercised.
+deterministic (fixed random seed).  The TimeSolv files use the exact column
+headings of TimeSolv's Import/Export > Export Excel entities (Matter, Matter
+Originating Professional, Time, Invoice, Payment & Allocation) as supplied by
+the firm; values are fictitious.  The professionals list and partner roster use
+the program's own simple formats.
 
 Scenario highlights (year 2025):
 
@@ -16,9 +18,13 @@ Scenario highlights (year 2025):
   M-1007.
 * Kevin Park's M-1005 supervision changes mid-year (effective-dated mapping).
 * M-1012 time entries carry no invoice numbers -> matter-level fallback.
-* Quarterly invoices, partial payments, fee + expense (+ tax) allocations, an
-  unapplied trust deposit, a void payment, a payment outside the period and a
-  duplicated payment row.
+* Quarterly invoices (fees + expenses; M-1009 also carries tax), partial
+  payments, one cheque allocated to two invoices, an unapplied trust deposit, a
+  void payment, a write-off credit, payments outside the period and a duplicated
+  payment row.
+* Originators come from the Matter Originating Professional export with 0%
+  except M-1003 (Chen 60 / Alvarez 40); M-1010 lists two originators with 0%,
+  so an equal split is assumed and flagged.
 * INTENTIONAL UNRESOLVED EXCEPTION: Owen Fletcher's hours on M-1011 have no
   mapping, the matter has no compensation supervising partner, its Responsible
   Professional is an associate and Fletcher has no default supervisor, so the
@@ -109,112 +115,137 @@ def hours_for(name: str) -> int:
 
 
 def main() -> None:
+    client_ids = {m[1]: f"C{1000 + i}" for i, m in enumerate(MATTERS)}
+    client_types = {m[1]: ("Individual" if "Estate" in m[1] else "Business") for m in MATTERS}
+    matter_info = {m[0]: m for m in MATTERS}
     entries = []
     invoices: dict[tuple[str, int], dict] = {}
-    eid = 500000
-    for mid, client, _, _, _, _, staff in MATTERS:
+    for mid, client, mname, _, _, _, staff in MATTERS:
         for month in range(1, 13):
             if month == 12 and mid in ("M-1009",):
                 continue
             q = (month - 1) // 3
             for person in staff:
                 for _ in range(rng.randint(1, hours_for(person))):
-                    eid += 1
                     day = date(YEAR, month, rng.randint(1, 28))
                     hrs = Decimal(str(round(rng.uniform(0.3, 5.5), 1)))
                     task, desc = rng.choice(TASKS)
                     billable = rng.random() > 0.06
                     rate = Decimal(RATES[person])
+                    amount = money(hrs * rate)
+                    inv = ""
                     if not billable:
-                        status, billed_hrs, inv = "Non-billable", Decimal("0"), ""
+                        status = "Unbilled"
                         desc = "Internal file management / training"
                     elif q == 3 and month >= 11:
-                        status, billed_hrs, inv = "Unbilled", Decimal("0"), ""
+                        status = "Unbilled"
                     elif rng.random() < 0.03:
-                        status, billed_hrs, inv = "Written Off", Decimal("0"), ""
+                        status = "Written Off"
                     else:
                         status = "Billed"
-                        billed_hrs = hrs
-                        if rng.random() < 0.10:
-                            billed_hrs = max(Decimal("0.1"), hrs - Decimal("0.5"))
                         inv = f"INV-{mid[2:]}-{q + 1}"
-                    billed_amt = money(billed_hrs * rate) if status == "Billed" else Decimal("0")
-                    if status == "Billed":
-                        key = (mid, q)
-                        invoices.setdefault(key, {"invoice": inv, "fees": Decimal("0"),
-                                                  "date": QUARTERS[q][1]})
-                        invoices[key]["fees"] += billed_amt
+                        invoices.setdefault((mid, q), {"invoice": inv, "fees": Decimal("0"),
+                                                       "date": QUARTERS[q][1]})
+                        invoices[(mid, q)]["fees"] += amount
                     entries.append({
-                        "Entry ID": f"TE-{eid}", "Date": day.strftime("%m/%d/%Y"), "Client": client,
-                        "Project ID": mid,
+                        "Time Entry Status": status, "Date": day.strftime("%m/%d/%Y"),
+                        "Firm User": person, "Client Id": client_ids[client], "Client Name": client,
+                        "Project Id": mid, "Project Name": mname, "Plan Task": "",
+                        "Plan Task Completed?": "", "Task Code": task, "Task Description": desc,
+                        "Sub-Task Code": "", "Sub Task Description": "", "Hours": f"{hrs}",
+                        "Rate": f"{rate:.2f}", "Amount": f"{amount:.2f}",
+                        "Notes": f"{desc} - {mname}",
                         "Invoice Number": "" if mid in NO_INVOICE_LINK else inv,
-                        "Timekeeper": person, "Professional Type": TYPES[person],
-                        "Hours": f"{hrs}", "Billable": "Yes" if billable else "No",
-                        "Billed Status": status, "Billed Hours": f"{billed_hrs}",
-                        "Rate": f"{rate:.2f}", "Billed Amount": f"{billed_amt:.2f}",
-                        "Task Code": task, "Description": desc,
+                        "Client Category": matter_info[mid][5], "Custom": "",
+                        "Billable Type": "Billable" if billable else "Non-Billable",
                     })
     # time on a matter that is missing from the matters list
     for i in range(3):
-        eid += 1
         entries.append({
-            "Entry ID": f"TE-{eid}", "Date": f"03/{10 + i}/{YEAR}", "Client": "Unknown Client",
-            "Project ID": "M-1099", "Invoice Number": "", "Timekeeper": "Kevin Park",
-            "Professional Type": "Associate", "Hours": "1.5", "Billable": "Yes",
-            "Billed Status": "Unbilled", "Billed Hours": "0", "Rate": "340.00",
-            "Billed Amount": "0.00", "Task Code": "A104", "Description": "Conflict check research",
+            "Time Entry Status": "Unbilled", "Date": f"03/{10 + i:02d}/{YEAR}",
+            "Firm User": "Kevin Park", "Client Id": "C9999", "Client Name": "Unknown Client",
+            "Project Id": "M-1099", "Project Name": "Conflict check", "Plan Task": "",
+            "Plan Task Completed?": "", "Task Code": "A104", "Task Description": "Review / analyze",
+            "Sub-Task Code": "", "Sub Task Description": "", "Hours": "1.5", "Rate": "340.00",
+            "Amount": "510.00", "Notes": "Conflict check research", "Invoice Number": "",
+            "Client Category": "", "Custom": "", "Billable Type": "Billable",
         })
-    entries.sort(key=lambda r: (r["Date"][6:], r["Date"][:5], r["Entry ID"]))
+    entries.sort(key=lambda r: (r["Date"][6:], r["Date"][:5], r["Firm User"]))
 
-    # ---------------------------------------------------------------- collections
-    matter_info = {m[0]: m for m in MATTERS}
+    # ---------------------------------------------------------------- invoices
+    inv_rows = []
+    for (mid, q), inv in sorted(invoices.items()):
+        inv["expenses"] = money(inv["fees"] * Decimal(rng.choice(["0.01", "0.02", "0.035", "0.05"])))
+        inv["tax"] = money(inv["fees"] * Decimal("0.01")) if mid == "M-1009" else Decimal("0.00")
+        inv["total"] = inv["fees"] + inv["expenses"] + inv["tax"]
+        m = matter_info[mid]
+        start, end = QUARTERS[q][0]
+        inv_rows.append({
+            "Client Name": m[1], "Client Id": client_ids[m[1]], "Project Name": m[2],
+            "Project Id": mid, "Invoice Number": inv["invoice"],
+            "Invoice Date": inv["date"].strftime("%m/%d/%Y"),
+            "From Date": f"{start:02d}/01/{YEAR}", "To Date": date(YEAR, end, 28).strftime("%m/%d/%Y"),
+            "Invoice Amount": f"{inv['total']:.2f}", "Total Amount Time": f"{inv['fees']:.2f}",
+            "Total Amount Expense": f"{inv['expenses']:.2f}", "Invoice Account Group": "Operating",
+            "Client Type": client_types[m[1]],
+        })
+
+    # ---------------------------------------------------------------- payments (TimeSolv format)
     pays = []
-    pid = 9000
 
-    def pay(mid: str, inv: str, when: date, fees: Decimal, expenses: Decimal, tax: Decimal = Decimal(0),
-            ptype: str = "Check", status: str = "Cleared") -> None:
-        nonlocal pid
-        pid += 1
+    def pay(mid: str, inv: str, when: date, allocated: Decimal, payment: Decimal | None = None,
+            method: str = "Check", ttype: str = "Payment", credit_type: str = "",
+            group: str = "Operating", available: Decimal = Decimal("0")) -> None:
         m = matter_info.get(mid)
         pays.append({
-            "Payment Date": when.strftime("%m/%d/%Y"), "Client Name": m[1] if m else "",
-            "Project ID": mid, "Project Name": m[2] if m else "", "Invoice #": inv,
-            "Payment ID": f"PMT-{pid}", "Payment Amount": f"{fees + expenses + tax:.2f}",
-            "Applied to Fees": f"{fees:.2f}", "Applied to Expenses": f"{expenses:.2f}",
-            "Applied to Tax": f"{tax:.2f}", "Payment Type": ptype, "Payment Status": status,
-            "Responsible Professional": m[4] if m else "",
+            "Transaction Type": ttype, "Transaction Date": when.strftime("%m/%d/%Y"),
+            "Client Name": m[1] if m else "", "Client Id": client_ids.get(m[1], "") if m else "",
+            "Project Name": m[2] if m else "", "Project Id": mid, "Credit Type": credit_type,
+            "Payment Method": method, "Invoice Number": inv,
+            "Payment Amount": f"{(payment if payment is not None else allocated):.2f}",
+            "Available Funds": f"{available:.2f}", "Allocated Amount": f"{allocated:.2f}",
+            "Payment Account Group": group, "Client Type": client_types.get(m[1], "") if m else "",
         })
 
     for (mid, q), inv in sorted(invoices.items()):
-        fees = inv["fees"]
-        expenses = money(fees * Decimal(rng.choice(["0.01", "0.02", "0.035", "0.05"])))
-        tax = money(fees * Decimal("0.0")) if mid != "M-1009" else money(fees * Decimal("0.01"))
+        total = inv["total"]
         when = inv["date"]
-        ptype = rng.choice(["Check", "ACH", "Wire", "Credit Card"])
+        method = rng.choice(["Check", "ACH", "Wire", "Credit Card"])
         if q == 0:
-            pay(mid, inv["invoice"], when + timedelta(days=rng.randint(20, 45)), fees, expenses, tax,
-                ptype)
+            pay(mid, inv["invoice"], when + timedelta(days=rng.randint(20, 45)), total,
+                method=method)
         elif q == 1:
-            first = money(fees * Decimal("0.6"))
-            pay(mid, inv["invoice"], when + timedelta(days=25), first, expenses, tax, ptype)
-            pay(mid, inv["invoice"], when + timedelta(days=60), fees - first, Decimal("0"),
-                Decimal("0"), ptype)
+            first = money(total * Decimal("0.6"))
+            pay(mid, inv["invoice"], when + timedelta(days=25), first, method=method)
+            if mid != "M-1005":
+                pay(mid, inv["invoice"], when + timedelta(days=60), total - first, method=method)
+            else:
+                inv["carry"] = total - first
         elif q == 2:
-            part = money(fees * Decimal(rng.choice(["0.5", "0.75", "1.0"])))
-            pay(mid, inv["invoice"], when + timedelta(days=rng.randint(25, 50)), part, expenses,
-                tax, ptype)
+            part = money(total * Decimal(rng.choice(["0.5", "0.75", "1.0"])))
+            when3 = when + timedelta(days=rng.randint(25, 50))
+            if mid == "M-1005":
+                # one cheque paying the rest of the Q2 invoice and part of Q3: two allocation
+                # rows that both show the full Payment Amount
+                rest = invoices[(mid, 1)]["carry"]
+                pay(mid, invoices[(mid, 1)]["invoice"], when3, rest, payment=rest + part,
+                    method=method)
+                pay(mid, inv["invoice"], when3, part, payment=rest + part, method=method)
+            else:
+                pay(mid, inv["invoice"], when3, part, method=method)
         else:
             # Q4 invoice paid in January of the following year -> outside the period
-            pay(mid, inv["invoice"], date(YEAR + 1, 1, 20), money(fees * Decimal("0.5")),
-                Decimal("0"), Decimal("0"), ptype)
+            pay(mid, inv["invoice"], date(YEAR + 1, 1, 20), money(total * Decimal("0.5")),
+                method=method)
     # special rows
-    pay("M-1001", "", date(YEAR, 2, 14), Decimal("0"), Decimal("0"), ptype="Trust Deposit")
-    pays[-1]["Payment Amount"] = "25000.00"
-    pays[-1]["Applied to Fees"] = "0.00"
-    pay("M-1006", "INV-1006-1", date(YEAR, 6, 2), Decimal("4800.00"), Decimal("0"), ptype="Check",
-        status="Void")
+    pay("M-1001", "", date(YEAR, 2, 14), Decimal("0"), payment=Decimal("25000.00"),
+        method="Wire", group="Trust", available=Decimal("25000.00"))  # unapplied trust deposit
+    pay("M-1006", "INV-1006-1", date(YEAR, 6, 2), Decimal("4800.00"), ttype="Void")
+    pay("M-1008", "INV-1008-3", date(YEAR, 11, 5), Decimal("1500.00"), ttype="Credit",
+        credit_type="Write Off", method="")
     pays.append(dict(pays[5]))  # duplicated export row
-    pays.sort(key=lambda r: (r["Payment Date"][6:], r["Payment Date"][:5], r["Payment ID"]))
+    pays.sort(key=lambda r: (r["Transaction Date"][6:], r["Transaction Date"][:5],
+                             r["Invoice Number"]))
 
     # ---------------------------------------------------------------- write files
     def write(name: str, rows: list[dict]) -> None:
@@ -232,20 +263,26 @@ def main() -> None:
             "Type": "Partner", "Supervisor": "", "Status": "Active"} for pid_, n, _, mp in PARTNERS]
           + [{"Professional ID": s[0], "Name": s[1], "Title": s[2], "Type": s[3],
               "Supervisor": s[5], "Status": "Active"} for s in STAFF])
-    write("timesolv_projects.csv", [{
-        "Project ID": m[0], "Client Name": m[1], "Project Name": m[2],
-        "Originating Attorney": m[3], "Responsible Professional": m[4],
-        "Status": "Open", "Open Date": f"0{1 + i % 9}/15/{YEAR - 1 - i % 3}", "Close Date": "",
-        "Practice Area": m[5], "Billing Arrangement": "Hourly",
+    write("timesolv_matters.csv", [{
+        "Client Name": m[1], "Project Name": m[2], "Project Id": m[0], "LEDES Project Id": "",
+        "Responsible Time Keeper": m[4], "Commission Percent": "0", "Active?": "Yes",
+        "Billable?": "Yes", "Start Date": f"0{1 + i % 9}/15/{YEAR - 1 - i % 3}",
+        "Estimated End Date": "", "Inactive Date": "", "Billing Arrangement": "Hourly",
+        "Client Category": m[5],
     } for i, m in enumerate(MATTERS)])
-    write("timesolv_time_entries.csv", entries)
-    write("timesolv_payment_allocations.csv", pays)
-    write("matter_originator_overrides.csv", [
-        {"matter_id": "M-1003", "partner": "Margaret Chen", "share_pct": "60",
-         "notes": "Split origination approved by committee"},
-        {"matter_id": "M-1003", "partner": "Robert Alvarez", "share_pct": "40",
-         "notes": "Split origination approved by committee"},
-    ])
+    orig_rows = []
+    for m in MATTERS:
+        names = {"M-1003": [("Margaret Chen", "60"), ("Robert Alvarez", "40")],
+                 "M-1010": [("Michael Brennan", "0"), ("James Whitfield", "0")]}.get(
+                     m[0], [(m[3], "0")])
+        for n, pct in names:
+            orig_rows.append({"Client Name": m[1], "Project Name": m[2],
+                              "Originating Time Keeper": n, "Originating Credit Percent": pct,
+                              "Originating Commission Percent": "0"})
+    write("timesolv_matter_originating_professional.csv", orig_rows)
+    write("timesolv_invoices.csv", inv_rows)
+    write("timesolv_time.csv", entries)
+    write("timesolv_payment_allocation.csv", pays)
     write("associate_matter_mappings.csv", [
         {"timekeeper": "Daniel Smith", "matter_id": "M-1001", "partner": "David Okafor",
          "start_date": "", "end_date": "", "allocation_pct": "100",

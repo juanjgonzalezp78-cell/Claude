@@ -409,7 +409,7 @@ def build_workbook(inputs: CompensationInputs, result: CompensationResult,
 
     # ------------------------------------------------------------ Collections
     cs = _decimals_to_float(result.collection_status)
-    kinds = {c: "money" for c in ["Amount collected", "Fees", "Expenses", "Taxes",
+    kinds = {c: "money" for c in ["Amount collected", "Allocated amount", "Fees", "Expenses", "Taxes",
                                   "Origination credited", "Working credited", "Unallocated"]}
     kinds.update({"Collection date": "date", "Row ID": "int", "Included": "bool"})
     first, last, cols = _table(ws["TimeSolv Collections"], fmt, "TimeSolv Collections",
@@ -628,8 +628,9 @@ def _executive_summary(ws: Any, fmt: _Formats, result: CompensationResult, statu
          f"='Partner Compensation'!{xl_col_to_name(10)}{HEADER_ROW + 2 + len(result.partner_summary)}",
          "money", "Sum of cent-exact partner totals.", True),
         ("Reconciliation difference", "=B8-B5", "money", "Must be zero.", True),
-        ("Total collections (all included and excluded cash rows)", float(m["total_collections"]),
-         "money", "Fees + expenses + taxes as exported (manually excluded rows omitted).", False),
+        ("Total collections in the period", float(m["total_collections"]),
+         "money", "Cash allocated to invoices in the period (fees, expenses and taxes); voids, "
+         "credits, unapplied funds and excluded rows omitted.", False),
         ("Total collected professional fees (credited)", float(m["total_fees_collected"]), "money",
          "Only fee allocations of qualifying collections.", False),
         ("Unallocated EWYK credit", float(m["unallocated_credit"]), "money",

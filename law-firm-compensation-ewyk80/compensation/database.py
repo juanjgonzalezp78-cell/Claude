@@ -87,6 +87,8 @@ COLLECTION_COLUMNS: dict[str, str] = {
     "amount_collected": "num", "fee_amount": "num", "expense_amount": "num",
     "tax_amount": "num", "payment_type": "text", "payment_status": "text",
     "originator_hint": "text", "responsible_professional": "text",
+    "transaction_type": "text", "credit_type": "text", "payment_method": "text",
+    "account_group": "text", "allocated_amount": "num", "available_funds": "num",
     "excluded": "bool", "exclusion_reason": "text", "duplicate_of": "text", "raw_json": "text",
 }
 
@@ -98,7 +100,14 @@ TIME_ENTRY_COLUMNS: dict[str, str] = {
     "description": "text", "raw_json": "text",
 }
 
-DATA_TABLES = {"collections": COLLECTION_COLUMNS, "time_entries": TIME_ENTRY_COLUMNS}
+INVOICE_COLUMNS: dict[str, str] = {
+    "dedup_key": "text", "invoice_id": "text", "invoice_date": "date", "client": "text",
+    "matter_id": "text", "matter_name": "text", "fees": "num", "expenses": "num", "taxes": "num",
+    "taxes2": "num", "interest": "num", "total": "num", "status": "text", "raw_json": "text",
+}
+
+DATA_TABLES = {"collections": COLLECTION_COLUMNS, "time_entries": TIME_ENTRY_COLUMNS,
+               "invoices": INVOICE_COLUMNS}
 
 
 def _sql_type(kind: str) -> str:
@@ -360,6 +369,16 @@ class Database:
                 rows,
             )
         return len(rows)
+
+    def delete_keys(self, name: str, year: int, keys: list[str]) -> int:
+        """Delete data rows whose dedup key is in ``keys`` (used to update invoices)."""
+        self.assert_writable(year)
+        with self.connect() as conn:
+            n = 0
+            for k in keys:
+                n += conn.execute(f"DELETE FROM {name} WHERE year = ? AND dedup_key = ?",
+                                  (year, k)).rowcount
+        return n
 
     def update_collection_flags(self, year: int, flags: pd.DataFrame, user: str) -> int:
         """Update ``excluded`` / ``exclusion_reason`` for collection rows (by row_id)."""

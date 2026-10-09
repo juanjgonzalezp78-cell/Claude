@@ -8,6 +8,7 @@ import pandas as pd
 import streamlit as st
 
 from compensation.expenses import NegativeNet
+from compensation.models import FeeSplit
 from compensation.models import Policy, TimekeeperCategory, WorkingMethod, to_decimal
 from compensation.service import (assign_responsible_as_originator, rename_partner,
                                   start_year_from_prior)
@@ -62,6 +63,12 @@ with tabs[0]:
                       index=1 if p.include_written_off else 0, horizontal=True)
         staff = c3.radio("Include paralegal / other staff hours", ["No", "Yes"],
                          index=1 if p.include_staff_hours else 0, horizontal=True)
+        fee_split = st.selectbox(
+            "Fee portion of payment allocations (when the export has no fee/expense split)",
+            FeeSplit.ALL, index=FeeSplit.ALL.index(p.fee_split_method)
+            if p.fee_split_method in FeeSplit.ALL else 0,
+            help="TimeSolv applies payments to tax, expenses and interest before fees unless the "
+                 "firm changed its line-item allocation order. Confirm the firm's TimeSolv setting.")
         st.markdown("**Partner expenses**")
         c1, c2 = st.columns(2)
         prorate = c1.radio("Prorate equal expense splits by time as partner", ["Yes", "No"],
@@ -78,7 +85,8 @@ with tabs[0]:
                  originator_working_eligible=orig_ok == "Yes", include_nonbillable=nonbill == "Yes",
                  include_written_off=wo == "Yes", include_staff_hours=staff == "Yes",
                  working_method=method, period_start=start, period_end=end,
-                 prorate_equal_expenses=prorate == "Yes", negative_net_treatment=negative)
+                 prorate_equal_expenses=prorate == "Yes", negative_net_treatment=negative,
+                 fee_split_method=fee_split)
     problems = validate_policy(new)
     for prob in problems:
         st.error(prob)

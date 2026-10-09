@@ -20,6 +20,7 @@ from typing import Any
 
 import pandas as pd
 
+from .allocation import derive_fee_portions
 from .attribution import AttributedEntry, Attributor, Roster
 from .expenses import ExpenseResult, allocate_expenses, apply_net
 from .lockstep import LockstepPartner, LockstepProposal, check_final_weights, propose_lockstep
@@ -63,6 +64,7 @@ class CompensationInputs:
     exclusions: pd.DataFrame = field(default_factory=pd.DataFrame)
     manual_shares: pd.DataFrame = field(default_factory=pd.DataFrame)
     collections: pd.DataFrame = field(default_factory=pd.DataFrame)
+    invoices: pd.DataFrame = field(default_factory=pd.DataFrame)
     time_entries: pd.DataFrame = field(default_factory=pd.DataFrame)
     expense_categories: pd.DataFrame = field(default_factory=pd.DataFrame)
     category_splits: pd.DataFrame = field(default_factory=pd.DataFrame)
@@ -119,8 +121,16 @@ def classify_collection(c: dict[str, Any], policy: Policy) -> tuple[bool, str]:
     """Decide whether a collection row earns EWYK credit. Returns (include, reason)."""
     if c.get("excluded"):
         return False, clean_str(c.get("exclusion_reason")) or "Manually excluded"
-    ptype = norm_name(c.get("payment_type"))
+    if c.get("_fee_error"):
+        return False, f"Fee portion unknown: {c['_fee_error']}"
+    ptype = " ".join(norm_name(c.get(k)) for k in ("payment_type", "transaction_type",
+                                                    "credit_type", "account_group"))
     status = norm_name(c.get("payment_status"))
+    if norm_name(c.get("transaction_type")) in ("credit", "credit note", "credit memo"):
+        return False, "Credit (non-cash) - not a collection"
+    alloc = to_decimal(c.get("allocated_amount"), default=None)
+    if alloc is not None and alloc == 0 and to_decimal(c.get("fee_amount")) == 0:
+        return False, "Unapplied funds (not allocated to an invoice)"
     if any(w in status for w in NOT_COLLECTED_WORDS) or any(w in ptype for w in NOT_COLLECTED_WORDS):
         return False, "Payment not actually collected (status/type indicates void, pending, " \
                       "reversed or outstanding)"
@@ -143,8 +153,14 @@ def classify_collection(c: dict[str, Any], policy: Policy) -> tuple[bool, str]:
 
 def collection_ref(c: dict[str, Any]) -> str:
     """Readable identifier for a collection row."""
-    pid = clean_str(c.get("payment_id")) or f"row {c.get('row_id', '?')}"
     inv = clean_str(c.get("invoice_id"))
+    pid = clean_str(c.get("payment_id"))
+    if not pid:
+        d = parse_date(c.get("collection_date")) if c.get("collection_date") else None
+        amt = to_decimal(c.get("allocated_amount"), default=None)
+        if amt is None:
+            amt = to_decimal(c.get("amount_collected"), default=None)
+        pid = f"{d or 'no date'} {clean_str(c.get('matter_id'))} ${amt or 0:,.2f}".strip()
     return f"{pid} / {inv}" if inv else pid
 
 
@@ -195,6 +211,13 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
                                      resolution="Correct the originator name or add the partner."))
         else:
             orig_valid[mkey] = [(n, s) for n, s, _ in names]
+            if any("EQUAL SPLIT ASSUMED" in clean_str(r.get("notes")) for _, _, r in names):
+                exc.append(ExceptionItem(
+                    Severity.WARNING, "Originator split assumed",
+                    f"Matter {mid} has {len(names)} originators in TimeSolv with no percentages; "
+                    "an equal split was assumed.", matter_id=mid,
+                    resolution="Firm Setup > Matter originators: confirm or correct the shares "
+                               "(editing the note removes this warning)."))
             for n, _, _ in names:
                 if not roster.is_active(n):
                     exc.append(ExceptionItem(Severity.WARNING, "Credit to inactive partner",
@@ -237,6 +260,7 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
 
     # ---------------------------------------------------------------- collections
     coll_rows = _records(inputs.collections)
+    derive_fee_portions(coll_rows, _records(inputs.invoices), policy, exc)
     included: list[dict[str, Any]] = []
     status_rows: list[dict[str, Any]] = []
     for c in coll_rows:
@@ -409,10 +433,9 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
                             / HUNDRED for ae in entries if ae.unassigned), ZERO)
     metrics = {
         "distributable_pool": policy.distributable_pool,
-        "total_collections": sum((to_decimal(c.get("amount_collected"), default=None)
-                                  or to_decimal(c.get("fee_amount")) + to_decimal(c.get("expense_amount"))
-                                  + to_decimal(c.get("tax_amount")) for c in coll_rows
-                                  if not c.get("excluded")), ZERO),
+        "total_collections": sum((_cash(r) for r in status_rows if r["Included"] or str(
+            r["Exclusion reason"]).startswith(("No amount allocated", "Fee portion unknown"))),
+            ZERO),
         "total_fees_collected": total_fees_included,
         "equal_pool": pools["equal"], "ewyk_pool": pools["ewyk"], "lockstep_pool": pools["lockstep"],
         "active_partners": len(active),
@@ -456,6 +479,15 @@ def calculate(inputs: CompensationInputs) -> CompensationResult:
     )
 
 
+def _cash(r: dict[str, Any]) -> Decimal:
+    """Cash collected on a status row: allocated amount, else amount, else its components."""
+    for key in ("Allocated amount", "Amount collected"):
+        v = r.get(key)
+        if v is not None and not (isinstance(v, float) and v != v):
+            return to_decimal(v)
+    return to_decimal(r.get("Fees")) + to_decimal(r.get("Expenses")) + to_decimal(r.get("Taxes"))
+
+
 def _status_row(c: dict[str, Any], included: bool, reason: str, orig: Decimal = ZERO,
                 work: Decimal = ZERO, unallocated: Decimal = ZERO, method: str = "") -> dict[str, Any]:
     return {
@@ -464,7 +496,9 @@ def _status_row(c: dict[str, Any], included: bool, reason: str, orig: Decimal = 
         "Client": clean_str(c.get("client")), "Matter ID": clean_str(c.get("matter_id")),
         "Invoice ID": clean_str(c.get("invoice_id")), "Payment ID": clean_str(c.get("payment_id")),
         "Amount collected": to_decimal(c.get("amount_collected"), default=None),
-        "Fees": to_decimal(c.get("fee_amount")), "Expenses": to_decimal(c.get("expense_amount")),
+        "Allocated amount": to_decimal(c.get("allocated_amount"), default=None),
+        "Fees": to_decimal(c.get("fee_amount")), "Fee source": c.get("_fee_source", ""),
+        "Expenses": to_decimal(c.get("expense_amount")),
         "Taxes": to_decimal(c.get("tax_amount")),
         "Included": included, "Exclusion reason": reason, "Working method": method,
         "Origination credited": orig, "Working credited": work, "Unallocated": unallocated,
@@ -632,10 +666,12 @@ def _entry_exceptions(entries: list[AttributedEntry], issue_entries: dict[str, l
                                  resolution="Reassign the hours with a mapping/override if the "
                                             "firm's policy requires."))
     if flag_counts.get("hours_billed_missing"):
-        exc.append(ExceptionItem(Severity.WARNING, "Data quality",
-                                 f"{flag_counts['hours_billed_missing']} billed entries had no "
-                                 "'hours billed' value; recorded hours were used.",
-                                 resolution="Map the Hours Billed column in the import wizard."))
+        exc.append(ExceptionItem(Severity.INFO, "Data quality",
+                                 f"{flag_counts['hours_billed_missing']} billed entries have no "
+                                 "separate 'hours billed' value (TimeSolv's Time export does not "
+                                 "include one); their recorded hours were used.",
+                                 resolution="No action needed unless the firm wants written-down "
+                                            "hours excluded."))
     if flag_counts.get("billable_assumed"):
         exc.append(ExceptionItem(Severity.INFO, "Data quality",
                                  f"{flag_counts['billable_assumed']} entries had no billable flag; "

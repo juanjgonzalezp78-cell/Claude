@@ -104,7 +104,7 @@ def qualifying_measure(e: dict[str, Any], policy: Policy) -> tuple[Decimal, str,
     billed = (not written_off) and (
         ("billed" in status and "unbilled" not in status and "not" not in status)
         or "invoiced" in status or "paid" in status
-        or (status == "" and bool(clean_str(e.get("invoice_id"))))
+        or bool(clean_str(e.get("invoice_id")))  # an invoice number means the time was billed
     )
     method = policy.working_method
 

@@ -1,0 +1,49 @@
+Client Name,Client Id,Project Name,Project Id,Invoice Number,Invoice Date,From Date,To Date,Invoice Amount,Total Amount Time,Total Amount Expense,Invoice Account Group,Client Type
+Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,INV-1001-1,04/04/2025,01/01/2025,03/28/2025,31627.53,30558.00,1069.53,Operating,Business
+Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,INV-1001-2,07/03/2025,04/01/2025,06/28/2025,24189.38,23037.50,1151.88,Operating,Business
+Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,INV-1001-3,10/03/2025,07/01/2025,09/28/2025,19524.84,19142.00,382.84,Operating,Business
+Harborview Holdings LLC,C1000,Commercial lease dispute,M-1001,INV-1001-4,12/31/2025,10/01/2025,12/28/2025,9612.56,9287.50,325.06,Operating,Business
+Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,INV-1002-1,04/04/2025,01/01/2025,03/28/2025,40811.22,40011.00,800.22,Operating,Business
+Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,INV-1002-2,07/03/2025,04/01/2025,06/28/2025,25633.62,25131.00,502.62,Operating,Business
+Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,INV-1002-3,10/03/2025,07/01/2025,09/28/2025,28828.80,27456.00,1372.80,Operating,Business
+Pinecrest Medical Group,C1001,Regulatory compliance review,M-1002,INV-1002-4,12/31/2025,10/01/2025,12/28/2025,4247.25,4045.00,202.25,Operating,Business
+Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,INV-1003-1,04/04/2025,01/01/2025,03/28/2025,17137.05,16321.00,816.05,Operating,Business
+Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,INV-1003-2,07/03/2025,04/01/2025,06/28/2025,31554.08,30051.50,1502.58,Operating,Business
+Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,INV-1003-3,10/03/2025,07/01/2025,09/28/2025,40130.33,39733.00,397.33,Operating,Business
+Atlas Manufacturing Inc.,C1002,Acquisition of Delta Tooling,M-1003,INV-1003-4,12/31/2025,10/01/2025,12/28/2025,16239.93,15921.50,318.43,Operating,Business
+Bluewater Logistics,C1003,Employment class action defense,M-1004,INV-1004-1,04/04/2025,01/01/2025,03/28/2025,24985.80,23796.00,1189.80,Operating,Business
+Bluewater Logistics,C1003,Employment class action defense,M-1004,INV-1004-2,07/03/2025,04/01/2025,06/28/2025,24584.41,24341.00,243.41,Operating,Business
+Bluewater Logistics,C1003,Employment class action defense,M-1004,INV-1004-3,10/03/2025,07/01/2025,09/28/2025,25081.35,23887.00,1194.35,Operating,Business
+Bluewater Logistics,C1003,Employment class action defense,M-1004,INV-1004-4,12/31/2025,10/01/2025,12/28/2025,9554.48,9099.50,454.98,Operating,Business
+Greenfield Energy Partners,C1004,Solar project finance,M-1005,INV-1005-1,04/04/2025,01/01/2025,03/28/2025,16860.15,16290.00,570.15,Operating,Business
+Greenfield Energy Partners,C1004,Solar project finance,M-1005,INV-1005-2,07/03/2025,04/01/2025,06/28/2025,31264.28,29775.50,1488.78,Operating,Business
+Greenfield Energy Partners,C1004,Solar project finance,M-1005,INV-1005-3,10/03/2025,07/01/2025,09/28/2025,17468.73,16878.00,590.73,Operating,Business
+Greenfield Energy Partners,C1004,Solar project finance,M-1005,INV-1005-4,12/31/2025,10/01/2025,12/28/2025,8162.04,8002.00,160.04,Operating,Business
+Northgate School District,C1005,Construction defect claim,M-1006,INV-1006-1,04/04/2025,01/01/2025,03/28/2025,22966.39,22739.00,227.39,Operating,Business
+Northgate School District,C1005,Construction defect claim,M-1006,INV-1006-2,07/03/2025,04/01/2025,06/28/2025,22858.50,21770.00,1088.50,Operating,Business
+Northgate School District,C1005,Construction defect claim,M-1006,INV-1006-3,10/03/2025,07/01/2025,09/28/2025,27175.86,26643.00,532.86,Operating,Business
+Northgate School District,C1005,Construction defect claim,M-1006,INV-1006-4,12/31/2025,10/01/2025,12/28/2025,10200.00,10000.00,200.00,Operating,Business
+Summit Biotech Corp.,C1006,Patent licensing program,M-1007,INV-1007-1,04/04/2025,01/01/2025,03/28/2025,25406.67,24908.50,498.17,Operating,Business
+Summit Biotech Corp.,C1006,Patent licensing program,M-1007,INV-1007-2,07/03/2025,04/01/2025,06/28/2025,23444.63,23212.50,232.13,Operating,Business
+Summit Biotech Corp.,C1006,Patent licensing program,M-1007,INV-1007-3,10/03/2025,07/01/2025,09/28/2025,26878.95,25970.00,908.95,Operating,Business
+Summit Biotech Corp.,C1006,Patent licensing program,M-1007,INV-1007-4,12/31/2025,10/01/2025,12/28/2025,4614.48,4524.00,90.48,Operating,Business
+Riverside Credit Union,C1007,Commercial loan workout,M-1008,INV-1008-1,04/04/2025,01/01/2025,03/28/2025,16431.66,15876.00,555.66,Operating,Business
+Riverside Credit Union,C1007,Commercial loan workout,M-1008,INV-1008-2,07/03/2025,04/01/2025,06/28/2025,21319.02,20901.00,418.02,Operating,Business
+Riverside Credit Union,C1007,Commercial loan workout,M-1008,INV-1008-3,10/03/2025,07/01/2025,09/28/2025,18588.15,17703.00,885.15,Operating,Business
+Riverside Credit Union,C1007,Commercial loan workout,M-1008,INV-1008-4,12/31/2025,10/01/2025,12/28/2025,2841.08,2745.00,96.08,Operating,Business
+Estate of Harold Vance,C1008,Estate administration,M-1009,INV-1009-1,04/04/2025,01/01/2025,03/28/2025,15229.07,14785.50,295.71,Operating,Individual
+Estate of Harold Vance,C1008,Estate administration,M-1009,INV-1009-2,07/03/2025,04/01/2025,06/28/2025,11746.92,11082.00,554.10,Operating,Individual
+Estate of Harold Vance,C1008,Estate administration,M-1009,INV-1009-3,10/03/2025,07/01/2025,09/28/2025,9161.00,8766.50,306.83,Operating,Individual
+Estate of Harold Vance,C1008,Estate administration,M-1009,INV-1009-4,12/31/2025,10/01/2025,12/28/2025,6226.64,5958.50,208.55,Operating,Individual
+Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,INV-1010-1,04/04/2025,01/01/2025,03/28/2025,25281.95,24427.00,854.95,Operating,Business
+Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,INV-1010-2,07/03/2025,04/01/2025,06/28/2025,12051.32,11932.00,119.32,Operating,Business
+Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,INV-1010-3,10/03/2025,07/01/2025,09/28/2025,27502.30,27230.00,272.30,Operating,Business
+Keystone Retail Partners,C1009,Retail portfolio sale,M-1010,INV-1010-4,12/31/2025,10/01/2025,12/28/2025,7338.66,7266.00,72.66,Operating,Business
+Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,INV-1011-1,04/04/2025,01/01/2025,03/28/2025,8779.05,8361.00,418.05,Operating,Business
+Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,INV-1011-2,07/03/2025,04/01/2025,06/28/2025,11951.66,11547.50,404.16,Operating,Business
+Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,INV-1011-3,10/03/2025,07/01/2025,09/28/2025,17545.02,17201.00,344.02,Operating,Business
+Cedar Point Hospitality,C1010,Franchise agreement litigation,M-1011,INV-1011-4,12/31/2025,10/01/2025,12/28/2025,7396.23,7323.00,73.23,Operating,Business
+Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,INV-1012-1,04/04/2025,01/01/2025,03/28/2025,30498.83,29046.50,1452.33,Operating,Business
+Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,INV-1012-2,07/03/2025,04/01/2025,06/28/2025,23613.30,23379.50,233.80,Operating,Business
+Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,INV-1012-3,10/03/2025,07/01/2025,09/28/2025,30138.96,29548.00,590.96,Operating,Business
+Meridian Software Ltd.,C1011,SaaS contract portfolio,M-1012,INV-1012-4,12/31/2025,10/01/2025,12/28/2025,7101.15,6763.00,338.15,Operating,Business

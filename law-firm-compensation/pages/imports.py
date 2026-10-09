@@ -19,8 +19,10 @@ tab_wizard, tab_history, tab_review = st.tabs(["Import wizard", "Import history"
                                                "Review collections"])
 
 with tab_wizard:
-    st.markdown("**Recommended order:** partner roster → professionals → matters → time entries "
-                "→ payment allocations.")
+    st.markdown("**Recommended order:** partner roster → professionals → matters → "
+                "originating professionals → time → invoices → payments → expenses. Use TimeSolv's "
+                "Import/Export → Export Excel entities (Matter, Matter Originating Professional, "
+                "Time, Invoice, Payment & Allocation).")
     labels = {k: v.label for k, v in DATASETS.items()}
     dataset = st.selectbox("1. What are you importing?", list(labels), format_func=labels.get,
                            index=list(labels).index("collections"))
